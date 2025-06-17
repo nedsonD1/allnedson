@@ -1,72 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nedson Group - Adedayo Adeniyi</title>
+    <title>Nedson Group - Company Overview</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f5f5f5; }
-        .container { max-width: 900px; margin: auto; padding: 20px; background: white; }
-        header { background: #003366; color: white; padding: 20px 0; text-align: center; }
-        h1, h2 { color: #003366; }
-        .section { margin-bottom: 30px; }
-        .button {
-            display: inline-block;
-            padding: 10px 15px;
-            margin: 5px;
-            background-color: #0057b7;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
+        header, footer { background: #003366; color: white; padding: 20px; text-align: center; }
+        .tabs { overflow: hidden; background: #eee; display: flex; justify-content: center; flex-wrap: wrap; }
+        .tabs button {
+            background: #ddd; border: none; outline: none; padding: 14px 20px;
+            cursor: pointer; transition: background 0.3s; font-weight: bold;
         }
-        .contact-info { margin-top: 10px; }
-        footer { background: #003366; color: white; text-align: center; padding: 10px; }
+        .tabs button:hover, .tabs button.active { background: #0057b7; color: white; }
+        .tab-content { display: none; padding: 20px; background: white; }
+        .tab-content.active { display: block; }
+        a { color: #0057b7; text-decoration: none; }
     </style>
 </head>
 <body>
     <header>
         <h1>Nedson Group</h1>
-        <p>Led by Adedayo Adeniyi – Director | IT Consultant | Real Estate & Finance Professional | Social Impact Advocate</p>
+        <p>IT | Real Estate | Finance | Charity</p>
     </header>
 
-    <div class="container">
-        <div class="section">
-            <h2>About Adedayo</h2>
-            <p>Strategic and visionary leader with experience across IT consultancy, real estate, finance, and non-profit sectors. Director of Nedson Innovations Ltd (UK), and founder of TenderCare Nigeria.</p>
-        </div>
+    <div class="tabs">
+        <button class="tablink active" onclick="openTab(event, 'IT')">Nedson Innovations (IT)</button>
+        <button class="tablink" onclick="openTab(event, 'Tech')">Nedson Technologies (Nigeria)</button>
+        <button class="tablink" onclick="openTab(event, 'Finance')">Nedson Properties & Finance</button>
+        <button class="tablink" onclick="openTab(event, 'Charity')">TenderCare Nigeria</button>
+    </div>
 
-        <div class="section">
-            <h2>What We Do</h2>
-            <ul>
-                <li><strong>IT Consultancy:</strong> Cloud Infrastructure, Cybersecurity, Remote Support, and Advisory</li>
-                <li><strong>Real Estate:</strong> Property Letting, Investment Advisory, Portfolio Management</li>
-                <li><strong>Finance:</strong> Fixed-Return Investment Programs, Financial Planning</li>
-                <li><strong>Charity:</strong> Education, Healthcare, Nutrition, Relief (TenderCare Nigeria)</li>
-            </ul>
-        </div>
+    <div id="IT" class="tab-content active">
+        <h2>Nedson Innovations Ltd (UK)</h2>
+        <p>We lead UK-based operations in IT consultancy and real estate letting. Our offerings include:</p>
+        <ul>
+            <li>Cloud Infrastructure Solutions</li>
+            <li>Remote Support & IT Consulting</li>
+            <li>Managed IT Services</li>
+            <li>Residential Property Management</li>
+        </ul>
+    </div>
 
-        <div class="section">
-            <h2>Our Brands</h2>
-            <a href="#" class="button">Nedson Innovations</a>
-            <a href="#" class="button">Nedson Technologies</a>
-            <a href="#" class="button">Nedson Properties & Finance</a>
-            <a href="#" class="button">TenderCare Nigeria</a>
-        </div>
+    <div id="Tech" class="tab-content">
+        <h2>Nedson Technologies (Nigeria)</h2>
+        <p>Based in Lagos, we serve as a full-service IT provider offering:</p>
+        <ul>
+            <li>IT Consulting & Training</li>
+            <li>Cloud & Cybersecurity Solutions</li>
+            <li>Hardware Sales & Support</li>
+            <li>Long-standing relationships with SMEs and enterprises</li>
+        </ul>
+    </div>
 
-        <div class="section">
-            <h2>Contact</h2>
-            <p class="contact-info">
-                Phone (UK): 07405007810<br>
-                Phone (NG): 08033456365<br>
-                Email: <a href="mailto:adedayoadeniyi0226@gmail.com">adedayoadeniyi0226@gmail.com</a><br>
-                LinkedIn: <a href="https://www.linkedin.com/in/adedayo-adeniyi-b13b33254" target="_blank">linkedin.com/in/adedayo-adeniyi</a>
-            </p>
-        </div>
+    <div id="Finance" class="tab-content">
+        <h2>Nedson Properties & Finance</h2>
+        <p>We provide real estate services and investment opportunities including:</p>
+        <ul>
+            <li>Property Sales & Leasing</li>
+            <li>Investment Structuring</li>
+            <li>2.5% Monthly ROI Investment Program</li>
+            <li>Smart Portfolio Management</li>
+        </ul>
+    </div>
+
+    <div id="Charity" class="tab-content">
+        <h2>TenderCare Nigeria</h2>
+        <p>A non-profit committed to helping underserved communities through:</p>
+        <ul>
+            <li>Education & Healthcare Initiatives</li>
+            <li>Nutrition Programs</li>
+            <li>Poverty Alleviation Projects</li>
+            <li>Grant Applications & Cross-sector Partnerships</li>
+        </ul>
     </div>
 
     <footer>
+        <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | UK: 07405007810 | NG: 08033456365</p>
+        <p><a href="https://linkedin.com/in/adedayo-adeniyi-b13b33254" target="_blank">LinkedIn</a></p>
         <p>&copy; 2025 Nedson Group. All rights reserved.</p>
     </footer>
+
+    <script>
+        function openTab(evt, tabId) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
