@@ -6,11 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
-    header, footer {
+    header {
       background: #000;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    header img {
+      height: 60px;
+    }
+    .brand-subtitle {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-right a {
+      padding: 10px 20px;
+      background: #25D366;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .header-right a:hover {
+      background: #1c9f52;
     }
     .container {
       max-width: 600px;
@@ -45,14 +76,30 @@
       background: #1c9f52;
     }
     a { color: #2e7d32; text-decoration: none; }
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <header>
-    <a href="index.html" style="text-decoration: none; color: white;">
-      <h1>GroupN</h1>
-    </a>
-    <p>Contact Us</p>
+    <div class="header-left">
+      <a href="index.html">
+        <img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo">
+      </a>
+      <span class="brand-subtitle">IT | Real Estate | Finance | Charity</span>
+    </div>
+    <div class="header-right">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </header>
 
   <div class="container">
