@@ -6,30 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #e8f5e9; }
-    header, footer {
+    header {
       background: #000;
       color: white;
       padding: 10px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
     }
     header img {
-      height: 280px;
+      height: 180px;
     }
-    .brand-desc {
+    .brand-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .brand-subtitle {
       font-size: 20px;
       font-weight: bold;
-      text-align: right;
+      margin-top: 10px;
     }
-    nav {
-      width: 100%;
-      text-align: center;
-      margin: 10px 0;
+    .top-nav {
+      display: flex;
+      gap: 10px;
     }
-    nav a {
-      margin: 0 10px;
+    .top-nav a {
       padding: 10px 20px;
       background: #25D366;
       border-radius: 5px;
@@ -37,7 +40,7 @@
       color: white;
       font-weight: bold;
     }
-    nav a:hover {
+    .top-nav a:hover {
       background: #1c9f52;
     }
     .tabs {
@@ -68,20 +71,14 @@
     .tab-content.active {
       display: block;
     }
-    footer a, footer p {
-      color: white !important;
-      text-decoration: none;
-      font-size: 18px;
+    footer {
+      background: #000;
+      color: white;
       text-align: center;
-      width: 100%;
+      padding: 20px;
     }
-    footer p:first-child {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    a {
-      color: #2e7d32;
+    footer a {
+      color: white;
       text-decoration: none;
     }
     .portfolio-button {
@@ -102,13 +99,16 @@
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo">
-    </a>
-    <nav>
+    <div class="brand-section">
+      <a href="index.html">
+        <img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo">
+      </a>
+      <span class="brand-subtitle">IT | Real Estate | Finance | Charity</span>
+    </div>
+    <div class="top-nav">
       <a href="index.html">Home</a>
       <a href="contact.html">Contact</a>
-    </nav>
+    </div>
   </header>
 
   <div class="tabs">
