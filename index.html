@@ -2,75 +2,170 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us - GroupN</title>
+  <title>GroupN - Company Overview</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
-    header, footer {
+    body { font-family: Arial, sans-serif; margin: 0; background: #e8f5e9; }
+    header {
       background: #000;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
     header img {
-      height: 180px;
+      height: 90px;
     }
-    .container {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #2e7d32;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    input, textarea, button {
-      margin: 10px 0;
-      padding: 12px;
+    .brand-subtitle {
       font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      font-weight: bold;
     }
-    button {
-      background: #25D366;
-      color: white;
+    .tabs {
+      background: #c8e6c9;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
+    .tabs button, .tabs a.button {
+      background: #a5d6a7;
       border: none;
+      padding: 14px 20px;
+      font-weight: bold;
       cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #003366;
     }
-    button:hover {
-      background: #1c9f52;
+    .tabs button.active, .tabs button:hover, .tabs a.button:hover {
+      background: #2e7d32;
+      color: white;
     }
-    a { color: #2e7d32; text-decoration: none; }
+    .tab-content { display: none; padding: 20px; background: white; }
+    .tab-content.active { display: block; }
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .portfolio-button {
+      display: inline-block;
+      padding: 10px 16px;
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .portfolio-button:hover {
+      background-color: #1c9f52;
+    }
   </style>
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo">
-    </a>
-    <p>Contact Us</p>
+    <div class="header-left">
+      <a href="index.html">
+        <img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo">
+      </a>
+      <span class="brand-subtitle">IT | Real Estate | Finance | Charity</span>
+    </div>
   </header>
 
-  <div class="container">
-    <h1>Get in Touch</h1>
-    <form action="https://formspree.io/f/xwpbqngv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <div class="tabs">
+    <button class="tablink active" onclick="openTab(event, 'IT')">Nedson Innovations Ltd (UK)</button>
+    <button class="tablink" onclick="openTab(event, 'Tech')">Nedson Technologies (Nigeria)</button>
+    <button class="tablink" onclick="openTab(event, 'Finance')">Nedson Properties & Finance Ltd (Nigeria)</button>
+    <button class="tablink" onclick="openTab(event, 'Charity')">TenderCare NG (Nigeria)</button>
+    <a href="index.html" class="button">Home</a>
+    <a href="contact.html" class="button">Contact</a>
+  </div>
+
+  <div id="IT" class="tab-content active">
+    <h2>Nedson Innovations Ltd (UK)</h2>
+    <p>We lead UK-based operations in IT consultancy and real estate letting. Our offerings include:</p>
+    <ul>
+      <li>Cloud Infrastructure Solutions</li>
+      <li>Remote Support & IT Consulting</li>
+      <li>Managed IT Services</li>
+      <li>Residential Property Management</li>
+    </ul>
+    <p><a href="portfolio-it.html" class="portfolio-button">See Portfolio</a></p>
+  </div>
+
+  <div id="Tech" class="tab-content">
+    <h2>Nedson Technologies (Nigeria)</h2>
+    <p>Based in Lagos, we serve as a full-service IT provider offering:</p>
+    <ul>
+      <li>IT Consulting & Training</li>
+      <li>Cloud & Cybersecurity Solutions</li>
+      <li>Hardware Sales & Support</li>
+      <li>Long-standing relationships with SMEs and enterprises</li>
+    </ul>
+    <p><a href="portfolio-tech.html" class="portfolio-button">See Portfolio</a></p>
+  </div>
+
+  <div id="Finance" class="tab-content">
+    <h2>Nedson Properties & Finance Ltd (Nigeria)</h2>
+    <p>We provide real estate services and investment opportunities including:</p>
+    <ul>
+      <li>Property Sales & Leasing</li>
+      <li>Investment Structuring</li>
+      <li>2.5% Monthly ROI Investment Program</li>
+      <li>Smart Portfolio Management</li>
+    </ul>
+    <p><a href="portfolio-finance.html" class="portfolio-button">See Portfolio</a></p>
+  </div>
+
+  <div id="Charity" class="tab-content">
+    <h2>TenderCare NG ((Nigeria)</h2>
+    <p>A non-profit committed to helping underserved communities through:</p>
+    <ul>
+      <li>Education & Healthcare Initiatives</li>
+      <li>Nutrition Programs</li>
+      <li>Poverty Alleviation Projects</li>
+      <li>Grant Applications & Cross-sector Partnerships</li>
+    </ul>
+    <p><a href="portfolio-charity.html" class="portfolio-button">See Portfolio</a></p>
   </div>
 
   <footer>
-    <p><a href="index.html">&larr; Back to Home</a></p>
+    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
     <p>&copy; 2025 GroupN. All rights reserved.</p>
   </footer>
+
+  <script>
+    function openTab(evt, tabId) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+      document.getElementById(tabId).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+
+  <!-- WhatsApp Chat Icon -->
+  <a href="https://wa.me/2348033456365" target="_blank" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="height: 50px;">
+  </a>
 </body>
 </html>
