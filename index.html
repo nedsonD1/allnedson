@@ -44,6 +44,53 @@
     .portfolio-button:hover {
       background-color: #1c9f52;
     }
+    @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  header img {
+    height: 50px;
+  }
+
+  .brand-subtitle {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tab-content {
+    padding: 15px;
+  }
+
+  footer {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .portfolio-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  input, textarea {
+    width: 100% !important;
+  }
+}
+
   </style>
 </head>
 <body>
