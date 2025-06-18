@@ -6,18 +6,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #e8f5e9; }
-    header, footer { background: #000; color: white; padding: 10px 30px; display: flex; align-items: center; justify-content: space-between; }
-    header img { height: 90px; }
-    .tabs { overflow: hidden; background: #c8e6c9; display: flex; justify-content: center; flex-wrap: wrap; }
-    .tabs button {
-      background: #a5d6a7; border: none; outline: none; padding: 14px 20px;
-      cursor: pointer; transition: background 0.3s; font-weight: bold;
+    header, footer {
+      background: #000;
+      color: white;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
     }
-    .tabs button:hover, .tabs button.active { background: #2e7d32; color: white; }
-    .tab-content { display: none; padding: 20px; background: white; }
-    .tab-content.active { display: block; }
-    footer a, footer p { color: white !important; text-decoration: none; }
-    a { color: #2e7d32; text-decoration: none; }
+    header img {
+      height: 140px;
+      margin-bottom: 5px;
+    }
+    .tabs {
+      overflow: hidden;
+      background: #c8e6c9;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .tabs button {
+      background: #a5d6a7;
+      border: none;
+      outline: none;
+      padding: 14px 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+    .tabs button:hover, .tabs button.active {
+      background: #2e7d32;
+      color: white;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background: white;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    footer a, footer p {
+      color: white !important;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    footer p:first-child {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    a {
+      color: #2e7d32;
+      text-decoration: none;
+    }
     .portfolio-button {
       display: inline-block;
       padding: 10px 16px;
@@ -33,9 +77,9 @@
       background-color: #1c9f52;
     }
     .brand-desc {
-      font-size: 16px;
+      font-size: 20px;
       font-weight: bold;
-      text-align: right;
+      margin-top: 5px;
     }
   </style>
 </head>
@@ -103,8 +147,7 @@
   </div>
 
   <footer>
-    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | UK: +447405007810 | NG: +2348033456365</p>
-    <p><a href="https://linkedin.com/in/adedayo-adeniyi-b13b33254" target="_blank">LinkedIn</a></p>
+    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
     <p>&copy; 2025 GroupN. All rights reserved.</p>
   </footer>
 
