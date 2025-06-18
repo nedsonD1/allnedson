@@ -12,13 +12,27 @@
       padding: 10px 30px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
     header img {
       height: 140px;
-      margin-bottom: 5px;
+    }
+    .brand-desc {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: right;
+    }
+    nav {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #25D366;
+      font-weight: bold;
     }
     .tabs {
       overflow: hidden;
@@ -52,6 +66,8 @@
       color: white !important;
       text-decoration: none;
       font-size: 18px;
+      text-align: center;
+      width: 100%;
     }
     footer p:first-child {
       font-size: 20px;
@@ -76,11 +92,6 @@
     .portfolio-button:hover {
       background-color: #1c9f52;
     }
-    .brand-desc {
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 5px;
-    }
   </style>
 </head>
 <body>
@@ -89,6 +100,10 @@
       <img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo">
     </a>
     <div class="brand-desc">IT | Real Estate | Finance | Charity</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <div class="tabs">
