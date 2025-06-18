@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #e8f5e9; }
-    header, footer { background: #000; color: white; padding: 20px; text-align: center; }
+    header, footer { background: #000; color: white; padding: 10px 30px; display: flex; align-items: center; justify-content: space-between; }
+    header img { height: 70px; }
     .tabs { overflow: hidden; background: #c8e6c9; display: flex; justify-content: center; flex-wrap: wrap; }
     .tabs button {
       background: #a5d6a7; border: none; outline: none; padding: 14px 20px;
@@ -31,15 +32,19 @@
     .portfolio-button:hover {
       background-color: #1c9f52;
     }
+    .brand-desc {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
   <header>
     <a href="index.html">
-      <img src="groupn-logo.png" alt="Groupn Logo" style="height: 90px; vertical-align: middle;">
+      <img src="groupn-logo.png" alt="GroupN Logo">
     </a>
-    <span style="font-size: 24px; font-weight: bold; vertical-align: middle; margin-left: 10px;">GroupN</span>
-    <p style="font-size: 18px;">IT | Real Estate | Finance | Charity</p>
+    <div class="brand-desc">IT | Real Estate | Finance | Charity</div>
   </header>
 
   <div class="tabs">
@@ -97,16 +102,6 @@
     <p><a href="portfolio-charity.html" class="portfolio-button">See Portfolio</a></p>
   </div>
 
-  <div style="padding: 30px; background: #f5f5f5; text-align: center;">
-    <h3>Contact Us</h3>
-    <form action="https://formspree.io/f/xwpbqngv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required style="margin: 10px; padding: 10px; width: 250px;"><br>
-      <input type="email" name="email" placeholder="Your Email" required style="margin: 10px; padding: 10px; width: 250px;"><br>
-      <textarea name="message" placeholder="Your Message" required style="margin: 10px; padding: 10px; width: 250px; height: 100px;"></textarea><br>
-      <button type="submit" style="padding: 10px 20px; background: #2e7d32; color: white; border: none; border-radius: 5px;">Send</button>
-    </form>
-  </div>
-
   <footer>
     <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | UK: +447405007810 | NG: +2348033456365</p>
     <p><a href="https://linkedin.com/in/adedayo-adeniyi-b13b33254" target="_blank">LinkedIn</a></p>
@@ -128,5 +123,10 @@
       evt.currentTarget.classList.add("active");
     }
   </script>
+
+  <!-- WhatsApp Chat Icon -->
+  <a href="https://wa.me/2348033456365" target="_blank" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="height: 50px;">
+  </a>
 </body>
 </html>
