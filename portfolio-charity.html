@@ -125,6 +125,30 @@
     .sticky-donate-button:hover {
       background: #388e3c;
     }
+    .sticky-share-buttons {
+      position: fixed;
+      top: 160px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 998;
+    }
+    .sticky-share-buttons a {
+      background: #ff9800;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .sticky-share-buttons a:hover {
+      background: #e65100;
+      transform: translateY(-2px) scale(1.03);
+    }
     @keyframes glow {
       from { box-shadow: 0 0 5px #66bb6a; }
       to { box-shadow: 0 0 20px #66bb6a; }
@@ -145,15 +169,14 @@
   </header>
 
   <a href="#donate" class="sticky-donate-button">Donate to TenderCare NG</a>
+  <div class="sticky-share-buttons">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com/portfolio-charity.html" target="_blank">📘 Share on Facebook</a>
+    <a href="https://twitter.com/intent/tweet?url=https://yourdomain.com/portfolio-charity.html&text=Support%20TenderCare%20NG%20today!" target="_blank">🐦 Share on Twitter</a>
+    <a href="https://wa.me/?text=Support%20TenderCare%20NG%20today!%20https://yourdomain.com/portfolio-charity.html" target="_blank">💬 Share on WhatsApp</a>
+  </div>
 
   <div class="container">
     <h1>TenderCare NG (Nigeria)</h1>
-    <div style="margin-bottom: 20px;">
-      <p>Share this page:</p>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com/portfolio-charity.html" target="_blank">Share on Facebook</a> |
-      <a href="https://twitter.com/intent/tweet?url=https://yourdomain.com/portfolio-charity.html&text=Support%20TenderCare%20NG%20today!" target="_blank">Share on Twitter</a>
-    </div>
-
     <p>Community Impact Through Compassion and Service:</p>
     <ul>
       <li>Sponsored school supplies and uniforms for 50+ underserved children</li>
