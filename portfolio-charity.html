@@ -7,18 +7,8 @@
     body { background: #fff3e0; font-family: Arial, sans-serif; color: #e65100; margin: 0; padding: 0; }
     .container { max-width: 900px; margin: auto; padding: 40px 20px; }
     h1 { color: #e65100; }
-    ul { line-height: 1.8; font-size: 16px; }
+    ul { line-height: 1.8; }
     a { color: #ff9800; font-weight: bold; text-decoration: none; }
-    .donate-box {
-      background: #ffe0b2;
-      border-left: 5px solid #fb8c00;
-      padding: 20px;
-      margin: 40px 0;
-      text-align: center;
-      border-radius: 8px;
-    }
-    .donate-box h3 { color: #e65100; }
-    .donate-box p { margin-bottom: 20px; font-size: 16px; }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -27,8 +17,7 @@
     }
     .gallery img {
       width: 100%;
-      border-radius: 8px;
-      object-fit: cover;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -45,29 +34,40 @@
     </ul>
 
     <div class="gallery">
-      <img src="tendercare1.jpg" alt="Children with school supplies">
-      <img src="tendercare2.jpg" alt="Food and healthcare distribution">
-      <img src="tendercare3.jpg" alt="Women in empowerment workshop">
-      <img src="tendercare4.jpg" alt="Outreach activities">
-      <img src="tendercare5.jpg" alt="Laptop donations to students">
-      <img src="tendercare6.jpg" alt="Community event with parents">
-      <img src="tendercare7.jpg" alt="Skill training session">
-      <img src="tendercare8.jpg" alt="Water or classroom renovation">
+      <img src="tendercare1.jpg" alt="Women Empowerment Program">
+      <img src="tendercare2.jpg" alt="Food Pack Distribution">
+      <img src="tendercare3.jpg" alt="Children Receiving Supplies">
+      <img src="tendercare4.jpg" alt="Charity Volunteers in Action">
+      <img src="tendercare5.jpg" alt="Laptop Donations to Students">
+      <img src="tendercare6.jpg" alt="Community Outreach with Parents">
+      <img src="tendercare7.jpg" alt="Aid Delivery to Remote Village">
+      <img src="tendercare8.jpg" alt="Renovated Classroom">
     </div>
 
-    <div class="donate-box">
-      <h3>Support Our Mission</h3>
-      <p>Your donation helps us provide education, healthcare, food and empowerment to those in need.</p>
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="business" value="adedayoniyi2@gmail.com" />
-        <input type="hidden" name="currency_code" value="GBP" />
-        <input type="hidden" name="item_name" value="Support TenderCare NG Charity" />
-        <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate with PayPal button" />
-        <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
-      </form>
-    </div>
+    <hr style="margin: 50px 0; border: none; border-top: 1px solid #ccc;">
 
-    <p><a href="index.html">← Back to Home</a></p>
+    <h2 style="color: #2e7d32;">Request Assistance</h2>
+    <p>If you or someone you know is in need of support, please fill out the form below and our team will get back to you.</p>
+
+    <form action="https://formspree.io/f/xwpbqngv" method="POST" style="max-width: 600px; margin-top: 20px;">
+      <input type="text" name="name" placeholder="Your Full Name" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+      <input type="email" name="email" placeholder="Your Email Address" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+      <input type="text" name="phone" placeholder="Phone Number (Optional)" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+
+      <select name="help_type" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+        <option value="">Type of Help Needed</option>
+        <option value="Food & Relief Pack">Food & Relief Pack</option>
+        <option value="School Support">School Support</option>
+        <option value="Health or Medical Help">Health or Medical Help</option>
+        <option value="Others">Other (explain below)</option>
+      </select><br>
+
+      <textarea name="message" rows="4" placeholder="Explain your situation..." required style="width: 100%; padding: 10px;"></textarea><br>
+      
+      <button type="submit" style="padding: 12px 20px; background: #2e7d32; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">Submit Request</button>
+    </form>
+
+    <p style="margin-top: 40px;"><a href="index.html">← Back to Home</a></p>
   </div>
 </body>
 </html>
