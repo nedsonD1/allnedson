@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TenderCare NG - Portfolio</title>
+  <title>TenderCare NG - Charity Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #fff3e0;
-      color: #e65100;
       margin: 0;
       padding: 0;
+      background: #fff3e0;
+      color: #4e342e;
     }
     header, footer {
       background: #000;
@@ -44,56 +44,89 @@
       color: white;
     }
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
     }
-    h1 {
-      color: #e65100;
+    h1, h2 {
+      color: #2e7d32;
     }
     ul {
       line-height: 1.8;
     }
-    .donate-section, .assist-section {
+    .donate-section, .request-section {
       background: #2e7d32;
       color: white;
-      padding: 30px;
-      margin-top: 40px;
-      border-radius: 10px;
+      padding: 30px 20px;
+      margin: 30px 0;
+      border-radius: 8px;
     }
-    .assist-section {
-      margin-top: 60px;
+    .donate-section h2, .request-section h2 {
+      color: white;
     }
-    .assist-section input,
-    .assist-section select,
-    .assist-section textarea {
-      width: 100%;
+    .donate-button {
+      background: white;
+      color: #2e7d32;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .bank-details {
+      margin-top: 20px;
+      background: #1b5e20;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .request-section form {
+      display: flex;
+      flex-direction: column;
+    }
+    .request-section label {
+      margin-top: 15px;
+    }
+    .request-section input, .request-section select, .request-section textarea, .request-section button {
       padding: 10px;
-      margin: 10px 0;
+      margin-top: 5px;
+      font-size: 16px;
       border-radius: 5px;
       border: none;
     }
-    .assist-section button {
-      background: #ff9800;
+    .request-section textarea {
+      height: 100px;
+    }
+    .request-section button {
+      background: orange;
       color: white;
       font-weight: bold;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
+      margin-top: 20px;
       cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      background: #000;
+      color: white;
+      padding: 20px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
     }
     .floating-donate {
       position: fixed;
-      top: 30%;
+      top: 80px;
       right: 20px;
-      background: #2e7d32;
+      background: #25D366;
       color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
+      padding: 12px 16px;
+      border-radius: 50px;
       font-weight: bold;
-      z-index: 1000;
       text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
     }
   </style>
 </head>
@@ -110,7 +143,7 @@
     </nav>
   </header>
 
-  <a class="floating-donate" href="#donate">Donate to TenderCare NG</a>
+  <a href="#donate" class="floating-donate">Donate to TenderCare NG</a>
 
   <div class="container">
     <h1>TenderCare NG (Nigeria)</h1>
@@ -123,36 +156,42 @@
       <li>Operate regular educational aid for orphaned and displaced youth</li>
     </ul>
 
-    <div class="donate-section" id="donate">
-      <h2>Support Our Mission</h2>
-      <p><strong>Donate via PayPal:</strong></p>
-      <form action="https://formspree.io/f/xwpbqngv" method="POST">
-        <button type="submit" style="padding: 10px 20px; background: white; color: #2e7d32; font-weight: bold; border: none; border-radius: 5px; cursor: pointer;">Donate with PayPal</button>
-      </form>
-      <br>
-      <p><strong>Bank Transfer (UK)</strong></p>
-      <p>Account Name: NEDSON INNOVATIONS LTD<br>
-      Account Number: 54850384<br>
-      Sort Code: 04-00-03</p>
+    <div id="donate" class="donate-section">
+      <h2>Donate to TenderCare NG</h2>
+      <a href="https://www.paypal.com/donate" class="donate-button" target="_blank">Donate via PayPal</a>
+      <div class="bank-details">
+        <p><strong>Bank Transfer:</strong></p>
+        <p>NEDSON INNOVATIONS LTD</p>
+        <p>Account Number: 54850384</p>
+        <p>Sort Code: 04-00-03</p>
+      </div>
     </div>
 
-    <div class="assist-section">
+    <div class="request-section">
       <h2>Request Assistance</h2>
-      <form action="https://formspree.io/f/xwpbqngv" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <select name="type">
-          <option value="Education">Education</option>
-          <option value="Healthcare">Healthcare</option>
-          <option value="Nutrition">Nutrition</option>
-          <option value="Business Support">Business Support</option>
+      <form action="https://formspree.io/f/xwkgybda" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="type">Type of Assistance:</label>
+        <select id="type" name="type" required>
+          <option value="">Select an option</option>
+          <option value="food">Food</option>
+          <option value="school">School Fees</option>
+          <option value="medical">Medical Aid</option>
+          <option value="housing">Housing</option>
+          <option value="other">Other</option>
         </select>
-        <textarea name="message" rows="5" placeholder="Describe your need" required></textarea>
+
+        <label for="message">Describe your situation:</label>
+        <textarea id="message" name="message" placeholder="Briefly describe your situation..." required></textarea>
+
         <button type="submit">Submit Request</button>
       </form>
     </div>
-
-    <p style="text-align: center; margin-top: 40px;"><a href="index.html">← Back to Home</a></p>
   </div>
 
   <footer>
