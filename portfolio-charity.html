@@ -2,142 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TenderCare NG Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - TenderCare NG</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff3e0;
-      color: #e65100;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer {
-      background: #000;
+    body { background: #fff3e0; font-family: Arial, sans-serif; color: #e65100; margin: 0; padding: 0; }
+    .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+    h1 { color: #e65100; }
+    ul { line-height: 1.8; }
+    a { color: #ff9800; font-weight: bold; text-decoration: none; }
+
+    .donate-section, .request-section {
+      background: #e65100;
       color: white;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    header img {
-      height: 60px;
-    }
-    nav a {
-      background: #ffa726;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 8px 14px;
-      margin: 4px;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background: #fb8c00;
-    }
-    .container {
-      max-width: 960px;
-      margin: auto;
       padding: 30px 20px;
+      margin: 40px auto;
+      border-radius: 8px;
     }
-    h1 {
-      color: #e65100;
-    }
-    ul {
-      line-height: 1.8;
-    }
-    a {
-      color: #ff9800;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 30px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
+    .donate-section h2, .request-section h2 {
+      margin-top: 0;
     }
     .donate-button {
-      position: fixed;
-      bottom: 60px;
-      right: 20px;
-      background: #e65100;
-      color: white;
-      padding: 12px 18px;
-      font-weight: bold;
-      border-radius: 6px;
-      text-decoration: none;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-    }
-    .assist-form {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 30px;
-    }
-    .assist-form h2 {
-      color: #d84315;
-    }
-    .assist-form input,
-    .assist-form select,
-    .assist-form textarea,
-    .assist-form button {
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-      border: 1px solid #ccc;
+      background-color: white;
+      color: #e65100;
+      padding: 12px 20px;
       border-radius: 5px;
-      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
     }
-    .assist-form button {
-      background: #e65100;
+    .request-form {
+      background: white;
+      color: #333;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .request-form input, .request-form select, .request-form textarea, .request-form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .request-form button {
+      background-color: #e65100;
       color: white;
       border: none;
       cursor: pointer;
     }
-    .assist-form button:hover {
-      background: #bf360c;
-    }
-    .bank-details {
-      background: #fff;
-      padding: 20px;
+    .images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       margin-top: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .bank-details h2 {
-      color: #d84315;
+    .images img {
+      width: 100%;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-left">
-      <a href="index.html"><img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo"></a>
-      <span>IT | Real Estate | Finance | Charity</span>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <a class="donate-button" href="#donate">Donate to TenderCare NG</a>
-
   <div class="container">
     <h1>TenderCare NG (Nigeria)</h1>
     <p>Community Impact Through Compassion and Service:</p>
@@ -149,49 +75,44 @@
       <li>Operate regular educational aid for orphaned and displaced youth</li>
     </ul>
 
-    <div class="gallery">
-      <img src="tendercare1.jpg" alt="Gallery 1">
-      <img src="tendercare2.jpg" alt="Gallery 2">
-      <img src="tendercare3.jpg" alt="Gallery 3">
-      <img src="tendercare4.jpg" alt="Gallery 4">
-      <img src="tendercare5.jpg" alt="Gallery 5">
-      <img src="tendercare6.jpg" alt="Gallery 6">
-      <img src="tendercare7.jpg" alt="Gallery 7">
-      <img src="tendercare8.jpg" alt="Gallery 8">
+    <div class="images">
+      <img src="tendercare1.jpg" alt="TenderCare Activity 1">
+      <img src="tendercare2.jpg" alt="TenderCare Activity 2">
+      <img src="tendercare3.jpg" alt="TenderCare Activity 3">
+      <img src="tendercare4.jpg" alt="TenderCare Activity 4">
+      <img src="tendercare5.jpg" alt="TenderCare Activity 5">
+      <img src="tendercare6.jpg" alt="TenderCare Activity 6">
+      <img src="tendercare7.jpg" alt="TenderCare Activity 7">
+      <img src="tendercare8.jpg" alt="TenderCare Activity 8">
     </div>
 
-    <div id="donate" class="bank-details">
+    <div class="donate-section">
       <h2>Donate to TenderCare NG</h2>
-      <p><strong>Bank Transfer (UK)</strong></p>
-      <p>Account Name: <strong>NEDSON INNOVATIONS LTD</strong><br>
-      Account Number: <strong>54850384</strong><br>
-      Sort Code: <strong>04-00-03</strong></p>
+      <a class="donate-button" href="https://www.paypal.com/donate" target="_blank">Donate via PayPal</a>
+      <p><strong>Bank Transfer Option:</strong></p>
+      <p>Account Name: NEDSON INNOVATIONS LTD<br>
+         Account Number: 54850384<br>
+         Sort Code: 04-00-03</p>
     </div>
 
-    <div class="assist-form">
+    <div class="request-section">
       <h2>Request for Assistance</h2>
-      <form action="https://formspree.io/f/xayrkjgr" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <select name="need" required>
-          <option value="">Select Area of Need</option>
-          <option value="education">Education Support</option>
-          <option value="food">Food Relief</option>
-          <option value="health">Medical Help</option>
-          <option value="training">Empowerment/Training</option>
-          <option value="other">Other</option>
+      <form action="https://formspree.io/f/mwkgygkr" method="POST" class="request-form">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <select name="type">
+          <option value="Education">Education Support</option>
+          <option value="Health">Health Aid</option>
+          <option value="Food">Food Supply</option>
+          <option value="Empowerment">Women Empowerment</option>
+          <option value="Other">Other</option>
         </select>
-        <textarea name="message" placeholder="Briefly describe your situation" rows="4" required></textarea>
+        <textarea name="message" placeholder="Briefly describe the assistance you need" rows="4" required></textarea>
         <button type="submit">Submit Request</button>
       </form>
     </div>
 
-    <p style="margin-top: 30px;"><a href="index.html">← Back to Home</a></p>
+    <p style="margin-top: 40px;"><a href="index.html">← Back to Home</a></p>
   </div>
-
-  <footer>
-    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
-    <p>&copy; 2025 GroupN. All rights reserved.</p>
-  </footer>
 </body>
 </html>
