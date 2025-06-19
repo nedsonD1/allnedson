@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to GroupN</title>
+  <meta charset="UTF-8">
+  <title>About Us - GroupN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background: #f4fdf5;
+      margin: 0;
+      padding: 0;
       color: #003300;
     }
-
     header, footer {
       background: #000;
       color: white;
@@ -21,126 +21,53 @@
       align-items: center;
       flex-wrap: wrap;
     }
-
     .header-left {
       display: flex;
       align-items: center;
       gap: 15px;
     }
-
     header img {
-      height: 50px;
+      height: 60px;
     }
-
     nav a {
       background: #a5d6a7;
       color: #003300;
       text-decoration: none;
       font-weight: bold;
-      padding: 8px 14px;
+      padding: 10px 15px;
       margin: 5px;
       border-radius: 5px;
       transition: 0.3s;
     }
-
     nav a:hover {
       background: #2e7d32;
       color: white;
     }
-
-    .hero {
-      position: relative;
-      background-image: url('homepage-banner.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 700px;
+    .content {
+      max-width: 900px;
       margin: auto;
-    }
-
-    .section {
       padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
     }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-
-    .feature {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .feature h3 {
-      margin: 15px 0 10px;
+    h1 {
       color: #2e7d32;
     }
-
-    .feature p {
-      font-size: 15px;
+    .highlight {
+      font-weight: bold;
+      color: #1b5e20;
     }
-
-    .testimonial {
-      background: #fff;
-      margin-top: 30px;
-      padding: 25px;
-      border-left: 5px solid #2e7d32;
-      font-style: italic;
-      font-size: 16px;
-    }
-
     footer {
       text-align: center;
-      background: #000;
-      color: white;
-      padding: 20px;
     }
-
     footer a {
       color: white;
       text-decoration: none;
     }
-
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 12px 16px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      z-index: 1000;
-    }
   </style>
 </head>
 <body>
-
   <header>
     <div class="header-left">
-      <a href="index.html">
-        <img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo">
-      </a>
+      <a href="index.html"><img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo"></a>
       <span>IT | Real Estate | Finance | Charity</span>
     </div>
     <nav>
@@ -150,48 +77,43 @@
     </nav>
   </header>
 
-  <div class="hero">
-    <h1>Welcome to GroupN</h1>
-    <p>Empowering Growth through IT, Property, Finance & Social Impact across the UK and Nigeria</p>
-  </div>
+  <img src="about-heading-banner.jpg" alt="GroupN Sectors Banner" style="width: 100%; max-height: 120px; object-fit: cover; display: block;">
 
-  <div class="section">
-    <h2 style="text-align: center;">Explore Our Brands</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>Nedson Innovations Ltd (UK)</h3>
-        <p>Leading IT consultancy and residential property letting in the United Kingdom.</p>
-        <a href="portfolio-it.html">Learn More</a>
-      </div>
-      <div class="feature">
-        <h3>Nedson Technologies (Nigeria)</h3>
-        <p>Full-service IT solutions provider: sales, support, training and consultancy.</p>
-        <a href="portfolio-tech.html">Learn More</a>
-      </div>
-      <div class="feature">
-        <h3>Nedson Properties & Finance (Nigeria)</h3>
-        <p>Trusted property solutions and investment opportunities with monthly ROI programs.</p>
-        <a href="portfolio-finance.html">Learn More</a>
-      </div>
-      <div class="feature">
-        <h3>TenderCare NG</h3>
-        <p>Non-profit committed to education, healthcare, empowerment and food relief in underserved communities.</p>
-        <a href="portfolio-charity.html">Learn More</a>
-      </div>
-    </div>
-  </div>
+  <div class="content">
+    <h1>About GroupN</h1>
+    <p><span class="highlight">GroupN</span> is not a single company but an umbrella identity representing a family of registered businesses owned and managed together. It brings structure and identity to the work we do across industries, locations, and sectors.</p>
 
-  <div class="section testimonial">
-    “Partnering with GroupN brought us structure across IT and finance — it's like having four expert teams in one.”
-    <br>— SME Client, Lagos & London
+    <h2>Our Purpose</h2>
+    <p>GroupN was born from the desire to simplify and unify different ventures in <span class="highlight">Information Technology</span>, <span class="highlight">Real Estate</span>, <span class="highlight">Finance</span>, and <span class="highlight">Charity</span>. Though these ventures operate independently, GroupN connects them with a shared vision of innovation, excellence, and impact.</p>
+
+    <h2>Our Brands</h2>
+    <ul>
+      <li><strong>Nedson Innovations Ltd (UK):</strong> IT Consultancy and Property Letting in the UK.</li>
+      <li><strong>Nedson Technologies (Nigeria):</strong> Tech solutions, training, and hardware sales in Nigeria.</li>
+      <li><strong>Nedson Properties & Finance Ltd (Nigeria):</strong> Real estate investments and financial services.</li>
+      <li><strong>TenderCare NG:</strong> Non-profit providing educational, nutritional, and empowerment support.</li>
+    </ul>
+
+    <h2>Our Journey</h2>
+    <ul style="list-style: none; padding-left: 0;">
+      <li><strong>2020:</strong> Started with IT services in the UK</li>
+      <li><strong>2021:</strong> Expanded into real estate letting and investment</li>
+      <li><strong>2022:</strong> Opened Nigerian tech and charity arms</li>
+      <li><strong>2024:</strong> Launched finance & ROI investment program</li>
+    </ul>
+
+    <h2>Our Values</h2>
+    <ul>
+      <li>💡 <strong>Integrity:</strong> In every business and partnership.</li>
+      <li>🤝 <strong>Service:</strong> Focused on people and community needs.</li>
+      <li>🏆 <strong>Excellence:</strong> Across all brands and operations.</li>
+      <li>📈 <strong>Growth:</strong> For clients, communities, and team members.</li>
+    </ul>
   </div>
 
   <footer>
     <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
     <p>&copy; 2025 GroupN. All rights reserved.</p>
   </footer>
-
-  <a href="https://wa.me/2348033456365" class="whatsapp" target="_blank">Chat with us 💬</a>
-
 </body>
 </html>
