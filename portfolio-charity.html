@@ -5,23 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - TenderCare NG</title>
   <style>
-    body { background: #fff3e0; font-family: Arial, sans-serif; color: #e65100; margin: 0; padding: 0; }
-    .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+    body {
+      background: #fff3e0;
+      font-family: Arial, sans-serif;
+      color: #e65100;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
     h1 { color: #e65100; }
     ul { line-height: 1.8; }
     a { color: #ff9800; font-weight: bold; text-decoration: none; }
+
     .donate-section, .assistance-section {
       padding: 30px;
       margin-top: 40px;
       border-radius: 8px;
     }
+
     .donate-section {
       background: #1b5e20;
       color: white;
     }
+
     .donate-section h2, .assistance-section h2 {
       margin-top: 0;
     }
+
     .donate-section button {
       background: white;
       color: #1b5e20;
@@ -32,24 +55,31 @@
       cursor: pointer;
       margin-bottom: 10px;
     }
+
     .donate-section button:hover {
       background: #c8e6c9;
     }
+
     .assistance-section {
       background: #e8f5e9;
       color: #004d40;
     }
+
     .assistance-section form {
       display: flex;
       flex-direction: column;
     }
-    .assistance-section input, .assistance-section select, .assistance-section textarea {
+
+    .assistance-section input,
+    .assistance-section select,
+    .assistance-section textarea {
       margin-bottom: 15px;
       padding: 10px;
       border-radius: 4px;
       border: 1px solid #ccc;
       font-size: 16px;
     }
+
     .assistance-section button {
       background: #ff9800;
       color: white;
@@ -59,21 +89,25 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 15px;
       margin-top: 40px;
     }
+
     .gallery img {
       width: 100%;
       border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .gallery img:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
+
     .sticky-donate-button {
       position: fixed;
       top: 100px;
@@ -86,12 +120,18 @@
       text-decoration: none;
       z-index: 999;
     }
+
     .sticky-donate-button:hover {
       background: #388e3c;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header banner -->
+  <img src="tendercare-banner.jpg" alt="TenderCare NG Banner" class="banner">
+
+  <!-- Sticky donate button -->
   <a href="#donate" class="sticky-donate-button">Donate to TenderCare NG</a>
 
   <div class="container">
@@ -120,9 +160,10 @@
       <h2>Support Our Work</h2>
       <button onclick="window.open('https://www.paypal.com/donate', '_blank')">Donate via PayPal</button>
       <p><strong>Donate to Bank Account:</strong><br>
-      NEDSON INNOVATIONS LTD<br>
-      Account Number: 54850384<br>
-      Sort Code: 04-00-03</p>
+        NEDSON INNOVATIONS LTD<br>
+        Account Number: 54850384<br>
+        Sort Code: 04-00-03
+      </p>
     </div>
 
     <div class="assistance-section">
