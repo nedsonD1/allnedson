@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="google-site-verification" content="BPcYApKUtPDX1gD1nSkmC4E2IITHrXSZ6utWuvlauQk" />
-  <title>GroupN - Company Overview</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GroupN - Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #e8f5e9; }
-
     header, footer {
       background: #000;
       color: white;
@@ -17,22 +16,18 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-
     .header-left {
       display: flex;
       align-items: center;
       gap: 20px;
     }
-
     header img {
       height: 60px;
     }
-
     .brand-subtitle {
       font-size: 18px;
       font-weight: bold;
     }
-
     .tabs {
       overflow: hidden;
       background: #c8e6c9;
@@ -42,113 +37,73 @@
       gap: 10px;
       padding: 10px;
     }
-
-    .tabs a, .tabs button {
+    .tabs a {
       background: #a5d6a7;
-      border: none;
-      outline: none;
       padding: 10px 18px;
-      cursor: pointer;
-      transition: background 0.3s;
-      font-weight: bold;
       text-decoration: none;
       color: #003300;
+      font-weight: bold;
       border-radius: 5px;
+      transition: background 0.3s;
     }
-
-    .tabs a:hover, .tabs button:hover, .tabs .active {
+    .tabs a:hover {
       background: #2e7d32;
       color: white;
     }
-
-    .tab-content {
-      display: none;
-      padding: 20px;
+    .hero {
       background: white;
+      text-align: center;
+      padding: 50px 20px;
     }
-
-    .tab-content.active {
-      display: block;
+    .hero h1 { font-size: 36px; color: #2e7d32; margin-bottom: 10px; }
+    .hero p { font-size: 18px; max-width: 700px; margin: 0 auto; }
+    .section {
+      padding: 40px 20px;
+      background: #ffffff;
+      text-align: center;
     }
-
+    .section h2 { color: #003300; margin-bottom: 10px; }
+    .section p { max-width: 800px; margin: 0 auto 30px; }
+    .section a {
+      display: inline-block;
+      padding: 10px 16px;
+      background-color: #25D366;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+    }
     footer {
       background: #000;
       color: white;
       text-align: center;
       padding: 20px;
     }
-
-    footer a, footer p {
-      color: white !important;
-      text-decoration: none;
-    }
-
-    .portfolio-button {
-      display: inline-block;
-      padding: 10px 16px;
-      margin-top: 10px;
-      background-color: #25D366;
+    footer a {
       color: white;
-      font-weight: bold;
       text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s;
     }
-
-    .portfolio-button:hover {
-      background-color: #1c9f52;
-    }
-
     @media (max-width: 768px) {
       header {
         flex-direction: column;
         align-items: flex-start;
         padding: 15px;
       }
-
       .header-left {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
       }
-
-      header img {
-        height: 50px;
-      }
-
-      .brand-subtitle {
-        font-size: 16px;
-        margin-top: 5px;
-      }
-
+      header img { height: 50px; }
       .tabs {
         flex-direction: column;
         align-items: center;
         gap: 8px;
       }
-
-      .tab-content {
-        padding: 15px;
-      }
-
-      footer {
-        padding: 15px;
-        text-align: center;
-      }
-
-      .portfolio-button {
-        width: 100%;
-        text-align: center;
-      }
-
-      input, textarea {
-        width: 100% !important;
-      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <div class="header-left">
       <a href="index.html">
@@ -161,67 +116,29 @@
   <div class="tabs">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <button class="tablink active" onclick="openTab(event, 'IT')">Nedson Innovations Ltd (UK)</button>
-    <button class="tablink" onclick="openTab(event, 'Tech')">Nedson Technologies (Nigeria)</button>
-    <button class="tablink" onclick="openTab(event, 'Finance')">Nedson Properties & Finance Ltd (Nigeria)</button>
-    <button class="tablink" onclick="openTab(event, 'Charity')">TenderCare NG (Nigeria)</button>
+    <a href="portfolio-it.html">Nedson Innovations Ltd (UK)</a>
+    <a href="portfolio-tech.html">Nedson Technologies (Nigeria)</a>
+    <a href="portfolio-finance.html">Nedson Properties & Finance Ltd</a>
+    <a href="portfolio-charity.html">TenderCare NG</a>
     <a href="contact.html">Contact</a>
   </div>
 
-  <div id="IT" class="tab-content active">
-    <h2>Nedson Innovations Ltd (UK)</h2>
-    <p>We lead UK-based operations in IT consultancy and real estate letting. Our offerings include:</p>
-    <ul>
-      <li>Cloud Infrastructure Solutions</li>
-      <li>Remote Support & IT Consulting</li>
-      <li>Managed IT Services</li>
-      <li>Residential Property Management</li>
-    </ul>
-    <p><a href="portfolio-it.html" class="portfolio-button">See Portfolio</a></p>
-  </div>
+  <section class="hero">
+    <h1>Welcome to GroupN</h1>
+    <p>GroupN is the collective home for our businesses in IT, Property, Finance, and Social Impact across the UK and Nigeria.</p>
+  </section>
 
-  <div id="Tech" class="tab-content">
-    <h2>Nedson Technologies (Nigeria)</h2>
-    <p>Based in Lagos, we serve as a full-service IT provider offering:</p>
-    <ul>
-      <li>IT Consulting & Training</li>
-      <li>Cloud & Cybersecurity Solutions</li>
-      <li>Hardware Sales & Support</li>
-      <li>Long-standing relationships with SMEs and enterprises</li>
-    </ul>
-    <p><a href="portfolio-tech.html" class="portfolio-button">See Portfolio</a></p>
-  </div>
-
-  <div id="Finance" class="tab-content">
-    <h2>Nedson Properties & Finance Ltd (Nigeria)</h2>
-    <p>We provide real estate services and investment opportunities including:</p>
-    <ul>
-      <li>Property Sales & Leasing</li>
-      <li>Investment Structuring</li>
-      <li>2.5% Monthly ROI Investment Program</li>
-      <li>Smart Portfolio Management</li>
-    </ul>
-    <p><a href="portfolio-finance.html" class="portfolio-button">See Portfolio</a></p>
-  </div>
-
-  <div id="Charity" class="tab-content">
-    <h2>TenderCare NG (Nigeria)</h2>
-    <p>A non-profit committed to helping underserved communities through:</p>
-    <ul>
-      <li>Education & Healthcare Initiatives</li>
-      <li>Nutrition Programs</li>
-      <li>Poverty Alleviation Projects</li>
-      <li>Grant Applications & Cross-sector Partnerships</li>
-    </ul>
-    <p><a href="portfolio-charity.html" class="portfolio-button">See Portfolio</a></p>
-  </div>
+  <section class="section">
+    <h2>Explore Our Group</h2>
+    <p>We operate several brands under GroupN — delivering excellence across industries and borders.</p>
+    <a href="about.html">Learn More About Us</a>
+  </section>
 
   <footer>
     <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
     <p>&copy; 2025 GroupN. All rights reserved.</p>
   </footer>
 
-  <!-- WhatsApp Chat Button -->
   <a
     href="https://wa.me/2348033456365"
     style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 12px 16px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 1000;"
@@ -229,22 +146,5 @@
   >
     Chat with us 💬
   </a>
-
-  <script>
-    function openTab(evt, tabId) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tab-content");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("active");
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-      }
-      document.getElementById(tabId).classList.add("active");
-      evt.currentTarget.classList.add("active");
-    }
-  </script>
-
 </body>
 </html>
