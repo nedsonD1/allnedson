@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio - TenderCare NG</title>
+  <title>TenderCare NG - Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background: #fff3e0;
       font-family: Arial, sans-serif;
+      background: #fff3e0;
       color: #e65100;
       margin: 0;
       padding: 0;
@@ -44,78 +44,56 @@
       color: white;
     }
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
       padding: 40px 20px;
     }
-    h1, h2 {
-      color: #bf360c;
+    h1 {
+      color: #e65100;
     }
     ul {
       line-height: 1.8;
     }
-    a {
-      color: #ff9800;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .images {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .images img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .donate-box, .request-box {
-      background: #fb8c00;
+    .donate-section, .assist-section {
+      background: #2e7d32;
       color: white;
-      padding: 25px;
+      padding: 30px;
+      margin-top: 40px;
       border-radius: 10px;
-      margin: 40px auto;
     }
-    .donate-box h2, .request-box h2 {
-      margin-top: 0;
+    .assist-section {
+      margin-top: 60px;
     }
-    .paypal-btn {
-      background: white;
-      color: #fb8c00;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      display: inline-block;
-      text-decoration: none;
-    }
-    form input, form select, form textarea, form button {
+    .assist-section input,
+    .assist-section select,
+    .assist-section textarea {
       width: 100%;
       padding: 10px;
-      margin-top: 10px;
+      margin: 10px 0;
       border-radius: 5px;
       border: none;
-      font-size: 16px;
     }
-    form button {
-      background: #1b5e20;
+    .assist-section button {
+      background: #ff9800;
       color: white;
       font-weight: bold;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
     }
-    .sticky-donate {
+    .floating-donate {
       position: fixed;
-      top: 100px;
+      top: 30%;
       right: 20px;
-      background: #fb8c00;
+      background: #2e7d32;
       color: white;
       padding: 12px 20px;
-      border-radius: 50px;
-      text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       z-index: 1000;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -132,7 +110,7 @@
     </nav>
   </header>
 
-  <a href="#donate" class="sticky-donate">Donate to TenderCare NG</a>
+  <a class="floating-donate" href="#donate">Donate to TenderCare NG</a>
 
   <div class="container">
     <h1>TenderCare NG (Nigeria)</h1>
@@ -145,44 +123,36 @@
       <li>Operate regular educational aid for orphaned and displaced youth</li>
     </ul>
 
-    <div class="images">
-      <img src="tendercare1.jpg" alt="TenderCare Activity 1">
-      <img src="tendercare2.jpg" alt="TenderCare Activity 2">
-      <img src="tendercare3.jpg" alt="TenderCare Activity 3">
-      <img src="tendercare4.jpg" alt="TenderCare Activity 4">
-      <img src="tendercare5.jpg" alt="TenderCare Activity 5">
-      <img src="tendercare6.jpg" alt="TenderCare Activity 6">
-      <img src="tendercare7.jpg" alt="TenderCare Activity 7">
-      <img src="tendercare8.jpg" alt="TenderCare Activity 8">
-    </div>
-
-    <div class="donate-box" id="donate">
-      <h2>Support TenderCare NG</h2>
-      <a href="https://www.paypal.com/donate" target="_blank" class="paypal-btn">Donate via PayPal</a>
-      <p><strong>Bank Transfer:</strong><br>
-      NEDSON INNOVATIONS LTD<br>
+    <div class="donate-section" id="donate">
+      <h2>Support Our Mission</h2>
+      <p><strong>Donate via PayPal:</strong></p>
+      <form action="https://formspree.io/f/xwpbqngv" method="POST">
+        <button type="submit" style="padding: 10px 20px; background: white; color: #2e7d32; font-weight: bold; border: none; border-radius: 5px; cursor: pointer;">Donate with PayPal</button>
+      </form>
+      <br>
+      <p><strong>Bank Transfer (UK)</strong></p>
+      <p>Account Name: NEDSON INNOVATIONS LTD<br>
       Account Number: 54850384<br>
-      Sort Code: 04-00-03 (Monzo)</p>
+      Sort Code: 04-00-03</p>
     </div>
 
-    <div class="request-box">
+    <div class="assist-section">
       <h2>Request Assistance</h2>
-      <form action="https://formspree.io/f/xnqeyewy" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <select name="type" required>
-          <option value="" disabled selected>Type of Assistance</option>
-          <option value="food">Food</option>
-          <option value="school">Education</option>
-          <option value="health">Healthcare</option>
-          <option value="other">Other</option>
+      <form action="https://formspree.io/f/xwpbqngv" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <select name="type">
+          <option value="Education">Education</option>
+          <option value="Healthcare">Healthcare</option>
+          <option value="Nutrition">Nutrition</option>
+          <option value="Business Support">Business Support</option>
         </select>
-        <textarea name="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
+        <textarea name="message" rows="5" placeholder="Describe your need" required></textarea>
         <button type="submit">Submit Request</button>
       </form>
     </div>
 
-    <p style="text-align:center; margin-top: 40px;"><a href="index.html">&larr; Back to Home</a></p>
+    <p style="text-align: center; margin-top: 40px;"><a href="index.html">← Back to Home</a></p>
   </div>
 
   <footer>
