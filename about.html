@@ -49,12 +49,23 @@
       font-weight: bold;
       color: #1b5e20;
     }
+    .brand-section img, .values-section img {
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
     footer {
       text-align: center;
     }
     footer a {
       color: white;
       text-decoration: none;
+    }
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
     }
   </style>
 </head>
@@ -71,6 +82,8 @@
     </nav>
   </header>
 
+  <img src="about-banner.jpg" alt="GroupN Overview Banner" class="banner">
+
   <div class="content">
     <h1>About GroupN</h1>
     <p><span class="highlight">GroupN</span> is not a single company but an umbrella identity representing a family of registered businesses owned and managed together. It brings structure and identity to the work we do across industries, locations, and sectors.</p>
@@ -79,19 +92,19 @@
     <p>GroupN was born from the desire to simplify and unify different ventures in <span class="highlight">Information Technology</span>, <span class="highlight">Real Estate</span>, <span class="highlight">Finance</span>, and <span class="highlight">Charity</span>. Though these ventures operate independently, GroupN connects them with a shared vision of innovation, excellence, and impact.</p>
 
     <h2>Our Brands</h2>
-    <ul>
-      <li><strong>Nedson Innovations Ltd (UK):</strong> IT Consultancy and Property Letting in the UK.</li>
-      <li><strong>Nedson Technologies (Nigeria):</strong> Tech solutions, training, and hardware sales in Nigeria.</li>
-      <li><strong>Nedson Properties & Finance Ltd (Nigeria):</strong> Real estate investments and financial services.</li>
-      <li><strong>TenderCare NG:</strong> Non-profit providing educational, nutritional, and empowerment support.</li>
+    <ul class="brand-section">
+      <li><img src="icon-it.png" alt="IT"> <strong>Nedson Innovations Ltd (UK):</strong> IT Consultancy and Property Letting in the UK.</li>
+      <li><img src="icon-tech.png" alt="Tech"> <strong>Nedson Technologies (Nigeria):</strong> Tech solutions, training, and hardware sales in Nigeria.</li>
+      <li><img src="icon-finance.png" alt="Finance"> <strong>Nedson Properties & Finance Ltd (Nigeria):</strong> Real estate investments and financial services.</li>
+      <li><img src="icon-charity.png" alt="Charity"> <strong>TenderCare NG:</strong> Non-profit providing educational, nutritional, and empowerment support.</li>
     </ul>
 
     <h2>Our Values</h2>
-    <ul>
-      <li><strong>Integrity:</strong> In every business and partnership.</li>
-      <li><strong>Service:</strong> Focused on people and community needs.</li>
-      <li><strong>Excellence:</strong> Across all brands and operations.</li>
-      <li><strong>Growth:</strong> For clients, communities, and team members.</li>
+    <ul class="values-section">
+      <li><img src="icon-integrity.png" alt="Integrity"> <strong>Integrity:</strong> In every business and partnership.</li>
+      <li><img src="icon-service.png" alt="Service"> <strong>Service:</strong> Focused on people and community needs.</li>
+      <li><img src="icon-excellence.png" alt="Excellence"> <strong>Excellence:</strong> Across all brands and operations.</li>
+      <li><img src="icon-growth.png" alt="Growth"> <strong>Growth:</strong> For clients, communities, and team members.</li>
     </ul>
   </div>
 
