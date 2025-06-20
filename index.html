@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Us - Nedson Innovations Ltd</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nedson Innovations Ltd</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #000;
-      color: #fff;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
     }
     header, footer {
       background: #111;
@@ -32,16 +31,26 @@
     nav a:hover {
       color: #00ff99;
     }
-    .content {
-      max-width: 900px;
-      margin: auto;
+    section {
       padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    h1, h2 {
+    h2 {
       color: #00ff99;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 5px;
     }
-    ul {
-      line-height: 1.7;
+    .faq, .book-now {
+      background-color: #111;
+      margin-top: 20px;
+      border-radius: 10px;
+      padding: 20px;
+      border: 1px solid #333;
+    }
+    .faq p {
+      margin: 10px 0;
     }
     footer p {
       font-size: 14px;
@@ -49,6 +58,34 @@
     }
     footer a {
       color: #00ff99;
+      text-decoration: none;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    input, textarea {
+      background: #222;
+      color: #fff;
+    }
+    button {
+      background-color: #00ff99;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
       text-decoration: none;
     }
   </style>
@@ -66,25 +103,47 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<div class="content">
-  <h1>Our Mission</h1>
-  <p>At <strong>Nedson Innovations Ltd</strong>, the goal is to make IT support simple, professional, and accessible. Every user matters, and every solution is handled with care and precision — whether it’s a small task or full system setup.</p>
+<section id="home">
+  <h2>Welcome</h2>
+  <p>Nedson Innovations Ltd provides professional IT support and consulting to help individuals and businesses stay productive and secure. From everyday system issues to full tech setup, everything is handled with care and precision.</p>
+</section>
 
-  <p>We help individuals and businesses stay productive and protected. The focus is on offering top-quality service in a way that’s flexible, clear, and easy to access — even remotely.</p>
-
-  <h2>Meet Our Lead Consultant</h2>
-  <p><strong>Adedayo Adeniyi</strong> is an experienced IT professional with years of hands-on support and consulting experience across different environments. He brings a strong passion for solving tech problems and supporting others through reliable, expert guidance.</p>
-
-  <p>His work includes day-to-day system support, remote troubleshooting, office setups, device repairs, and helping people make smart use of their technology. Whether it’s for a single laptop or a growing team — the focus stays the same: smart support, fast resolution, and lasting solutions.</p>
-
-  <h2>Why Clients Choose Us</h2>
+<section id="services">
+  <h2>Our Services</h2>
   <ul>
-    <li>⚙️ Remote-first, flexible IT support</li>
-    <li>🧠 Experienced, practical solutions</li>
-    <li>💬 Clear communication and fast service</li>
-    <li>📈 Real value with expert guidance</li>
+    <li>Laptop/Desktop Support (Windows & macOS)</li>
+    <li>Software Installation & Troubleshooting</li>
+    <li>Cloud Backup & Recovery Setup</li>
+    <li>Business Email, File Sharing & Workspace Setup</li>
+    <li>Network & WiFi Configuration</li>
+    <li>Antivirus, Encryption & Device Security</li>
+    <li>Ongoing IT Support & Monthly Plans</li>
   </ul>
-</div>
+</section>
+
+<section id="faq" class="faq">
+  <h2>FAQs</h2>
+  <p><strong>Q: Do you offer remote support?</strong><br>A: Yes, most services can be done remotely via secure tools.</p>
+  <p><strong>Q: What devices do you support?</strong><br>A: Windows laptops, desktops, and MacBooks.</p>
+  <p><strong>Q: How do I make payment?</strong><br>A: Details will be shared after booking confirmation. Payments can be made by transfer.</p>
+</section>
+
+<section id="book" class="book-now">
+  <h2>Book Now</h2>
+  <form action="https://formspree.io/f/xwpbqngv" method="POST">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required />
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="your@email.com" required />
+    <label for="service">Service Needed</label>
+    <input type="text" id="service" name="service" placeholder="e.g. Windows repair, Setup..." required />
+    <label for="message">Additional Message</label>
+    <textarea id="message" name="message" rows="4" placeholder="Describe the issue..."></textarea>
+    <button type="submit">Submit Booking Request</button>
+  </form>
+</section>
+
+<a href="https://wa.me/447405007810" class="whatsapp" title="Chat with us on WhatsApp">💬</a>
 
 <footer>
   <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
