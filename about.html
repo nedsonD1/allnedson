@@ -1,95 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - Nedson Innovations Ltd</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #000;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
+    body { font-family: Arial, sans-serif; background-color: #000; color: #fff; margin: 0; padding: 0; }
     header, footer {
       background: #111;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    nav {
-      background: #222;
-      padding: 15px;
-      text-align: center;
-    }
+    .header-left { display: flex; align-items: center; gap: 15px; }
+    header img { height: 50px; }
     nav a {
       color: #ccc;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      color: #00ff99;
-    }
-    .content {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    h1, h2 {
-      color: #00ff99;
-    }
-    ul {
-      line-height: 1.7;
-    }
-    footer p {
-      font-size: 14px;
-      color: #777;
-    }
-    footer a {
-      color: #00ff99;
-      text-decoration: none;
+    nav a:hover { color: #00ff99; }
+    .content { max-width: 900px; margin: auto; padding: 40px 20px; }
+    h1, h2 { color: #00ff99; }
+    @media (max-width: 768px) {
+      header, nav { flex-direction: column; text-align: center; }
+      .header-left { flex-direction: column; align-items: center; gap: 10px; }
+      nav a { display: inline-block; margin: 8px 6px; font-size: 15px; }
+      .content { padding: 20px; width: 90%; }
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="header-left">
+      <a href="index.html"><img src="groupn-logo-BOLD-XXL.png" alt="Nedson Logo"></a>
+      <span>IT | Real Estate | Finance | Charity</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Nedson Innovations Ltd</h1>
-  <p>Smart, Reliable IT Support – Wherever You Are</p>
-</header>
+  <div class="content">
+    <h1>About Nedson Innovations</h1>
+    <p>We are a tech-driven company that helps individuals and businesses stay productive, protected, and connected. Our team handles everything from fixing systems to setting up full IT solutions — all with a focus on simplicity and real value.</p>
+    <h2>Our Mission</h2>
+    <p>To make technology simple, effective, and accessible to everyone — wherever they are.</p>
+    <h2>What Makes Us Different</h2>
+    <ul>
+      <li>✅ Remote IT Support for fast fixes</li>
+      <li>✅ Windows & Mac help</li>
+      <li>✅ Easy setup and security</li>
+      <li>✅ Honest advice & ongoing support</li>
+    </ul>
+  </div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<div class="content">
-  <h1>Our Mission</h1>
-  <p>At <strong>Nedson Innovations Ltd</strong>, the goal is to make IT support simple, professional, and accessible. Every user matters, and every solution is handled with care and precision — whether it’s a small task or full system setup.</p>
-
-  <p>We help individuals and businesses stay productive and protected. The focus is on offering top-quality service in a way that’s flexible, clear, and easy to access — even remotely.</p>
-
-  <h2>Meet Our Lead Consultant</h2>
-  <p><strong>Adedayo Adeniyi</strong> is an experienced IT professional with years of hands-on support and consulting experience across different environments. He brings a strong passion for solving tech problems and supporting others through reliable, expert guidance.</p>
-
-  <p>His work includes day-to-day system support, remote troubleshooting, office setups, device repairs, and helping people make smart use of their technology. Whether it’s for a single laptop or a growing team — the focus stays the same: smart support, fast resolution, and lasting solutions.</p>
-
-  <h2>Why Clients Choose Us</h2>
-  <ul>
-    <li>⚙️ Remote-first, flexible IT support</li>
-    <li>🧠 Experienced, practical solutions</li>
-    <li>💬 Clear communication and fast service</li>
-    <li>📈 Real value with expert guidance</li>
-  </ul>
-</div>
-
-<footer>
-  <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
-  <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
+    <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
+  </footer>
 </body>
 </html>
