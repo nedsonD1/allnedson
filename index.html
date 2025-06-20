@@ -3,81 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nedson Innovations Ltd</title>
+  <title>Welcome - Nedson Innovations</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #000; color: #fff; }
     header, footer {
       background: #111;
-      padding: 20px 30px;
+      padding: 25px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
     }
     .header-left { display: flex; align-items: center; gap: 15px; }
-    .header-left img { height: 60px; }
+    .header-left img { height: 70px; }
     nav a {
       color: #ccc;
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
     }
     nav a:hover { color: #00ff99; }
     .hero {
+      background: #111;
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 80px 20px 60px;
     }
-    .hero h2 {
-      font-size: 32px;
+    .hero h1 {
+      font-size: 36px;
       color: #00ff99;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     .hero p {
-      max-width: 700px;
-      margin: auto;
       font-size: 18px;
+      color: #ccc;
+      max-width: 800px;
+      margin: 0 auto 30px;
       line-height: 1.6;
-      color: #ddd;
     }
     .hero .cta-button {
-      margin-top: 30px;
-      padding: 12px 25px;
       background: #00ff99;
       color: #000;
+      padding: 12px 25px;
       font-weight: bold;
-      border: none;
       border-radius: 5px;
-      cursor: pointer;
       text-decoration: none;
       display: inline-block;
+    }
+    .section-title {
+      text-align: center;
+      margin: 60px 20px 20px;
+      font-size: 24px;
+      color: #00ff99;
     }
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      padding: 50px 20px;
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
+      padding: 30px 20px;
     }
     .service-box {
       background: #111;
       border: 1px solid #333;
-      border-radius: 10px;
       padding: 20px;
-      transition: transform 0.3s;
+      border-radius: 10px;
+      transition: 0.3s;
     }
-    .service-box:hover { transform: translateY(-5px); }
+    .service-box:hover { transform: translateY(-5px); border-color: #00ff99; }
     .service-box h3 {
       color: #00ff99;
       margin-bottom: 10px;
     }
     .service-box p {
       color: #ccc;
-      font-size: 15px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      background: #111;
+      color: #777;
+    }
+    footer a { color: #00ff99; text-decoration: none; }
     .whatsapp {
       position: fixed;
       bottom: 20px;
@@ -90,73 +100,64 @@
       text-decoration: none;
       z-index: 1000;
     }
-    footer {
-      background: #111;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #777;
-    }
-    footer a { color: #00ff99; text-decoration: none; }
     @media (max-width: 768px) {
       header, nav { flex-direction: column; text-align: center; }
-      .header-left { flex-direction: column; align-items: center; gap: 10px; }
-      nav a { display: inline-block; margin: 8px 6px; font-size: 15px; }
+      .header-left { flex-direction: column; gap: 10px; }
+      .hero h1 { font-size: 28px; }
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="header-left">
+      <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <div class="header-left">
-    <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <section class="hero">
+    <h1>Need Help With Tech? We Got You.</h1>
+    <p>From remote IT support and laptop sourcing to setting up full tech for small businesses – Nedson Innovations helps you stay productive, secure, and stress-free. No big money needed. Just real solutions, done well.</p>
+    <a href="contact.html" class="cta-button">Request Support</a>
+  </section>
 
-<section class="hero">
-  <h2>Need Help With Tech? We Got You.</h2>
-  <p>Whether it's a slow laptop, a small business setup, or finding the best deals — Nedson Innovations is your go-to IT support partner. Remote, honest, and always ready to help.</p>
-  <a href="contact.html" class="cta-button">Request Support</a>
-</section>
+  <h2 class="section-title">Our Services</h2>
+  <section class="services">
+    <div class="service-box">
+      <h3>🔧 Remote Tech Support</h3>
+      <p>Fix slow PCs, blue screens, software issues, printer & email problems. We also train people on using their devices. Everything done remotely via WhatsApp or AnyDesk.</p>
+    </div>
+    <div class="service-box">
+      <h3>💻 Laptop Sourcing</h3>
+      <p>You tell us what you want. We find it. You pay when you confirm the option. No capital from you upfront. Just smart buying and good deals.</p>
+    </div>
+    <div class="service-box">
+      <h3>📦 Business Tech Setup</h3>
+      <p>For freelancers, shop owners, and tutors – we help with business email, cloud storage, WhatsApp Biz, and backup tools. Get things done right the first time.</p>
+    </div>
+    <div class="service-box">
+      <h3>💼 Monthly Support</h3>
+      <p>Need us to be your tech guy every month? We got you. Regular updates, protection and on-call support. One small fee, no stress.</p>
+    </div>
+    <div class="service-box">
+      <h3>📲 First-Timer Friendly</h3>
+      <p>Just starting or unsure? Ask questions freely. We even offer discounts for first sessions or referrals. Let us prove ourselves.</p>
+    </div>
+    <div class="service-box">
+      <h3>💡 All From Experience</h3>
+      <p>This business runs on trust, skills, and hands-on results – not big capital. You ask, we show up. That’s how we grow.</p>
+    </div>
+  </section>
 
-<section class="services">
-  <div class="service-box">
-    <h3>Remote Tech Support</h3>
-    <p>We fix Windows issues, install software, help with email/printing problems, and even train you on using your device — all from home. Easy and fast!</p>
-  </div>
-  <div class="service-box">
-    <h3>Laptop Deals (On Request)</h3>
-    <p>You tell us your budget, we find the best laptop deal — used or new. You pay once you're happy. No upfront buying. Honest sourcing, fair profits.</p>
-  </div>
-  <div class="service-box">
-    <h3>Small Business Tech Setup</h3>
-    <p>We set up emails, cloud backup, security tools, WhatsApp Business, and more. Perfect for shop owners, freelancers, or anyone growing their hustle.</p>
-  </div>
-  <div class="service-box">
-    <h3>Flexible Payment</h3>
-    <p>Simple charges: Pay per session, per setup, or monthly support. No pressure. First-timers may even get discounts or bonuses.</p>
-  </div>
-  <div class="service-box">
-    <h3>Trust and Testimonials</h3>
-    <p>Most of our new customers come from referrals. We offer real help, and people talk. That’s how we grow — by doing good work that spreads naturally.</p>
-  </div>
-  <div class="service-box">
-    <h3>Zero Capital, High Value</h3>
-    <p>We run this with knowledge, not big money. It's your trust and our skill that keeps this working. Let’s grow together.</p>
-  </div>
-</section>
+  <a href="https://wa.me/447405007810" class="whatsapp" title="Chat with us on WhatsApp">💬</a>
 
-<a href="https://wa.me/447405007810" class="whatsapp" title="Chat with us on WhatsApp">💬</a>
-
-<footer>
-  <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
-  <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
+    <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
+  </footer>
 </body>
 </html>
