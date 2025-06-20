@@ -31,7 +31,7 @@
       padding: 80px 20px 60px;
     }
     .hero h1 {
-      font-size: 36px;
+      font-size: 40px;
       color: #00ff99;
       margin-bottom: 15px;
     }
@@ -42,7 +42,7 @@
       margin: 0 auto 30px;
       line-height: 1.6;
     }
-    .hero .cta-button {
+    .cta-button {
       background: #00ff99;
       color: #000;
       padding: 12px 25px;
@@ -50,14 +50,15 @@
       border-radius: 5px;
       text-decoration: none;
       display: inline-block;
+      margin-top: 10px;
     }
     .section-title {
       text-align: center;
       margin: 60px 20px 20px;
-      font-size: 24px;
+      font-size: 28px;
       color: #00ff99;
     }
-    .services, .support-list {
+    .services, .support-list, .why-choose {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
@@ -65,24 +66,27 @@
       margin: 0 auto;
       padding: 30px 20px;
     }
-    .service-box, .support-box {
+    .service-box, .support-box, .why-box {
       background: #111;
       border: 1px solid #333;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 25px;
+      border-radius: 12px;
       transition: 0.3s;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
     }
-    .service-box:hover, .support-box:hover {
+    .service-box:hover, .support-box:hover, .why-box:hover {
       transform: translateY(-5px);
       border-color: #00ff99;
+      box-shadow: 0 5px 20px rgba(0, 255, 153, 0.1);
     }
-    .service-box h3, .support-box h4 {
+    .service-box h3, .support-box h4, .why-box h4 {
       color: #00ff99;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
-    .service-box p, .support-box p {
+    .service-box p, .support-box p, .why-box p {
       color: #ccc;
       line-height: 1.6;
+      font-size: 15px;
     }
     .floating-button {
       position: fixed;
@@ -138,30 +142,30 @@
   <section class="hero">
     <h1>Need Help With Tech? We Got You.</h1>
     <p>From onsite visits to remote fixes, business setup and ongoing support – Nedson Innovations keeps you productive, secure, and stress-free. It’s tech made simple.</p>
-    <a href="contact.html" class="cta-button">Learn More</a>
+    <a href="contact.html" class="cta-button">Get Started</a>
   </section>
 
   <h2 class="section-title">Our Services</h2>
   <section class="services">
     <div class="service-box">
-      <h3>🔧 Tech Support (Remote & Onsite)</h3>
-      <p>We fix slow PCs, blue screens, software issues, printer & email problems. At your location or remotely via WhatsApp or AnyDesk.</p>
+      <h3>🔧 Remote & Onsite Tech Support</h3>
+      <p>We fix slow computers, software issues, errors, printer and internet problems. At your home, office or remotely via WhatsApp or AnyDesk.</p>
     </div>
     <div class="service-box">
-      <h3>📦 Business Tech Setup</h3>
-      <p>We help small businesses set up professional email, cloud backup, security, WhatsApp Business, and more. Perfect for freelancers and shop owners.</p>
+      <h3>📦 Small Business Tech Setup</h3>
+      <p>Email setup, cloud storage, device security, WhatsApp Business, team access — all configured right from the start.</p>
     </div>
     <div class="service-box">
       <h3>💼 Monthly Support Plans</h3>
-      <p>Let us handle your IT needs every month – updates, maintenance, and quick help whenever you need it. Easy and reliable.</p>
+      <p>Flexible IT care for personal users or small businesses. We manage your tech, keep it secure, and respond fast when things go wrong.</p>
     </div>
     <div class="service-box">
-      <h3>🤝 First-Time Friendly</h3>
-      <p>We welcome first-timers with clear answers and support. You can even enjoy a discount or referral bonus for trying us out.</p>
+      <h3>🤝 First-Timer Friendly</h3>
+      <p>We break tech jargon into simple language and help beginners feel confident using their systems.</p>
     </div>
     <div class="service-box">
-      <h3>🧠 Real Experience, Not Big Capital</h3>
-      <p>This business runs on trust, skill, and real hands-on help. No hype, just good work that speaks for itself.</p>
+      <h3>🧠 Built on Trust</h3>
+      <p>No big ads. No empty promises. Just reliable service, good referrals, and customers who keep coming back.</p>
     </div>
   </section>
 
@@ -169,35 +173,55 @@
   <section class="support-list">
     <div class="support-box">
       <h4>🔧 Computer Troubleshooting</h4>
-      <p>Slow performance, system crashes, black or blue screen, startup issues, and more.</p>
+      <p>Slow systems, startup errors, blue/black screens, crashes.</p>
     </div>
     <div class="support-box">
       <h4>💽 Software Installation</h4>
-      <p>Microsoft Office, Zoom, antivirus, PDF tools, accounting apps, and others.</p>
+      <p>Office, Zoom, Antivirus, PDF editors, finance tools, etc.</p>
     </div>
     <div class="support-box">
-      <h4>🌐 Internet & Network</h4>
-      <p>WiFi setup, connection drops, router help, VPN configuration, and speed issues.</p>
+      <h4>🌐 Network & Internet</h4>
+      <p>Router setup, WiFi drops, VPN support, network speed fixes.</p>
     </div>
     <div class="support-box">
-      <h4>🖨️ Printer & Devices</h4>
-      <p>Printer setup, not printing, scanner issues, external drives not showing, webcam or display problems.</p>
+      <h4>🖨️ Printers & Devices</h4>
+      <p>Printer setup, scanners, external drives, monitors, webcams.</p>
     </div>
     <div class="support-box">
-      <h4>🛡️ Security & Protection</h4>
-      <p>Virus removal, firewall, device encryption, parental controls, and safe browsing tools.</p>
+      <h4>🛡️ Security</h4>
+      <p>Virus clean-up, firewall setup, parental control & safe browsing.</p>
     </div>
     <div class="support-box">
-      <h4>☁️ Cloud & Backup</h4>
-      <p>Google Drive, OneDrive, Dropbox, iCloud setup, file syncing, and data recovery.</p>
+      <h4>☁️ Backup & Cloud</h4>
+      <p>Google Drive, OneDrive, Dropbox, iCloud, recovery setup.</p>
     </div>
     <div class="support-box">
-      <h4>📧 Accounts & Emails</h4>
-      <p>Password recovery, email not syncing, login issues, and account security support.</p>
+      <h4>📧 Accounts & Email</h4>
+      <p>Password resets, login help, syncing, permissions & recovery.</p>
     </div>
     <div class="support-box">
       <h4>👨‍💻 Business Tools</h4>
-      <p>Professional email, file sharing, team tools, WhatsApp Business, and setup for small businesses.</p>
+      <p>Team access, file sharing, WhatsApp Business, shared cloud folders.</p>
+    </div>
+  </section>
+
+  <h2 class="section-title">Why Choose Nedson?</h2>
+  <section class="why-choose">
+    <div class="why-box">
+      <h4>🛠️ We Come to You</h4>
+      <p>Home visit? Business office? We’ll be there. Or we can fix things remotely.</p>
+    </div>
+    <div class="why-box">
+      <h4>💳 Pay As You Go</h4>
+      <p>No commitment required. Pay per job or join a monthly support plan.</p>
+    </div>
+    <div class="why-box">
+      <h4>🧑‍💼 Real Help, Not Robots</h4>
+      <p>You speak to a real tech who listens, explains, and solves your issue — with patience.</p>
+    </div>
+    <div class="why-box">
+      <h4>🙌 Trusted by Others</h4>
+      <p>Our best marketing is referrals. People recommend us because we deliver.</p>
     </div>
   </section>
 
