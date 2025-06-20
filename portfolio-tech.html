@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nedson Technologies (Nigeria)</title>
   <style>
-    body { background: #f3f4f6; font-family: Arial, sans-serif; margin: 0; padding: 0; color: #1b5e20; }
-    header, footer {
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #e8f5e9;
+      color: #004d40;
+    }
+    header {
       background: #000;
-      color: white;
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      color: white;
     }
     .header-left {
       display: flex;
@@ -37,29 +42,35 @@
       background: #2e7d32;
       color: white;
     }
-    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-    h2.button-title {
-      background: #1b5e20;
-      color: white;
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-top: 40px;
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
     }
-    .highlight-section {
+    h2 {
+      background: #a5d6a7;
+      color: #003300;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    .services-portfolio {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
-      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 40px;
     }
-    .highlight-section > div {
+    .section-box {
       flex: 1 1 45%;
+    }
+    ul {
+      padding-left: 20px;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 15px;
-      margin-top: 40px;
+      margin-top: 30px;
     }
     .gallery img {
       width: 100%;
@@ -70,28 +81,68 @@
       transform: scale(1.05);
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
-    .enquire-button {
-      position: fixed;
-      top: 150px;
-      right: 20px;
+    .form-box {
+      background: #f1f8e9;
+      padding: 30px;
+      border-radius: 8px;
+      margin-top: 50px;
+    }
+    .form-box label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-box input, .form-box textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .form-box button {
+      margin-top: 20px;
       background: #2e7d32;
       color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-box button:hover {
+      background: #1b5e20;
+    }
+    .whatsapp-float {
+      position: fixed;
+      top: 120px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      font-weight: bold;
       padding: 12px 16px;
       border-radius: 30px;
-      font-weight: bold;
       text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       z-index: 999;
-      box-shadow: 0 0 10px #66bb6a;
     }
-    .enquire-button:hover {
-      background: #388e3c;
+    .testimonials {
+      margin-top: 50px;
+    }
+    .testimonial {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #2e7d32;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="header-left">
-      <a href="index.html"><img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo"></a>
+      <a href="index.html"><img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo" /></a>
       <span>IT | Real Estate | Finance | Charity</span>
     </div>
     <nav>
@@ -101,72 +152,77 @@
     </nav>
   </header>
 
-  <a href="https://wa.me/2348033456365" class="enquire-button" target="_blank">📞 Enquire on WhatsApp</a>
+  <a href="https://wa.me/2348033456365" class="whatsapp-float" target="_blank">📞 Enquire on WhatsApp</a>
 
   <div class="container">
-    <div style="text-align: center; margin-bottom: 20px;">
-      <img src="nedsontech-logo.png" alt="Nedson Technologies Logo" style="height: 80px;">
-    </div>
+    <center><img src="nedson-tech-logo.png" alt="Nedson Technologies Logo" style="height: 80px;"></center>
 
-    <div class="highlight-section">
-      <div>
-        <h2 class="button-title">Our Services</h2>
+    <div class="services-portfolio">
+      <div class="section-box">
+        <h2>Our Services</h2>
         <ul>
-          <li>Structured IT training (children, youth, professionals)</li>
-          <li>Sales of computers, accessories, phones & gadgets</li>
-          <li>LAN and WiFi setup for offices, schools & homes</li>
-          <li>IT Consultancy for retail/POS businesses</li>
-          <li>Hardware and software support for SMEs</li>
+          <li>IT Support & Consultancy</li>
+          <li>LAN/WiFi Infrastructure Deployment</li>
+          <li>Computer & Phone Sales</li>
+          <li>Cybersecurity & Backup Solutions</li>
+          <li>Remote & On-site Support</li>
         </ul>
       </div>
-      <div>
-        <h2 class="button-title">Portfolio Highlights</h2>
+      <div class="section-box">
+        <h2>Portfolio Highlights</h2>
         <ul>
           <li>Implemented LAN and WiFi infrastructure for 3 commercial properties</li>
           <li>Provided structured computer training to over 50 clients in Lagos and Ibadan</li>
           <li>Supplied and configured over 200 refurbished laptops for SMEs and schools</li>
           <li>Delivered IT consultancy services for POS and retail businesses</li>
-          <li>Offered hardware and software support to startups in Lagos state ecosystem</li>
+          <li>Offered hardware/software support to Lagos startups</li>
         </ul>
       </div>
     </div>
 
-    <h2 class="button-title">Gallery</h2>
+    <h2>Gallery</h2>
     <div class="gallery">
-      <img src="NT1.jpg" alt="Training Session 1">
-      <img src="NT2.jpg" alt="Training Session 2">
-      <img src="NT3.jpg" alt="Laptop Supply">
-      <img src="NT4.jpg" alt="POS Support">
-      <img src="NT5.jpg" alt="Tech Support">
-      <img src="NT6.jpg" alt="Store Front">
-      <img src="NT7.jpg" alt="Staff on Site">
-      <img src="NT8.jpg" alt="Classroom Setup">
+      <img src="NT1.jpg" alt="Nedson Activity 1" />
+      <img src="NT2.jpg" alt="Nedson Activity 2" />
+      <img src="NT3.jpg" alt="Nedson Activity 3" />
+      <img src="NT4.jpg" alt="Nedson Activity 4" />
+      <img src="NT5.jpg" alt="Nedson Activity 5" />
+      <img src="NT6.jpg" alt="Nedson Activity 6" />
+      <img src="NT7.jpg" alt="Nedson Activity 7" />
+      <img src="NT8.jpg" alt="Nedson Activity 8" />
     </div>
 
-    <h2 class="button-title">Book an Engineer / Request IT Support</h2>
-    <form action="https://formspree.io/f/xwkgzznv" method="POST" style="margin-top: 20px;">
-      <label for="name">Full Name</label><br>
-      <input type="text" name="name" id="name" required style="width:100%; padding:10px; margin-bottom:10px;"><br>
+    <div class="form-box">
+      <h2>Book an Engineer / Request IT Support</h2>
+      <form action="https://formspree.io/f/xwkgzznv" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
 
-      <label for="email">Email Address</label><br>
-      <input type="email" name="email" id="email" required style="width:100%; padding:10px; margin-bottom:10px;"><br>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
 
-      <label for="message">Describe the IT Issue or Request</label><br>
-      <textarea name="message" id="message" rows="5" required style="width:100%; padding:10px;"></textarea><br>
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" required />
 
-      <button type="submit" style="padding: 10px 20px; background: #2e7d32; color: white; border: none; border-radius: 5px; font-weight: bold;">Submit Request</button>
-    </form>
+        <label for="location">Location (City/Area)</label>
+        <input type="text" id="location" name="location" required />
 
-    <h2 class="button-title">Testimonials</h2>
-    <blockquote style="margin-top: 20px; background: #e0f2f1; padding: 20px; border-left: 5px solid #1b5e20;">
-      "Nedson Technologies set up our office WiFi and trained our team in less than a week. Highly recommended!"<br>
-      — SME Business Owner, Lagos
-    </blockquote>
+        <label for="issue">Describe Your IT Issue or Support Needed</label>
+        <textarea id="issue" name="issue" rows="5" required></textarea>
+
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+
+    <div class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial">"Nedson Technologies helped set up our full office network with no downtime. Efficient and responsive!"</div>
+      <div class="testimonial">"We got 10 laptops at great prices for our school, all delivered ready to use. Excellent experience."</div>
+      <div class="testimonial">"I always contact them for any phone or laptop issue. Honest and reliable engineers."</div>
+    </div>
+
+    <p><a href="index.html">← Back to Home</a></p>
   </div>
 
-  <footer>
-    <p>Contact: <a href="mailto:info@nedsontechnologies.ng">info@nedsontechnologies.ng</a></p>
-    <p>&copy; 2025 Nedson Technologies. All rights reserved.</p>
-  </footer>
 </body>
 </html>
