@@ -2,21 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Nedson Innovations Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; background-color: #000; color: #fff; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #000; color: #fff; }
     header, footer {
       background: #111;
-      color: white;
-      padding: 15px 30px;
+      padding: 20px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
     }
-    .header-left { display: flex; align-items: center; gap: 15px; }
-    header img { height: 50px; }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .header-left img {
+      height: 60px;
+    }
     nav a {
       color: #ccc;
       margin: 0 10px;
@@ -24,46 +31,123 @@
       font-weight: bold;
     }
     nav a:hover { color: #00ff99; }
-    .content { max-width: 900px; margin: auto; padding: 40px 20px; }
-    h1, h2 { color: #00ff99; }
+    .social-icons img {
+      width: 24px;
+      margin: 0 5px;
+      filter: brightness(0) invert(1);
+    }
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    h2 { color: #00ff99; margin-bottom: 20px; }
+    p { margin-bottom: 20px; line-height: 1.7; color: #ccc; }
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .profile img {
+      width: 200px;
+      border-radius: 10px;
+      border: 2px solid #00ff99;
+    }
+    .profile-details { flex: 1; }
+    ul { padding-left: 20px; line-height: 1.8; }
+    ul li::marker { color: #00ff99; }
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-decoration: none;
+      z-index: 1000;
+    }
+    footer {
+      background: #111;
+      padding: 30px 20px;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+    footer a {
+      color: #00ff99;
+      text-decoration: none;
+    }
     @media (max-width: 768px) {
+      .profile { flex-direction: column; text-align: center; }
       header, nav { flex-direction: column; text-align: center; }
       .header-left { flex-direction: column; align-items: center; gap: 10px; }
-      nav a { display: inline-block; margin: 8px 6px; font-size: 15px; }
-      .content { padding: 20px; width: 90%; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-left">
-      <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
-      <span>IT | Real Estate | Finance | Charity</span>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <div class="content">
-    <h1>About Nedson Innovations</h1>
-    <p>We are a tech-driven company that helps individuals and businesses stay productive, protected, and connected. Our team handles everything from fixing systems to setting up full IT solutions — all with a focus on simplicity and real value.</p>
-    <h2>Our Mission</h2>
-    <p>To make technology simple, effective, and accessible to everyone — wherever they are.</p>
-    <h2>What Makes Us Different</h2>
-    <ul>
-      <li>✅ Remote IT Support for fast fixes</li>
-      <li>✅ Windows & Mac help</li>
-      <li>✅ Easy setup and security</li>
-      <li>✅ Honest advice & ongoing support</li>
-    </ul>
+<header>
+  <div class="header-left">
+    <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="social-icons">
+    <img src="facebook-icon.png" alt="Facebook">
+    <img src="instagram-icon.png" alt="Instagram">
+    <img src="tiktok-icon.png" alt="TikTok">
+  </div>
+</header>
+
+<div class="content">
+  <h2>Our Mission</h2>
+  <p>We aim to make IT support simple, modern, and available to anyone — no matter where they are. Our work helps people fix issues, stay connected, and keep their devices or systems in good health. </p>
+
+  <div class="profile">
+    <img src="placeholder-profile.jpg" alt="Adedayo Adeniyi">
+    <div class="profile-details">
+      <h2>Meet Our Lead Consultant</h2>
+      <p><strong>Adedayo Adeniyi</strong> leads Nedson Innovations Ltd with hands-on expertise, great attention to user needs, and years of experience in IT support and system consulting. He is passionate about simplifying tech and helping clients get the best from their devices and networks.</p>
+      <p>From daily support and repairs to strategic setups, Adedayo ensures everyone — from solo users to small teams — gets high-quality care.</p>
+    </div>
   </div>
 
-  <footer>
-    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
-    <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
-  </footer>
+  <h2>Why Clients Choose Us</h2>
+  <ul>
+    <li>⚙️ Remote-first, flexible IT support</li>
+    <li>🧠 Practical, hands-on tech expertise</li>
+    <li>💬 Friendly, clear communication</li>
+    <li>📈 Value-driven service with fast results</li>
+  </ul>
+
+  <a href="contact.html" class="cta-button">Request Support</a>
+</div>
+
+<a href="https://wa.me/447405007810" class="whatsapp" title="Chat with us on WhatsApp">💬</a>
+
+<footer>
+  <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
+  <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
