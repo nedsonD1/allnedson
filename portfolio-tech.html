@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nedson Technologies (Nigeria)</title>
   <style>
-    body { background: #e8f5e9; font-family: Arial, sans-serif; color: #004d40; margin: 0; padding: 0; }
+    body { background: #f5f5f5; font-family: Arial, sans-serif; color: #333; margin: 0; padding: 0; }
     header, footer {
       background: #000;
       color: white;
@@ -15,14 +15,8 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    header img {
-      height: 60px;
-    }
+    .header-left { display: flex; align-items: center; gap: 15px; }
+    header img { height: 60px; }
     nav a {
       background: #a5d6a7;
       color: #003300;
@@ -33,58 +27,66 @@
       border-radius: 5px;
       transition: 0.3s;
     }
-    nav a:hover {
-      background: #2e7d32;
-      color: white;
-    }
-    .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-    h1, h2 { color: #2e7d32; }
-    ul { line-height: 1.8; }
-    a { color: #1b5e20; font-weight: bold; text-decoration: none; }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 30px;
-    }
-    .gallery img {
+    nav a:hover { background: #2e7d32; color: white; }
+    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+    h1, h2 { color: #2e7d32; text-align: center; margin-bottom: 20px; }
+    h2 { border-bottom: 2px solid #c8e6c9; padding-bottom: 5px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 0; }
+    .grid img {
       width: 100%;
       border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.4s ease;
     }
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    .grid img:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .section {
+      margin: 60px 0;
+      animation: fadeIn 1s ease-in;
     }
-    .form-section {
-      background: #ffffff;
-      margin-top: 40px;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .services ul, .projects ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
     }
-    .form-section form {
-      display: flex;
-      flex-direction: column;
+    .services li::before, .projects li::before {
+      content: '✅';
+      margin-right: 10px;
+      color: green;
     }
-    .form-section input, .form-section textarea {
-      margin-bottom: 15px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    .form-section button {
-      background: #2e7d32;
+    .enquiry-button {
+      display: inline-block;
+      background: #25D366;
       color: white;
-      border: none;
-      padding: 12px;
+      padding: 10px 20px;
+      border-radius: 30px;
       font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
+      text-decoration: none;
+      margin: 20px auto;
+      display: block;
+      width: fit-content;
     }
-    .form-section button:hover {
-      background: #1b5e20;
+    .enquiry-button:hover { background: #1c9f52; }
+    .testimonial {
+      background: #fff;
+      padding: 20px;
+      border-left: 5px solid #2e7d32;
+      margin-top: 30px;
+      font-style: italic;
+    }
+    .calendar iframe {
+      border: none;
+      width: 100%;
+      height: 600px;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      background: #000;
+      color: white;
+      padding: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -103,50 +105,54 @@
 
   <div class="container">
     <h1>Nedson Technologies (Nigeria)</h1>
-    <p>Technology-driven solutions tailored for Nigerian SMEs, homes, and schools.</p>
 
-    <h2>Our Services</h2>
-    <ul>
-      <li>LAN and WiFi Infrastructure for homes and businesses</li>
-      <li>Refurbished Laptops and Accessories Supply</li>
-      <li>Point of Sale (POS) Setup & IT Support</li>
-      <li>Hardware & Software Repairs and Maintenance</li>
-      <li>Cloud Backup & Network Security Services</li>
-      <li>Home and Office IT Consultation</li>
-    </ul>
+    <section class="section services">
+      <h2>Our Core Services</h2>
+      <ul>
+        <li>Sales of refurbished laptops and accessories</li>
+        <li>Hardware and software troubleshooting</li>
+        <li>Networking (LAN/WiFi) setup and installation</li>
+        <li>Tech consulting for startups and small businesses</li>
+        <li>IT training and capacity building programs</li>
+      </ul>
+      <a href="https://wa.me/2348033456365" class="enquiry-button">📞 Enquire on WhatsApp</a>
+    </section>
 
-    <h2>Our Training Programs</h2>
-    <ul>
-      <li>Basic to Advanced Computer Literacy Training</li>
-      <li>Professional IT Skills: Networking, Repairs, POS Setup</li>
-      <li>Custom Training for Businesses & Institutions</li>
-    </ul>
-    <p><a href="https://wa.me/2348033456365" target="_blank">📞 Enquire on WhatsApp</a></p>
+    <section class="section projects">
+      <h2>Our Projects & Achievements</h2>
+      <ul>
+        <li>Implemented LAN and WiFi infrastructure for 3 commercial properties</li>
+        <li>Provided structured computer training to over 50 clients in Lagos and Ibadan</li>
+        <li>Supplied and configured over 200 refurbished laptops for SMEs and schools</li>
+        <li>Delivered IT consultancy services for POS and retail businesses</li>
+        <li>Offered hardware and software support to emerging startups in Lagos state ecosystem</li>
+      </ul>
+    </section>
 
-    <div class="gallery">
-      <img src="NT1.jpg" alt="Nedson Technologies Image 1">
-      <img src="NT2.jpg" alt="Nedson Technologies Image 2">
-      <img src="NT3.jpg" alt="Nedson Technologies Image 3">
-      <img src="NT4.jpg" alt="Nedson Technologies Image 4">
-      <img src="NT5.jpg" alt="Nedson Technologies Image 5">
-      <img src="NT6.jpg" alt="Nedson Technologies Image 6">
-      <img src="NT7.jpg" alt="Nedson Technologies Image 7">
-      <img src="NT8.jpg" alt="Nedson Technologies Image 8">
-    </div>
+    <section class="section gallery">
+      <h2>Gallery</h2>
+      <div class="grid">
+        <img src="NT1.jpg" alt="LAN and WiFi setup">
+        <img src="NT2.jpg" alt="Training session">
+        <img src="NT3.jpg" alt="Laptop sales">
+        <img src="NT4.jpg" alt="POS consultancy">
+        <img src="NT5.jpg" alt="Startup support">
+        <img src="NT6.jpg" alt="Store front">
+        <img src="NT7.jpg" alt="Technician at work">
+        <img src="NT8.jpg" alt="Team outdoors">
+      </div>
+    </section>
 
-    <div class="form-section">
+    <section class="section testimonial">
+      “We got everything we needed — laptops, networking, and after-sales support. Nedson Technologies was professional and reliable.”<br>
+      — Local Business Owner, Yaba, Lagos
+    </section>
+
+    <section class="section calendar">
       <h2>Book an Engineer / Request IT Support</h2>
-      <form action="https://formspree.io/f/xwkgyzkv" method="POST">
-        <input type="text" name="name" placeholder="Your Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <input type="text" name="address" placeholder="Your Location (City or Area)" required>
-        <textarea name="issue" rows="5" placeholder="Describe your IT issue or request" required></textarea>
-        <button type="submit">Submit Request</button>
-      </form>
-    </div>
-
-    <p><a href="index.html">← Back to Home</a></p>
+      <p>You can book an appointment below or <a href="contact.html">contact us directly</a>.</p>
+      <iframe src="https://calendly.com/yourcalendlylink/15min" title="Book with Nedson Technologies"></iframe>
+    </section>
   </div>
 
   <footer>
