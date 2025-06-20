@@ -2,23 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us - GroupN</title>
+  <title>Contact Us - Nedson Innovations Ltd</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000;
+      color: #fff;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background: #000;
-      color: white;
-      padding: 10px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: #111;
+      padding: 20px;
+      text-align: center;
     }
 
     header img {
@@ -29,14 +27,15 @@
       max-width: 600px;
       margin: 40px auto;
       padding: 20px;
-      background: white;
+      background: #111;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,255,153,0.2);
+      border: 1px solid #333;
     }
 
     h1 {
       text-align: center;
-      color: #2e7d32;
+      color: #00ff99;
     }
 
     form {
@@ -49,29 +48,34 @@
       padding: 12px;
       font-size: 16px;
       border-radius: 5px;
-      border: 1px solid #ccc;
+      border: none;
+    }
+
+    input, textarea {
+      background: #222;
+      color: #fff;
     }
 
     button {
-      background: #25D366;
-      color: white;
-      border: none;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
       cursor: pointer;
     }
 
     button:hover {
-      background: #1c9f52;
+      background: #00cc7a;
     }
 
     footer {
-      background: #000;
-      color: white;
+      background: #111;
+      color: #777;
       text-align: center;
       padding: 20px;
     }
 
     footer a {
-      color: white;
+      color: #00ff99;
       text-decoration: none;
     }
   </style>
@@ -80,23 +84,23 @@
 
   <header>
     <a href="index.html">
-      <img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo">
+      <img src="nedson-logo.png" alt="Nedson Innovations Ltd Logo">
     </a>
   </header>
 
   <div class="container">
-    <h1>Get in Touch</h1>
+    <h1>Contact Nedson Innovations</h1>
     <form action="https://formspree.io/f/xwpbqngv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <textarea name="message" placeholder="How can we help you?" required rows="5"></textarea>
       <button type="submit">Send Message</button>
     </form>
   </div>
 
   <footer>
     <p><a href="index.html">&larr; Back to Home</a></p>
-    <p>&copy; 2025 GroupN. All rights reserved.</p>
+    <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
   </footer>
 
 </body>
