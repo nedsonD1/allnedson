@@ -57,7 +57,7 @@
       font-size: 24px;
       color: #00ff99;
     }
-    .services {
+    .services, .support-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
@@ -65,19 +65,22 @@
       margin: 0 auto;
       padding: 30px 20px;
     }
-    .service-box {
+    .service-box, .support-box {
       background: #111;
       border: 1px solid #333;
       padding: 20px;
       border-radius: 10px;
       transition: 0.3s;
     }
-    .service-box:hover { transform: translateY(-5px); border-color: #00ff99; }
-    .service-box h3 {
+    .service-box:hover, .support-box:hover {
+      transform: translateY(-5px);
+      border-color: #00ff99;
+    }
+    .service-box h3, .support-box h4 {
       color: #00ff99;
       margin-bottom: 10px;
     }
-    .service-box p {
+    .service-box p, .support-box p {
       color: #ccc;
       line-height: 1.6;
     }
@@ -159,6 +162,42 @@
     <div class="service-box">
       <h3>🧠 Real Experience, Not Big Capital</h3>
       <p>This business runs on trust, skill, and real hands-on help. No hype, just good work that speaks for itself.</p>
+    </div>
+  </section>
+
+  <h2 class="section-title">What We Can Help You With</h2>
+  <section class="support-list">
+    <div class="support-box">
+      <h4>🔧 Computer Troubleshooting</h4>
+      <p>Slow performance, system crashes, black or blue screen, startup issues, and more.</p>
+    </div>
+    <div class="support-box">
+      <h4>💽 Software Installation</h4>
+      <p>Microsoft Office, Zoom, antivirus, PDF tools, accounting apps, and others.</p>
+    </div>
+    <div class="support-box">
+      <h4>🌐 Internet & Network</h4>
+      <p>WiFi setup, connection drops, router help, VPN configuration, and speed issues.</p>
+    </div>
+    <div class="support-box">
+      <h4>🖨️ Printer & Devices</h4>
+      <p>Printer setup, not printing, scanner issues, external drives not showing, webcam or display problems.</p>
+    </div>
+    <div class="support-box">
+      <h4>🛡️ Security & Protection</h4>
+      <p>Virus removal, firewall, device encryption, parental controls, and safe browsing tools.</p>
+    </div>
+    <div class="support-box">
+      <h4>☁️ Cloud & Backup</h4>
+      <p>Google Drive, OneDrive, Dropbox, iCloud setup, file syncing, and data recovery.</p>
+    </div>
+    <div class="support-box">
+      <h4>📧 Accounts & Emails</h4>
+      <p>Password recovery, email not syncing, login issues, and account security support.</p>
+    </div>
+    <div class="support-box">
+      <h4>👨‍💻 Business Tools</h4>
+      <p>Professional email, file sharing, team tools, WhatsApp Business, and setup for small businesses.</p>
     </div>
   </section>
 
