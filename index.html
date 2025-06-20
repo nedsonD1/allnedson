@@ -17,7 +17,7 @@
       flex-wrap: wrap;
     }
     .header-left { display: flex; align-items: center; gap: 15px; }
-    .header-left img { height: 70px; }
+    .header-left img { height: 90px; }
     nav a {
       color: #ccc;
       margin: 0 12px;
@@ -81,6 +81,31 @@
       color: #ccc;
       line-height: 1.6;
     }
+    .floating-button {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      z-index: 1000;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 1000;
+    }
     footer {
       text-align: center;
       padding: 25px 20px;
@@ -88,18 +113,6 @@
       color: #777;
     }
     footer a { color: #00ff99; text-decoration: none; }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 15px;
-      border-radius: 50%;
-      font-size: 24px;
-      text-decoration: none;
-      z-index: 1000;
-    }
     @media (max-width: 768px) {
       header, nav { flex-direction: column; text-align: center; }
       .header-left { flex-direction: column; gap: 10px; }
@@ -121,39 +134,36 @@
 
   <section class="hero">
     <h1>Need Help With Tech? We Got You.</h1>
-    <p>From remote IT support and laptop sourcing to setting up full tech for small businesses – Nedson Innovations helps you stay productive, secure, and stress-free. No big money needed. Just real solutions, done well.</p>
-    <a href="contact.html" class="cta-button">Request Support</a>
+    <p>From onsite visits to remote fixes, business setup and ongoing support – Nedson Innovations keeps you productive, secure, and stress-free. It’s tech made simple.</p>
+    <a href="contact.html" class="cta-button">Learn More</a>
   </section>
 
   <h2 class="section-title">Our Services</h2>
   <section class="services">
     <div class="service-box">
-      <h3>🔧 Remote Tech Support</h3>
-      <p>Fix slow PCs, blue screens, software issues, printer & email problems. We also train people on using their devices. Everything done remotely via WhatsApp or AnyDesk.</p>
-    </div>
-    <div class="service-box">
-      <h3>💻 Laptop Sourcing</h3>
-      <p>You tell us what you want. We find it. You pay when you confirm the option. No capital from you upfront. Just smart buying and good deals.</p>
+      <h3>🔧 Tech Support (Remote & Onsite)</h3>
+      <p>We fix slow PCs, blue screens, software issues, printer & email problems. At your location or remotely via WhatsApp or AnyDesk.</p>
     </div>
     <div class="service-box">
       <h3>📦 Business Tech Setup</h3>
-      <p>For freelancers, shop owners, and tutors – we help with business email, cloud storage, WhatsApp Biz, and backup tools. Get things done right the first time.</p>
+      <p>We help small businesses set up professional email, cloud backup, security, WhatsApp Business, and more. Perfect for freelancers and shop owners.</p>
     </div>
     <div class="service-box">
-      <h3>💼 Monthly Support</h3>
-      <p>Need us to be your tech guy every month? We got you. Regular updates, protection and on-call support. One small fee, no stress.</p>
+      <h3>💼 Monthly Support Plans</h3>
+      <p>Let us handle your IT needs every month – updates, maintenance, and quick help whenever you need it. Easy and reliable.</p>
     </div>
     <div class="service-box">
-      <h3>📲 First-Timer Friendly</h3>
-      <p>Just starting or unsure? Ask questions freely. We even offer discounts for first sessions or referrals. Let us prove ourselves.</p>
+      <h3>🤝 First-Time Friendly</h3>
+      <p>We welcome first-timers with clear answers and support. You can even enjoy a discount or referral bonus for trying us out.</p>
     </div>
     <div class="service-box">
-      <h3>💡 All From Experience</h3>
-      <p>This business runs on trust, skills, and hands-on results – not big capital. You ask, we show up. That’s how we grow.</p>
+      <h3>🧠 Real Experience, Not Big Capital</h3>
+      <p>This business runs on trust, skill, and real hands-on help. No hype, just good work that speaks for itself.</p>
     </div>
   </section>
 
-  <a href="https://wa.me/447405007810" class="whatsapp" title="Chat with us on WhatsApp">💬</a>
+  <a href="contact.html" class="floating-button">Request Support</a>
+  <a href="https://wa.me/447405007810" class="whatsapp" title="Chat on WhatsApp">Chat on WhatsApp</a>
 
   <footer>
     <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
