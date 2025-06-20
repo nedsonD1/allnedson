@@ -6,89 +6,75 @@
   <title>Nedson Innovations Ltd</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    header {
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
+    header, footer {
       background: #111;
-      padding: 30px 20px;
-      text-align: center;
-      animation: fadeInDown 1s ease-out;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    header img {
-      max-width: 150px;
-      margin-bottom: 10px;
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
-    header h1 {
-      font-size: 28px;
-      color: #00ff99;
-      margin-top: 10px;
-    }
-    nav {
-      margin-top: 15px;
+    .header-left img {
+      height: 60px;
     }
     nav a {
       color: #ccc;
+      margin: 0 10px;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
-      transition: color 0.3s;
     }
-    nav a:hover {
-      color: #00ff99;
+    nav a:hover { color: #00ff99; }
+    .social-icons img {
+      width: 24px;
+      margin: 0 5px;
+      filter: brightness(0) invert(1);
     }
-    .hero {
+    .content {
       text-align: center;
       padding: 60px 20px 30px;
-      animation: fadeIn 1.2s ease-out;
     }
-    .hero h2 {
-      font-size: 32px;
+    .content h2 {
       color: #00ff99;
+      font-size: 32px;
       margin-bottom: 20px;
     }
-    .hero p {
+    .content p {
       max-width: 700px;
       margin: auto;
       font-size: 18px;
       line-height: 1.6;
       color: #ddd;
     }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
-      animation: fadeInUp 1.5s ease-out;
+    .cta-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
     }
-    .service-box {
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 10px;
-      padding: 20px;
-      transition: transform 0.3s;
-    }
-    .service-box:hover {
-      transform: translateY(-5px);
-    }
-    .service-box h3 {
-      color: #00ff99;
-      margin-bottom: 10px;
-    }
-    .service-box p {
-      color: #ccc;
-      font-size: 15px;
-      line-height: 1.5;
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-decoration: none;
+      z-index: 1000;
     }
     footer {
       background: #111;
@@ -96,73 +82,44 @@
       text-align: center;
       font-size: 14px;
       color: #777;
-      animation: fadeIn 2s ease-out;
     }
     footer a {
       color: #00ff99;
       text-decoration: none;
     }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @media (max-width: 600px) {
-      header h1 { font-size: 22px; }
-      .hero h2 { font-size: 24px; }
+    @media (max-width: 768px) {
+      header, nav { flex-direction: column; text-align: center; }
+      .header-left { flex-direction: column; align-items: center; gap: 10px; }
+      nav a { display: inline-block; margin: 8px 6px; font-size: 15px; }
+      .content { padding: 20px; width: 90%; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="groupn-logo-BOLD-XXL.png" alt="Nedson Logo">
-  <h1>Nedson Innovations Ltd</h1>
+  <div class="header-left">
+    <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
+  </div>
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
+  <div class="social-icons">
+    <img src="facebook-icon.png" alt="Facebook">
+    <img src="instagram-icon.png" alt="Instagram">
+    <img src="tiktok-icon.png" alt="TikTok">
+  </div>
 </header>
 
-<section class="hero">
+<div class="content">
   <h2>Welcome to Nedson Innovations</h2>
   <p>Smart, reliable IT support — remote or on-site. We help individuals and businesses stay productive, protected, and connected. From system fixes to full tech setups, we keep it simple and efficient.</p>
-</section>
+  <a href="#book" class="cta-button">Request Support</a>
+</div>
 
-<section class="services">
-  <div class="service-box">
-    <h3>Remote & Onsite IT Support</h3>
-    <p>We resolve system issues, slow performance, and hardware errors quickly and efficiently.</p>
-  </div>
-  <div class="service-box">
-    <h3>Windows & Mac Support</h3>
-    <p>We set up, upgrade, and fix both Windows and macOS systems — safely and smoothly.</p>
-  </div>
-  <div class="service-box">
-    <h3>Cloud Backup & Recovery</h3>
-    <p>Protect your data with automated backup solutions and restore support if anything goes wrong.</p>
-  </div>
-  <div class="service-box">
-    <h3>Email & Workspace Setup</h3>
-    <p>Professional email, Google/Microsoft tools, file sharing, and more — fully configured for your team.</p>
-  </div>
-  <div class="service-box">
-    <h3>Network & WiFi Solutions</h3>
-    <p>From home WiFi to business LAN setups, we boost performance and improve connectivity.</p>
-  </div>
-  <div class="service-box">
-    <h3>Ongoing Monthly Support</h3>
-    <p>Need regular help? Choose a monthly plan and let us handle your IT, updates, and protection.</p>
-  </div>
-</section>
+<a href="https://wa.me/447405007810" class="whatsapp" title="Chat with us on WhatsApp">💬</a>
 
 <footer>
   <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
