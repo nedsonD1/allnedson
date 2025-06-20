@@ -1,29 +1,153 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio - Nedson Technologies (Nigeria)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nedson Technologies (Nigeria)</title>
   <style>
-    body { background: #fff8e1; font-family: Arial, sans-serif; color: #4e342e; margin: 0; padding: 0; }
+    body { background: #e8f5e9; font-family: Arial, sans-serif; color: #004d40; margin: 0; padding: 0; }
+    header, footer {
+      background: #000;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      background: #a5d6a7;
+      color: #003300;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #2e7d32;
+      color: white;
+    }
     .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-    h1 { color: #4e342e; }
+    h1, h2 { color: #2e7d32; }
     ul { line-height: 1.8; }
-    a { color: #25D366; font-weight: bold; text-decoration: none; }
+    a { color: #1b5e20; font-weight: bold; text-decoration: none; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .form-section {
+      background: #ffffff;
+      margin-top: 40px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-section input, .form-section textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .form-section button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .form-section button:hover {
+      background: #1b5e20;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <div class="header-left">
+      <a href="index.html"><img src="groupn-logo-BOLD-XXL.png" alt="GroupN Logo"></a>
+      <span>IT | Real Estate | Finance | Charity</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
   <div class="container">
     <h1>Nedson Technologies (Nigeria)</h1>
-    <p>Helping Nigerian Businesses Thrive with Technology:</p>
+    <p>Technology-driven solutions tailored for Nigerian SMEs, homes, and schools.</p>
+
+    <h2>Our Services</h2>
     <ul>
-      <li>Implemented LAN and WiFi infrastructure for 3 commercial properties</li>
-      <li>Provided structured computer training to over 50 clients in Lagos and Ibadan</li>
-      <li>Supplied and configured over 200 refurbished laptops for SMEs and schools</li>
-      <li>Delivered IT consultancy services for POS and retail businesses</li>
-      <li>Offered hardware and software support to emerging startups in Yaba Tech ecosystem</li>
+      <li>LAN and WiFi Infrastructure for homes and businesses</li>
+      <li>Refurbished Laptops and Accessories Supply</li>
+      <li>Point of Sale (POS) Setup & IT Support</li>
+      <li>Hardware & Software Repairs and Maintenance</li>
+      <li>Cloud Backup & Network Security Services</li>
+      <li>Home and Office IT Consultation</li>
     </ul>
+
+    <h2>Our Training Programs</h2>
+    <ul>
+      <li>Basic to Advanced Computer Literacy Training</li>
+      <li>Professional IT Skills: Networking, Repairs, POS Setup</li>
+      <li>Custom Training for Businesses & Institutions</li>
+    </ul>
+    <p><a href="https://wa.me/2348033456365" target="_blank">📞 Enquire on WhatsApp</a></p>
+
+    <div class="gallery">
+      <img src="nedson1.jpg" alt="Tech Setup">
+      <img src="nedson2.jpg" alt="Laptop Supply">
+      <img src="nedson3.jpg" alt="Staff Support">
+      <img src="nedson4.jpg" alt="Training Session">
+    </div>
+
+    <div class="form-section">
+      <h2>Book an Engineer / Request IT Support</h2>
+      <form action="https://formspree.io/f/xwkgyzkv" method="POST">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="text" name="address" placeholder="Your Location (City or Area)" required>
+        <textarea name="issue" rows="5" placeholder="Describe your IT issue or request" required></textarea>
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+
     <p><a href="index.html">← Back to Home</a></p>
   </div>
+
+  <footer>
+    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
+    <p>&copy; 2025 GroupN. All rights reserved.</p>
+  </footer>
 </body>
 </html>
