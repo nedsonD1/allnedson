@@ -1,72 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nedson Innovations Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
       background: #000;
       color: #fff;
+      overflow-x: hidden;
     }
-    header, footer {
+    header {
       background: #111;
-      color: white;
-      padding: 20px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
     }
     header img {
-      height: 50px;
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-size: 28px;
+      color: #00ff99;
+      margin-top: 10px;
+    }
+    nav {
+      margin-top: 15px;
     }
     nav a {
       color: #ccc;
-      margin: 0 10px;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
+      transition: color 0.3s;
     }
     nav a:hover {
       color: #00ff99;
     }
-
     .hero {
       text-align: center;
       padding: 60px 20px 30px;
+      animation: fadeIn 1.2s ease-out;
     }
-    .hero h1 {
+    .hero h2 {
       font-size: 32px;
       color: #00ff99;
+      margin-bottom: 20px;
     }
     .hero p {
-      font-size: 18px;
       max-width: 700px;
       margin: auto;
+      font-size: 18px;
       line-height: 1.6;
       color: #ddd;
     }
-
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      padding: 40px 20px;
-      max-width: 1000px;
+      padding: 50px 20px;
+      max-width: 1100px;
       margin: auto;
+      animation: fadeInUp 1.5s ease-out;
     }
     .service-box {
       background: #111;
       border: 1px solid #333;
       border-radius: 10px;
       padding: 20px;
+      transition: transform 0.3s;
+    }
+    .service-box:hover {
+      transform: translateY(-5px);
     }
     .service-box h3 {
       color: #00ff99;
@@ -77,84 +90,84 @@
       font-size: 15px;
       line-height: 1.5;
     }
-
     footer {
+      background: #111;
+      padding: 30px 20px;
       text-align: center;
       font-size: 14px;
       color: #777;
+      animation: fadeIn 2s ease-out;
     }
     footer a {
       color: #00ff99;
       text-decoration: none;
     }
-
-    @media (max-width: 768px) {
-      header, nav {
-        flex-direction: column;
-        text-align: center;
-      }
-      .header-left {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-      nav a {
-        margin: 8px 6px;
-        font-size: 15px;
-      }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 22px; }
+      .hero h2 { font-size: 24px; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="header-left">
-      <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo" /></a>
-      <span>IT | Real Estate | Finance | Charity</span>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<header>
+  <img src="groupn-logo-BOLD-XXL.png" alt="Nedson Logo">
+  <h1>Nedson Innovations Ltd</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h1>Welcome to Nedson Innovations Ltd</h1>
-    <p>We provide smart, remote-friendly IT support and digital solutions. From fixing systems to setting up your whole tech, we make sure you stay productive, protected, and stress-free.</p>
-  </section>
+<section class="hero">
+  <h2>Welcome to Nedson Innovations</h2>
+  <p>Smart, reliable IT support — remote or on-site. We help individuals and businesses stay productive, protected, and connected. From system fixes to full tech setups, we keep it simple and efficient.</p>
+</section>
 
-  <section class="services">
-    <div class="service-box">
-      <h3>IT Support & Troubleshooting</h3>
-      <p>Get fast help with slow laptops, freezing systems, or software errors. Remote and on-site available.</p>
-    </div>
-    <div class="service-box">
-      <h3>Windows & macOS Setup</h3>
-      <p>Fresh install, migration, or setup — we handle clean, secure installation and full configuration.</p>
-    </div>
-    <div class="service-box">
-      <h3>Cloud Backup & Security</h3>
-      <p>Protect your files with cloud-based backup, encryption, and recovery tools. Simple and safe.</p>
-    </div>
-    <div class="service-box">
-      <h3>Business Email & Collaboration</h3>
-      <p>Set up email, file sharing, Google or Microsoft workspace tools for your team or business.</p>
-    </div>
-    <div class="service-box">
-      <h3>Networking & Connectivity</h3>
-      <p>From home WiFi issues to office LAN setups — we’ll make sure your connection is strong and secure.</p>
-    </div>
-    <div class="service-box">
-      <h3>Monthly IT Support Plans</h3>
-      <p>Need ongoing support? Choose a flexible support plan that suits your tech needs monthly.</p>
-    </div>
-  </section>
+<section class="services">
+  <div class="service-box">
+    <h3>Remote & Onsite IT Support</h3>
+    <p>We resolve system issues, slow performance, and hardware errors quickly and efficiently.</p>
+  </div>
+  <div class="service-box">
+    <h3>Windows & Mac Support</h3>
+    <p>We set up, upgrade, and fix both Windows and macOS systems — safely and smoothly.</p>
+  </div>
+  <div class="service-box">
+    <h3>Cloud Backup & Recovery</h3>
+    <p>Protect your data with automated backup solutions and restore support if anything goes wrong.</p>
+  </div>
+  <div class="service-box">
+    <h3>Email & Workspace Setup</h3>
+    <p>Professional email, Google/Microsoft tools, file sharing, and more — fully configured for your team.</p>
+  </div>
+  <div class="service-box">
+    <h3>Network & WiFi Solutions</h3>
+    <p>From home WiFi to business LAN setups, we boost performance and improve connectivity.</p>
+  </div>
+  <div class="service-box">
+    <h3>Ongoing Monthly Support</h3>
+    <p>Need regular help? Choose a monthly plan and let us handle your IT, updates, and protection.</p>
+  </div>
+</section>
 
-  <footer>
-    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
-    <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
+  <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
