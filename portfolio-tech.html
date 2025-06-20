@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nedson Technologies (Nigeria)</title>
   <style>
-    body { background: #f4fdf5; font-family: Arial, sans-serif; color: #003300; margin: 0; padding: 0; }
+    body { background: #f3f4f6; font-family: Arial, sans-serif; margin: 0; padding: 0; color: #1b5e20; }
     header, footer {
       background: #000;
       color: white;
@@ -37,26 +37,29 @@
       background: #2e7d32;
       color: white;
     }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    .section-title {
-      background: #a5d6a7;
+    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+    h2.button-title {
+      background: #1b5e20;
+      color: white;
       display: inline-block;
       padding: 10px 20px;
-      font-weight: bold;
-      font-size: 20px;
       border-radius: 5px;
-      margin-bottom: 20px;
+      margin-top: 40px;
     }
-    ul { line-height: 1.8; }
+    .highlight-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .highlight-section > div {
+      flex: 1 1 45%;
+    }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 15px;
-      margin-top: 20px;
+      margin-top: 40px;
     }
     .gallery img {
       width: 100%;
@@ -67,56 +70,21 @@
       transform: scale(1.05);
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
-    .whatsapp-sticky {
+    .enquire-button {
       position: fixed;
       top: 150px;
       right: 20px;
-      background: #25D366;
+      background: #2e7d32;
       color: white;
-      font-weight: bold;
       padding: 12px 16px;
       border-radius: 30px;
+      font-weight: bold;
       text-decoration: none;
       z-index: 999;
       box-shadow: 0 0 10px #66bb6a;
-      animation: glow 1.5s infinite alternate;
     }
-    .whatsapp-sticky:hover {
-      background: #1c9f52;
-    }
-    @keyframes glow {
-      from { box-shadow: 0 0 5px #66bb6a; }
-      to { box-shadow: 0 0 20px #66bb6a; }
-    }
-    form {
-      margin-top: 30px;
-      background: #e8f5e9;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-    form button {
-      background: #2e7d32;
-      color: white;
-      font-weight: bold;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .testimonial {
-      background: #fff;
-      padding: 20px;
-      margin-top: 40px;
-      border-left: 5px solid #2e7d32;
-      font-style: italic;
+    .enquire-button:hover {
+      background: #388e3c;
     }
   </style>
 </head>
@@ -133,60 +101,72 @@
     </nav>
   </header>
 
-  <a href="https://wa.me/2348033456365" class="whatsapp-sticky" target="_blank">📞 Enquire on WhatsApp</a>
+  <a href="https://wa.me/2348033456365" class="enquire-button" target="_blank">📞 Enquire on WhatsApp</a>
 
   <div class="container">
-    <div style="text-align:center; margin-bottom: 20px;">
+    <div style="text-align: center; margin-bottom: 20px;">
       <img src="nedsontech-logo.png" alt="Nedson Technologies Logo" style="height: 80px;">
     </div>
 
-    <div class="section-title">Our Services</div>
-    <ul>
-      <li>LAN and WiFi Infrastructure Deployment</li>
-      <li>Computer Training (Private and Group)</li>
-      <li>Refurbished Laptop Sales & Configuration</li>
-      <li>POS System & Retail IT Consulting</li>
-      <li>Hardware & Software Support</li>
-    </ul>
+    <div class="highlight-section">
+      <div>
+        <h2 class="button-title">Our Services</h2>
+        <ul>
+          <li>Structured IT training (children, youth, professionals)</li>
+          <li>Sales of computers, accessories, phones & gadgets</li>
+          <li>LAN and WiFi setup for offices, schools & homes</li>
+          <li>IT Consultancy for retail/POS businesses</li>
+          <li>Hardware and software support for SMEs</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="button-title">Portfolio Highlights</h2>
+        <ul>
+          <li>Implemented LAN and WiFi infrastructure for 3 commercial properties</li>
+          <li>Provided structured computer training to over 50 clients in Lagos and Ibadan</li>
+          <li>Supplied and configured over 200 refurbished laptops for SMEs and schools</li>
+          <li>Delivered IT consultancy services for POS and retail businesses</li>
+          <li>Offered hardware and software support to startups in Lagos state ecosystem</li>
+        </ul>
+      </div>
+    </div>
 
-    <div class="section-title">Book an Engineer / Request IT Support</div>
-    <form action="https://formspree.io/f/xwkgzznv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="issue" rows="5" placeholder="Describe your issue..." required></textarea>
-      <button type="submit">Submit Request</button>
+    <h2 class="button-title">Gallery</h2>
+    <div class="gallery">
+      <img src="NT1.jpg" alt="Training Session 1">
+      <img src="NT2.jpg" alt="Training Session 2">
+      <img src="NT3.jpg" alt="Laptop Supply">
+      <img src="NT4.jpg" alt="POS Support">
+      <img src="NT5.jpg" alt="Tech Support">
+      <img src="NT6.jpg" alt="Store Front">
+      <img src="NT7.jpg" alt="Staff on Site">
+      <img src="NT8.jpg" alt="Classroom Setup">
+    </div>
+
+    <h2 class="button-title">Book an Engineer / Request IT Support</h2>
+    <form action="https://formspree.io/f/xwkgzznv" method="POST" style="margin-top: 20px;">
+      <label for="name">Full Name</label><br>
+      <input type="text" name="name" id="name" required style="width:100%; padding:10px; margin-bottom:10px;"><br>
+
+      <label for="email">Email Address</label><br>
+      <input type="email" name="email" id="email" required style="width:100%; padding:10px; margin-bottom:10px;"><br>
+
+      <label for="message">Describe the IT Issue or Request</label><br>
+      <textarea name="message" id="message" rows="5" required style="width:100%; padding:10px;"></textarea><br>
+
+      <button type="submit" style="padding: 10px 20px; background: #2e7d32; color: white; border: none; border-radius: 5px; font-weight: bold;">Submit Request</button>
     </form>
 
-    <div class="section-title">Portfolio Highlights</div>
-    <ul>
-      <li>Implemented LAN and WiFi infrastructure for 3 commercial properties</li>
-      <li>Provided structured computer training to over 50 clients in Lagos and Ibadan</li>
-      <li>Supplied and configured over 200 refurbished laptops for SMEs and schools</li>
-      <li>Delivered IT consultancy services for POS and retail businesses</li>
-      <li>Offered hardware and software support to startups in Lagos State</li>
-    </ul>
-
-    <div class="section-title">Gallery</div>
-    <div class="gallery">
-      <img src="NT1.jpg" alt="Nedson Technologies Activity 1">
-      <img src="NT2.jpg" alt="Nedson Technologies Activity 2">
-      <img src="NT3.jpg" alt="Nedson Technologies Activity 3">
-      <img src="NT4.jpg" alt="Nedson Technologies Activity 4">
-      <img src="NT5.jpg" alt="Nedson Technologies Activity 5">
-      <img src="NT6.jpg" alt="Nedson Technologies Activity 6">
-      <img src="NT7.jpg" alt="Nedson Technologies Activity 7">
-      <img src="NT8.jpg" alt="Nedson Technologies Activity 8">
-    </div>
-
-    <div class="testimonial">
-      “Nedson Technologies transformed our IT setup. Their training, hardware support, and network solutions are world-class.”<br>
-      — Business Owner, Lagos
-    </div>
+    <h2 class="button-title">Testimonials</h2>
+    <blockquote style="margin-top: 20px; background: #e0f2f1; padding: 20px; border-left: 5px solid #1b5e20;">
+      "Nedson Technologies set up our office WiFi and trained our team in less than a week. Highly recommended!"<br>
+      — SME Business Owner, Lagos
+    </blockquote>
   </div>
 
   <footer>
-    <p style="text-align: center;">Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a></p>
-    <p style="text-align: center;">&copy; 2025 Nedson Technologies. All rights reserved.</p>
+    <p>Contact: <a href="mailto:info@nedsontechnologies.ng">info@nedsontechnologies.ng</a></p>
+    <p>&copy; 2025 Nedson Technologies. All rights reserved.</p>
   </footer>
 </body>
 </html>
