@@ -8,24 +8,33 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #000;
-      color: #fff;
       margin: 0;
       padding: 0;
+      color: #fff;
     }
     header, footer {
       background: #111;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    header img {
+      height: 50px;
     }
     nav {
-      background: #222;
-      padding: 15px;
       text-align: center;
     }
     nav a {
       color: #ccc;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -38,7 +47,6 @@
       padding: 20px;
       background: #111;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,255,153,0.2);
       border: 1px solid #333;
     }
     h1 {
@@ -67,7 +75,10 @@
       cursor: pointer;
     }
     button:hover {
-      background: #00cc7a;
+      background: #00cc77;
+    }
+    footer {
+      text-align: center;
     }
     footer p {
       font-size: 14px;
@@ -82,22 +93,23 @@
 <body>
 
 <header>
-  <h1>Nedson Innovations Ltd</h1>
-  <p>Smart, Reliable IT Support – Wherever You Are</p>
+  <div class="header-left">
+    <a href="index.html"><img src="groupn-logo-BOLD-XXL.png" alt="Nedson Logo"></a>
+    <span>IT | Real Estate | Finance | Charity</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
 <div class="container">
-  <h1>Contact Us</h1>
+  <h1>Get in Touch</h1>
   <form action="https://formspree.io/f/xwpbqngv" method="POST">
-    <input type="text" name="name" placeholder="Your Full Name" required>
-    <input type="email" name="email" placeholder="Your Email Address" required>
-    <textarea name="message" placeholder="How can we help you?" required rows="5"></textarea>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
     <button type="submit">Send Message</button>
   </form>
 </div>
