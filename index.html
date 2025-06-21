@@ -72,7 +72,7 @@
       color: white;
       background: transparent;
       border-radius: 5px;
-      border: 1px solid white;
+      border: 1px solid #fff;
       transition: all 0.3s ease;
     }
 
@@ -213,7 +213,6 @@
       padding: 25px 20px;
       background: #111;
       color: #777;
-      font-weight: normal;
     }
 
     footer a {
@@ -226,42 +225,21 @@
       .hero-overlay {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        background-color: transparent;
-        padding: 20px 20px;
+        gap: 15px;
       }
 
       .hero-nav {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
         margin-left: 0;
-        gap: 10px;
       }
 
       .hero-nav a {
-        font-size: 14px;
-        padding: 8px 12px;
-        font-weight: bold;
+        width: 100%;
         text-align: center;
-        border: 1px solid #fff;
       }
 
       .logo {
-        height: 60px;
-      }
-
-      .hero-content {
-        margin-top: 120px;
-      }
-
-      .hero-content h1 {
-        font-size: 26px;
-      }
-
-      .hero-content p {
-        font-size: 16px;
-        line-height: 1.6;
+        height: 70px;
       }
     }
   </style>
@@ -269,14 +247,14 @@
 <body>
 
 <section class="hero-video">
-  <video autoplay muted loop playsinline>
+  <video muted autoplay loop playsinline>
     <source src="nedson-hero.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
   <div class="hero-overlay">
     <img src="nedson-logo.png" alt="Nedson Logo" class="logo" />
     <div class="hero-nav">
-      <a href="/">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
