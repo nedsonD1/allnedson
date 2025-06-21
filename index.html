@@ -1,36 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nedson Innovations Ltd</title>
-  <meta name="description" content="Nedson Innovations Ltd offers expert IT support, tech setup, and training services for individuals and businesses, both remotely and onsite." />
-  <link rel="icon" href="nedson-favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* All your styles remain unchanged */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #fff;
     }
-    /* ... rest of your CSS ... */
+    .hero-video {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-video video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.5);
+      animation: slowZoom 60s infinite linear;
+    }
+    @keyframes slowZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+      gap: 10px;
+      flex-wrap: nowrap;
+    }
+    .hero-overlay img {
+      height: 160px;
+      margin-right: 20px;
+    }
+    .hero-nav {
+      display: flex;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .hero-nav a {
+      padding: 10px 16px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+    .hero-nav a:hover {
+      background: #fff;
+      color: #000;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      max-width: 800px;
+    }
+    .hero-content h1 {
+      font-size: 42px;
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .hero-content p {
+      font-size: 20px;
+      color: #fff;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+    .cta-button {
+      background: transparent;
+      color: #fff;
+      padding: 12px 25px;
+      font-weight: bold;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s, color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      background-color: #000;
+      color: #fff;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #333;
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #fff;
+    }
+    .card h3 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: #ccc;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      z-index: 1000;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+    .floating-button:hover {
+      background: #fff;
+      color: #000;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      z-index: 1000;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+    .whatsapp:hover {
+      background: #fff;
+      color: #000;
+    }
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      background: #111;
+      color: #777;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .hero-overlay {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-nav {
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 <body>
 
 <section class="hero-video">
-  <video autoplay muted loop playsinline aria-label="Background video showing technology visuals">
+  <video autoplay muted loop playsinline>
     <source src="nedson-hero.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
   <div class="hero-overlay">
-    <a href="index.html" aria-label="Go to home page"><img src="nedson-logo.png" alt="Nedson Logo"></a>
-    <div class="hero-nav" role="navigation" aria-label="Main navigation">
-      <a href="index.html" aria-label="Home page">Home</a>
-      <a href="about.html" aria-label="About Nedson">About</a>
-      <a href="contact.html" aria-label="Contact Nedson">Contact</a>
+    <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
+    <div class="hero-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
   <div class="hero-content">
@@ -38,7 +228,7 @@
     <p>Tech Support You Can Count On<br>
     From everyday issues to complex setups, we deliver expert IT solutions with care and precision, ensuring your devices and systems run smoothly, every time.<br>
     Whether you’re an individual or a business, our remote and onsite services are designed to keep your tech stress-free and fully optimised.</p>
-    <a href="contact.html" class="cta-button" aria-label="Get support from Nedson">Get Support</a>
+    <a href="contact.html" class="cta-button">Get Support</a>
   </div>
 </section>
 
@@ -94,8 +284,8 @@
   </div>
 </section>
 
-<a href="contact.html" class="floating-button" aria-label="Request tech support">Request Support</a>
-<a href="https://wa.me/447405007810" class="whatsapp" aria-label="Chat with Nedson on WhatsApp">Chat on WhatsApp</a>
+<a href="contact.html" class="floating-button">Request Support</a>
+<a href="https://wa.me/447405007810" class="whatsapp">Chat on WhatsApp</a>
 
 <footer>
   <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
