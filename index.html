@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nedson Innovations Ltd</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -45,20 +45,19 @@
       padding: 20px 30px;
       background: transparent;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
       z-index: 999;
       gap: 10px;
-      flex-wrap: nowrap;
     }
     .hero-overlay img {
       height: 160px;
-      margin-right: 20px;
     }
     .hero-nav {
       display: flex;
       gap: 10px;
-      flex-shrink: 0;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .hero-nav a {
       padding: 10px 16px;
@@ -78,7 +77,6 @@
       z-index: 1;
       padding: 20px;
       max-width: 800px;
-      margin-top: 160px;
     }
     .hero-content h1 {
       font-size: 42px;
@@ -198,15 +196,6 @@
     footer a {
       color: #fff;
       text-decoration: none;
-    }
-    @media (max-width: 768px) {
-      .hero-overlay {
-        flex-direction: column;
-        align-items: center;
-      }
-      .hero-nav {
-        justify-content: center;
-      }
     }
   </style>
 </head>
