@@ -64,7 +64,7 @@
       text-decoration: none;
       color: #fff;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s, color 0.3s;
     }
     .hero-nav a:hover {
       background: #fff;
@@ -90,13 +90,19 @@
       font-weight: 500;
     }
     .cta-button {
-      background-color: #fff;
-      color: #000;
+      background: transparent;
+      color: #fff;
       padding: 12px 25px;
       font-weight: bold;
+      border: 1px solid #fff;
       border-radius: 5px;
       text-decoration: none;
       display: inline-block;
+      transition: background 0.3s, color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #fff;
+      color: #000;
     }
     .section {
       padding: 60px 20px;
@@ -150,19 +156,15 @@
       border-radius: 30px;
       text-decoration: none;
       z-index: 1000;
+      padding: 12px 20px;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: background 0.3s, color 0.3s;
     }
-    .floating-button {
-      bottom: 90px;
+    .floating-button:hover, .whatsapp:hover {
       background: #fff;
       color: #000;
-      padding: 12px 20px;
-    }
-    .whatsapp {
-      bottom: 20px;
-      background: #fff;
-      color: #000;
-      padding: 12px 20px;
-      font-size: 14px;
     }
     footer {
       text-align: center;
@@ -171,7 +173,7 @@
       color: #777;
     }
     footer a {
-      color: #00ff99;
+      color: #fff;
       text-decoration: none;
     }
     @media (max-width: 768px) {
