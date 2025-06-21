@@ -63,9 +63,13 @@
       margin-bottom: 15px;
     }
 
-    .section-text p {
+    .section-text p, .section-text ul {
       font-size: 16px;
       line-height: 1.7;
+    }
+
+    .section-text ul {
+      padding-left: 20px;
     }
 
     .section-img {
@@ -90,14 +94,6 @@
       color: white;
     }
 
-    footer {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-
     .floating-button {
       position: fixed;
       bottom: 20px;
@@ -120,6 +116,14 @@
       border-color: #fff;
     }
 
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
@@ -130,40 +134,31 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    /* ✅ Mobile view fix for About page */
     @media (max-width: 768px) {
-      .header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        padding: 20px;
-        background-color: transparent;
-      }
-
-      .header img {
-        height: 60px;
-      }
-
-      .nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-      }
-
-      .nav a {
-        font-size: 14px;
-        padding: 8px 12px;
-      }
-
       .section {
         flex-direction: column;
         text-align: center;
+        padding: 40px 20px;
       }
 
       .section-img, .section-text {
         max-width: 90%;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav a {
+        width: fit-content;
       }
     }
   </style>
