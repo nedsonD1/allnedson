@@ -1,1 +1,277 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nedson Innovations Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    .hero-video {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-video video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.5);
+      animation: slowZoom 60s infinite linear;
+    }
+    @keyframes slowZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+    .hero-nav {
+      display: flex;
+      gap: 12px;
+    }
+    .hero-nav a {
+      padding: 10px 16px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+    .hero-nav a:hover {
+      background: #fff;
+      color: #000;
+    }
+    .hero-logo img {
+      height: 100px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      max-width: 800px;
+      animation: slideInUp 1s ease forwards;
+    }
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hero-content h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .hero-content p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+    .cta-button {
+      background: transparent;
+      color: #fff;
+      padding: 12px 25px;
+      font-weight: bold;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      background-color: #000;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #333;
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #fff;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: #ccc;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .floating-button, .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      z-index: 1000;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+    .floating-button {
+      right: 20px;
+    }
+    .whatsapp {
+      left: 20px;
+    }
+    .floating-button:hover, .whatsapp:hover {
+      background: #fff;
+      color: #000;
+    }
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      background: #111;
+      color: #aaa;
+      cursor: pointer;
+    }
+    footer.collapsed {
+      height: 50px;
+      overflow: hidden;
+    }
+    @media (max-width: 768px) {
+      .hero-overlay {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 15px;
+      }
+      .hero-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="nedson-hero.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="hero-overlay">
+      <div class="hero-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hero-logo">
+        <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1>Welcome to Nedson Innovations</h1>
+      <p>Tech Support You Can Count On<br>
+      From everyday issues to complex setups, we deliver expert IT solutions with care and precision, ensuring your devices and systems run smoothly, every time.<br>
+      Whether you’re an individual or a business, our remote and onsite services are designed to keep your tech stress-free and fully optimised.</p>
+      <a href="contact.html" class="cta-button">Get Support</a>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2>What We Do</h2>
+    <div class="content-grid">
+      <div class="card"><h3>🔧 Tech Support</h3><p>Fixing system errors, slow PCs, blue screen, printer problems, missing files, and daily tech headaches. Done at your home or remotely.</p></div>
+      <div class="card"><h3>📦 Business Setup</h3><p>Email addresses, Google Drive, Dropbox, WhatsApp Business, antivirus, and secure file sharing — set up right the first time.</p></div>
+      <div class="card"><h3>🛡️ Security & Backup</h3><p>Cloud backup setup, virus removal, firewall and encryption for your laptop or business computers.</p></div>
+      <div class="card"><h3>💼 Monthly Support</h3><p>Ongoing IT support, software help, and system health check for peace of mind — just like having your own IT guy.</p></div>
+      <div class="card"><h3>📧 Email & Accounts</h3><p>Password resets, email sync issues, login problems — sorted out quickly and explained simply.</p></div>
+      <div class="card"><h3>👨‍💻 Training & Guidance</h3><p>We teach you or your team how to use tools, avoid mistakes, and stay confident with your tech.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <h2>Why Choose Nedson?</h2>
+    <div class="content-grid">
+      <div class="card"><h3>🏠 We Come to You</h3><p>We offer both onsite and remote sessions — we meet you where it’s most convenient.</p></div>
+      <div class="card"><h3>🤝 First-Timer Friendly</h3><p>No tech jargon, just real help in plain language. Great for first-time users and referrals.</p></div>
+      <div class="card"><h3>🧠 Built on Trust</h3><p>We don’t advertise much. Our business grows through people who love our service and tell others.</p></div>
+      <div class="card"><h3>💬 Always Reachable</h3><p>We respond fast. Via WhatsApp, email or direct call — you’ll get support when you need it.</p></div>
+    </div>
+  </section>
+
+  <a href="contact.html" class="floating-button">Request Support</a>
+  <a href="https://wa.me/447405007810" class="whatsapp">Chat on WhatsApp</a>
+
+  <footer id="main-footer">
+    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
+    <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.section').forEach(section => observer.observe(section));
+
+    // Footer toggle on click
+    document.getElementById('main-footer').addEventListener('click', function () {
+      this.classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>
