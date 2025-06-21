@@ -4,18 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nedson Innovations Ltd</title>
-  <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #fff;
     }
+
     .hero-video {
       position: relative;
       width: 100%;
@@ -26,6 +23,7 @@
       justify-content: center;
       text-align: center;
     }
+
     .hero-video video {
       position: absolute;
       top: 0;
@@ -37,83 +35,74 @@
       filter: brightness(0.5);
       animation: slowZoom 60s infinite linear;
     }
+
     @keyframes slowZoom {
       0% { transform: scale(1); }
       100% { transform: scale(1.1); }
     }
+
     .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(4px);
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      padding: 15px 20px;
+      padding: 20px 40px;
       display: flex;
       align-items: center;
-      z-index: 100;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      z-index: 2;
+      justify-content: flex-start;
+      gap: 30px;
     }
+
     .logo {
-      height: 70px;
+      height: 100px;
     }
+
     .hero-nav {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      align-items: center;
+      gap: 20px;
+      margin-left: 60px;
     }
+
     .hero-nav a {
-      padding: 8px 16px;
-      font-size: 15px;
+      padding: 10px 18px;
+      font-size: 16px;
       font-weight: bold;
       text-decoration: none;
       color: white;
       background: transparent;
       border-radius: 5px;
-      border: 1px solid transparent;
+      border: 1px solid #fff; /* Outline added as requested */
       transition: all 0.3s ease;
-      white-space: nowrap;
     }
-    .hero-nav a:hover,
-    .hero-nav a.active {
+
+    .hero-nav a:hover {
       background: #fff;
       color: #000;
     }
+
     .hero-content {
       position: relative;
       z-index: 1;
       padding: 20px;
-      max-width: 90%;
+      max-width: 800px;
     }
-    .hero-content h1,
-    .hero-content p,
-    .hero-content a {
-      opacity: 0;
-      animation: fadeUp 1s ease forwards;
-    }
-    .hero-content h1 { animation-delay: 0.2s; }
-    .hero-content p { animation-delay: 0.4s; }
-    .hero-content a { animation-delay: 0.6s; }
-    @keyframes fadeUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+
     .hero-content h1 {
-      font-size: 32px;
+      font-size: 42px;
       color: #fff;
       margin-bottom: 20px;
       font-weight: bold;
     }
+
     .hero-content p {
-      font-size: 18px;
+      font-size: 20px;
       color: #fff;
-      line-height: 1.7;
+      line-height: 1.6;
       margin-bottom: 30px;
       font-weight: 500;
     }
+
     .cta-button {
       background: transparent;
       color: #fff;
@@ -124,10 +113,12 @@
       text-decoration: none;
       transition: background 0.3s, color 0.3s;
     }
+
     .cta-button:hover {
       background: #fff;
       color: #000;
     }
+
     .section {
       padding: 60px 20px;
       max-width: 1100px;
@@ -136,20 +127,24 @@
       transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
+
     .section.visible {
       opacity: 1;
       transform: translateY(0);
     }
+
     .section h2 {
       text-align: center;
-      font-size: 26px;
+      font-size: 28px;
       margin-bottom: 30px;
     }
+
     .content-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
+
     .card {
       background-color: #111;
       border-radius: 12px;
@@ -157,22 +152,26 @@
       border: 1px solid #333;
       transition: 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-5px);
       border-color: #fff;
     }
+
     .card h3 {
       margin-bottom: 10px;
     }
+
     .card p {
       color: #ccc;
       font-size: 15px;
       line-height: 1.6;
     }
-    .floating-button,
-    .whatsapp {
+
+    .floating-button {
       position: fixed;
       bottom: 20px;
+      right: 20px;
       padding: 12px 20px;
       font-weight: bold;
       border-radius: 30px;
@@ -183,32 +182,63 @@
       color: #fff;
       transition: background 0.3s, color 0.3s;
     }
-    .floating-button { right: 20px; }
-    .whatsapp { left: 20px; }
-    .floating-button:hover,
+
+    .floating-button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      z-index: 1000;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+
     .whatsapp:hover {
       background: #fff;
       color: #000;
     }
+
     footer {
       text-align: center;
       padding: 25px 20px;
       background: #111;
       color: #777;
     }
+
     footer a {
       color: #fff;
       text-decoration: none;
     }
-    @media (max-width: 480px) {
-      .hero-content h1 {
-        font-size: 26px;
+
+    @media (max-width: 768px) {
+      .hero-overlay {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
       }
-      .hero-content p {
-        font-size: 16px;
+
+      .hero-nav {
+        flex-direction: column;
+        margin-left: 0;
       }
+
+      .hero-nav a {
+        width: 100%;
+        text-align: center;
+      }
+
       .logo {
-        height: 60px;
+        height: 70px;
       }
     }
   </style>
@@ -223,7 +253,7 @@
   <div class="hero-overlay">
     <img src="nedson-logo.png" alt="Nedson Logo" class="logo" />
     <div class="hero-nav">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -241,22 +271,52 @@
 <section class="section" id="services">
   <h2>What We Do</h2>
   <div class="content-grid">
-    <div class="card"><h3>🔧 Tech Support</h3><p>Fixing system errors, slow PCs, blue screen, printer problems, missing files, and daily tech headaches. Done at your home or remotely.</p></div>
-    <div class="card"><h3>📦 Business Setup</h3><p>Email addresses, Google Drive, Dropbox, WhatsApp Business, antivirus, and secure file sharing — set up right the first time.</p></div>
-    <div class="card"><h3>🛡️ Security & Backup</h3><p>Cloud backup setup, virus removal, firewall and encryption for your laptop or business computers.</p></div>
-    <div class="card"><h3>💼 Monthly Support</h3><p>Ongoing IT support, software help, and system health check for peace of mind — just like having your own IT guy.</p></div>
-    <div class="card"><h3>📧 Email & Accounts</h3><p>Password resets, email sync issues, login problems — sorted out quickly and explained simply.</p></div>
-    <div class="card"><h3>👨‍💻 Training & Guidance</h3><p>We teach you or your team how to use tools, avoid mistakes, and stay confident with your tech.</p></div>
+    <div class="card">
+      <h3>🔧 Tech Support</h3>
+      <p>Fixing system errors, slow PCs, blue screen, printer problems, missing files, and daily tech headaches. Done at your home or remotely.</p>
+    </div>
+    <div class="card">
+      <h3>📦 Business Setup</h3>
+      <p>Email addresses, Google Drive, Dropbox, WhatsApp Business, antivirus, and secure file sharing — set up right the first time.</p>
+    </div>
+    <div class="card">
+      <h3>🛡️ Security & Backup</h3>
+      <p>Cloud backup setup, virus removal, firewall and encryption for your laptop or business computers.</p>
+    </div>
+    <div class="card">
+      <h3>💼 Monthly Support</h3>
+      <p>Ongoing IT support, software help, and system health check for peace of mind — just like having your own IT guy.</p>
+    </div>
+    <div class="card">
+      <h3>📧 Email & Accounts</h3>
+      <p>Password resets, email sync issues, login problems — sorted out quickly and explained simply.</p>
+    </div>
+    <div class="card">
+      <h3>👨‍💻 Training & Guidance</h3>
+      <p>We teach you or your team how to use tools, avoid mistakes, and stay confident with your tech.</p>
+    </div>
   </div>
 </section>
 
 <section class="section" id="why">
   <h2>Why Choose Nedson?</h2>
   <div class="content-grid">
-    <div class="card"><h3>🏠 We Come to You</h3><p>We offer both onsite and remote sessions — we meet you where it’s most convenient.</p></div>
-    <div class="card"><h3>🤝 First-Timer Friendly</h3><p>No tech jargon, just real help in plain language. Great for first-time users and referrals.</p></div>
-    <div class="card"><h3>🧠 Built on Trust</h3><p>We don’t advertise much. Our business grows through people who love our service and tell others.</p></div>
-    <div class="card"><h3>💬 Always Reachable</h3><p>We respond fast. Via WhatsApp, email or direct call — you’ll get support when you need it.</p></div>
+    <div class="card">
+      <h3>🏠 We Come to You</h3>
+      <p>We offer both onsite and remote sessions — we meet you where it’s most convenient.</p>
+    </div>
+    <div class="card">
+      <h3>🤝 First-Timer Friendly</h3>
+      <p>No tech jargon, just real help in plain language. Great for first-time users and referrals.</p>
+    </div>
+    <div class="card">
+      <h3>🧠 Built on Trust</h3>
+      <p>We don’t advertise much. Our business grows through people who love our service and tell others.</p>
+    </div>
+    <div class="card">
+      <h3>💬 Always Reachable</h3>
+      <p>We respond fast. Via WhatsApp, email or direct call — you’ll get support when you need it.</p>
+    </div>
   </div>
 </section>
 
