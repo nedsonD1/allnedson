@@ -48,7 +48,7 @@
       align-items: center;
       z-index: 2;
       gap: 10px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
     .hero-overlay img {
       height: 160px;
@@ -56,10 +56,8 @@
     }
     .hero-nav {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
       gap: 10px;
-      flex: 1;
+      flex-shrink: 0;
     }
     .hero-nav a {
       padding: 10px 16px;
@@ -234,4 +232,7 @@
   </div>
 </section>
 
-<!-- (All other previously included content remains intact and unchanged) -->
+<!-- All other content remains fully intact -->
+
+</body>
+</html>
