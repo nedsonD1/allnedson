@@ -149,20 +149,39 @@
       font-size: 15px;
       line-height: 1.6;
     }
-    .floating-button, .whatsapp {
+    .floating-button {
       position: fixed;
+      bottom: 20px;
       right: 20px;
+      padding: 12px 20px;
       font-weight: bold;
       border-radius: 30px;
       text-decoration: none;
       z-index: 1000;
-      padding: 12px 20px;
       border: 1px solid #fff;
       background: transparent;
       color: #fff;
       transition: background 0.3s, color 0.3s;
     }
-    .floating-button:hover, .whatsapp:hover {
+    .floating-button:hover {
+      background: #fff;
+      color: #000;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      z-index: 1000;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+    .whatsapp:hover {
       background: #fff;
       color: #000;
     }
