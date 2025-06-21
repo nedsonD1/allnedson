@@ -213,34 +213,55 @@
       padding: 25px 20px;
       background: #111;
       color: #777;
-      font-weight: normal; /* remove bold */
+      font-weight: normal;
     }
 
     footer a {
       color: #fff;
       text-decoration: none;
-      font-weight: normal; /* remove bold from email link */
+      font-weight: normal;
     }
 
     @media (max-width: 768px) {
       .hero-overlay {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
       }
 
       .hero-nav {
         flex-direction: column;
         margin-left: 0;
+        align-items: center;
+        gap: 10px;
       }
 
       .hero-nav a {
         width: 100%;
         text-align: center;
+        font-size: 15px;
+        padding: 8px 12px;
       }
 
       .logo {
-        height: 70px;
+        height: 60px;
+      }
+
+      .hero-content {
+        margin-top: 120px;
+        padding: 20px;
+      }
+
+      .hero-content h1 {
+        font-size: 26px;
+      }
+
+      .hero-content p {
+        font-size: 16px;
+        line-height: 1.6;
       }
     }
   </style>
@@ -273,52 +294,22 @@
 <section class="section" id="services">
   <h2>What We Do</h2>
   <div class="content-grid">
-    <div class="card">
-      <h3>🔧 Tech Support</h3>
-      <p>Fixing system errors, slow PCs, blue screen, printer problems, missing files, and daily tech headaches. Done at your home or remotely.</p>
-    </div>
-    <div class="card">
-      <h3>📦 Business Setup</h3>
-      <p>Email addresses, Google Drive, Dropbox, WhatsApp Business, antivirus, and secure file sharing — set up right the first time.</p>
-    </div>
-    <div class="card">
-      <h3>🛡️ Security & Backup</h3>
-      <p>Cloud backup setup, virus removal, firewall and encryption for your laptop or business computers.</p>
-    </div>
-    <div class="card">
-      <h3>💼 Monthly Support</h3>
-      <p>Ongoing IT support, software help, and system health check for peace of mind — just like having your own IT guy.</p>
-    </div>
-    <div class="card">
-      <h3>📧 Email & Accounts</h3>
-      <p>Password resets, email sync issues, login problems — sorted out quickly and explained simply.</p>
-    </div>
-    <div class="card">
-      <h3>👨‍💻 Training & Guidance</h3>
-      <p>We teach you or your team how to use tools, avoid mistakes, and stay confident with your tech.</p>
-    </div>
+    <div class="card"><h3>🔧 Tech Support</h3><p>Fixing system errors, slow PCs, blue screen, printer problems, missing files, and daily tech headaches. Done at your home or remotely.</p></div>
+    <div class="card"><h3>📦 Business Setup</h3><p>Email addresses, Google Drive, Dropbox, WhatsApp Business, antivirus, and secure file sharing — set up right the first time.</p></div>
+    <div class="card"><h3>🛡️ Security & Backup</h3><p>Cloud backup setup, virus removal, firewall and encryption for your laptop or business computers.</p></div>
+    <div class="card"><h3>💼 Monthly Support</h3><p>Ongoing IT support, software help, and system health check for peace of mind — just like having your own IT guy.</p></div>
+    <div class="card"><h3>📧 Email & Accounts</h3><p>Password resets, email sync issues, login problems — sorted out quickly and explained simply.</p></div>
+    <div class="card"><h3>👨‍💻 Training & Guidance</h3><p>We teach you or your team how to use tools, avoid mistakes, and stay confident with your tech.</p></div>
   </div>
 </section>
 
 <section class="section" id="why">
   <h2>Why Choose Nedson?</h2>
   <div class="content-grid">
-    <div class="card">
-      <h3>🏠 We Come to You</h3>
-      <p>We offer both onsite and remote sessions — we meet you where it’s most convenient.</p>
-    </div>
-    <div class="card">
-      <h3>🤝 First-Timer Friendly</h3>
-      <p>No tech jargon, just real help in plain language. Great for first-time users and referrals.</p>
-    </div>
-    <div class="card">
-      <h3>🧠 Built on Trust</h3>
-      <p>We don’t advertise much. Our business grows through people who love our service and tell others.</p>
-    </div>
-    <div class="card">
-      <h3>💬 Always Reachable</h3>
-      <p>We respond fast. Via WhatsApp, email or direct call — you’ll get support when you need it.</p>
-    </div>
+    <div class="card"><h3>🏠 We Come to You</h3><p>We offer both onsite and remote sessions — we meet you where it’s most convenient.</p></div>
+    <div class="card"><h3>🤝 First-Timer Friendly</h3><p>No tech jargon, just real help in plain language. Great for first-time users and referrals.</p></div>
+    <div class="card"><h3>🧠 Built on Trust</h3><p>We don’t advertise much. Our business grows through people who love our service and tell others.</p></div>
+    <div class="card"><h3>💬 Always Reachable</h3><p>We respond fast. Via WhatsApp, email or direct call — you’ll get support when you need it.</p></div>
   </div>
 </section>
 
