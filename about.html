@@ -13,105 +13,84 @@
       color: #fff;
     }
 
-    .hero-overlay {
-      background: rgba(0, 0, 0, 0.9);
+    .header {
       padding: 20px 40px;
+      background-color: #000;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: flex-start;
-      gap: 30px;
-      flex-wrap: wrap;
     }
 
     .logo {
-      height: 100px;
+      height: 60px;
     }
 
-    .hero-nav {
+    .nav-links {
       display: flex;
       gap: 20px;
-      flex: 1;
-      justify-content: center;
-      align-items: center;
     }
 
-    .hero-nav a {
+    .nav-links a {
       padding: 10px 18px;
       font-size: 16px;
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background: transparent;
       border-radius: 5px;
       border: 1px solid white;
       transition: all 0.3s ease;
     }
 
-    .hero-nav a:hover {
-      background: #fff;
-      color: #000;
+    .nav-links a:hover {
+      background-color: white;
+      color: black;
     }
 
-    .hero {
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
       text-align: center;
-      padding: 60px 20px 30px;
     }
 
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
+    .section p {
       font-size: 18px;
-      max-width: 700px;
-      margin: auto;
       line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto 40px auto;
     }
 
-    .content {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .highlight-section {
+    .white-section {
       background-color: #fff;
       color: #000;
-      padding: 40px 20px;
-      max-width: 800px;
+      padding: 60px 20px;
+      width: 100%;
+    }
+
+    .white-section h2 {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .white-section p,
+    .white-section li {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 900px;
       margin: auto;
     }
 
-    .highlight-section ul {
-      padding-left: 20px;
-    }
-
-    .highlight-section ul li {
-      margin-bottom: 10px;
-    }
-
-    .content h3, .highlight-section h3 {
-      font-size: 24px;
-      margin-top: 30px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background: transparent;
-      color: #fff;
-      padding: 12px 25px;
-      font-weight: bold;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-      margin-top: 30px;
-    }
-
-    .cta-button:hover {
-      background: #fff;
-      color: #000;
+    .white-section ul {
+      list-style: disc;
+      margin-top: 20px;
+      margin-bottom: 0;
+      padding-left: 40px;
     }
 
     footer {
@@ -119,6 +98,7 @@
       padding: 25px 20px;
       background: #111;
       color: #777;
+      font-weight: normal;
     }
 
     footer a {
@@ -128,66 +108,60 @@
     }
 
     @media (max-width: 768px) {
-      .hero-overlay {
+      .header {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
       }
 
-      .hero-nav {
+      .nav-links {
         flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
       }
 
-      .logo {
-        height: 70px;
-      }
-
-      .hero h1 {
-        font-size: 28px;
+      .nav-links a {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
 
-<div class="hero-overlay">
-  <img src="nedson-logo.png" alt="Nedson Logo" class="logo" />
-  <div class="hero-nav">
-    <a href="/">Home</a>
+<header class="header">
+  <img src="nedson-logo.png" alt="Nedson Logo" class="logo">
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-  </div>
-</div>
+  </nav>
+</header>
 
-<section class="hero">
+<section class="section">
   <h1>Our Mission</h1>
-  <p>Expert IT support and smart tech solutions built on trust and experience.</p>
-</section>
-
-<section class="content">
   <p>
-    At Nedson Innovations, we provide reliable, personalised tech support and IT setup services for individuals and small businesses.
-    Our goal is to simplify technology — so it works for you, not against you.
+    At Nedson Innovations, we provide reliable, personalised tech support and IT setup services for individuals and small businesses. Our goal is to simplify technology — so it works for you, not against you.
   </p>
 
-  <h3>Our Story</h3>
+  <h2 style="text-align:center;">Our Story</h2>
   <p>
-    Nedson Innovations began with a passion to help people fix daily tech issues — without the confusion or stress.
-    Over time, we’ve grown through word-of-mouth referrals, thanks to the trust we’ve earned from happy clients.
+    Nedson Innovations began with a passion to help people fix daily tech issues — without the confusion or stress. Over time, we’ve grown through word-of-mouth referrals, thanks to the trust we’ve earned from happy clients.
   </p>
 
-  <h3>We Value:</h3>
-  <ul>
-    <li>Honesty and clear communication</li>
-    <li>Speed and reliability</li>
-    <li>Building long-term client relationships</li>
-    <li>Empowering users with knowledge</li>
-  </ul>
+  <h2 style="text-align:center;">We Value:</h2>
+  <p>
+    - Practical solutions that are easy to understand<br>
+    - Building trust through consistency and communication<br>
+    - Taking time to listen before we act<br>
+    - Respecting your time and your tech
+  </p>
 </section>
 
-<section class="highlight-section">
-  <h3>What Makes Us Different</h3>
-  <p>We believe support should feel personal. Whether you’re calling us for the first time or the tenth, we take the time to understand your needs and resolve them with care and clarity.</p>
+<section class="white-section">
+  <h2>What Makes Us Different</h2>
+  <p>
+    We believe support should feel personal. Whether you’re calling us for the first time or the tenth, we take the time to understand your needs and resolve them with care and clarity.
+  </p>
   <ul>
     <li>Onsite and remote flexibility</li>
     <li>Clear communication without technical jargon</li>
@@ -196,14 +170,9 @@
   </ul>
 </section>
 
-<section class="content" style="text-align: center;">
-  <p>Whether you’re facing a tech issue, setting up your business tools, or just want advice — we’re here to help.</p>
-  <a href="contact.html" class="cta-button">Request Support</a>
-</section>
-
 <footer>
   <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | 07405 007 810</p>
-  <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
+  <p>&copy; 2025 Nedson Innovations. All rights reserved.</p>
 </footer>
 
 </body>
