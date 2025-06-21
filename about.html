@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - Nedson Innovations Ltd</title>
+  <title>About - Nedson Innovations Ltd</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,81 +22,81 @@
       gap: 15px;
     }
     .header-left img {
-      height: 60px;
+      height: 80px;
     }
     nav a {
       color: #ccc;
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
     nav a:hover { color: #00ff99; }
-    .social-icons img {
-      width: 24px;
-      margin: 0 5px;
-      filter: brightness(0) invert(1);
+    .hero-video {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
-    .content {
+    .hero-video video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+    .hero-content h1 {
+      font-size: 36px;
+      color: #00ff99;
+      margin-bottom: 15px;
+    }
+    .hero-content p {
+      font-size: 18px;
+      color: #eee;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .section {
+      padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
-      padding: 60px 20px;
     }
-    h2 { color: #00ff99; margin-bottom: 20px; }
-    p { margin-bottom: 20px; line-height: 1.7; color: #ccc; }
-    .profile {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: center;
-      margin-bottom: 40px;
+    .section h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #00ff99;
+      margin-bottom: 30px;
     }
-    .profile img {
-      width: 200px;
-      border-radius: 10px;
-      border: 2px solid #00ff99;
-    }
-    .profile-details { flex: 1; }
-    ul { padding-left: 20px; line-height: 1.8; }
-    ul li::marker { color: #00ff99; }
-    .cta-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 25px;
-      background: #00ff99;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 15px;
-      border-radius: 50%;
-      font-size: 24px;
-      text-decoration: none;
-      z-index: 1000;
+    .section p {
+      color: #ccc;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
     }
     footer {
       background: #111;
       padding: 30px 20px;
       text-align: center;
-      color: #777;
       font-size: 14px;
+      color: #777;
     }
     footer a {
       color: #00ff99;
       text-decoration: none;
     }
     @media (max-width: 768px) {
-      .profile { flex-direction: column; text-align: center; }
       header, nav { flex-direction: column; text-align: center; }
       .header-left { flex-direction: column; align-items: center; gap: 10px; }
+      nav a { display: inline-block; margin: 8px 6px; font-size: 15px; }
     }
   </style>
 </head>
@@ -111,38 +111,29 @@
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <div class="social-icons">
-    <img src="facebook-icon.png" alt="Facebook">
-    <img src="instagram-icon.png" alt="Instagram">
-    <img src="tiktok-icon.png" alt="TikTok">
-  </div>
 </header>
 
-<div class="content">
-  <h2>Our Mission</h2>
-  <p>We aim to make IT support simple, modern, and available to anyone — no matter where they are. Our work helps people fix issues, stay connected, and keep their devices or systems in good health. </p>
-
-  <div class="profile">
-    <img src="placeholder-profile.jpg" alt="Adedayo Adeniyi">
-    <div class="profile-details">
-      <h2>Meet Our Lead Consultant</h2>
-      <p><strong>Adedayo Adeniyi</strong> leads Nedson Innovations Ltd with hands-on expertise, great attention to user needs, and years of experience in IT support and system consulting. He is passionate about simplifying tech and helping clients get the best from their devices and networks.</p>
-      <p>From daily support and repairs to strategic setups, Adedayo ensures everyone — from solo users to small teams — gets high-quality care.</p>
-    </div>
+<section class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="hero-content">
+    <h1>About Nedson Innovations Ltd</h1>
+    <p>Tech shouldn’t be hard. We make it simple, human, and helpful — for individuals and businesses.</p>
   </div>
+</section>
 
-  <h2>Why Clients Choose Us</h2>
-  <ul>
-    <li>⚙️ Remote-first, flexible IT support</li>
-    <li>🧠 Practical, hands-on tech expertise</li>
-    <li>💬 Friendly, clear communication</li>
-    <li>📈 Value-driven service with fast results</li>
-  </ul>
+<section class="section">
+  <h2>Who We Are</h2>
+  <p>Nedson Innovations Ltd is a trusted IT support and consulting company helping individuals and businesses stay productive, protected, and connected. We provide hands-on tech help and system setup through remote support or onsite visits — wherever you are.</p>
+  <p>Whether it's a broken laptop, a slow system, missing files, or helping a small business get fully online with secure backup and cloud tools — we handle it all with patience, skill, and integrity.</p>
+</section>
 
-  <a href="contact.html" class="cta-button">Request Support</a>
-</div>
-
-<a href="https://wa.me/447405007810" class="whatsapp" title="Chat with us on WhatsApp">💬</a>
+<section class="section">
+  <h2>Meet Adedayo Adeniyi</h2>
+  <p>Adedayo is the founder and lead tech expert at Nedson Innovations Ltd. With years of practical experience in IT support, business tech setup, and customer service, he brings clarity and care to every solution delivered. He's supported both personal users and business clients, always aiming for simplicity, honesty, and results.</p>
+</section>
 
 <footer>
   <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
