@@ -9,171 +9,172 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #fff;
     }
 
     .header {
-      padding: 20px 40px;
       background-color: #000;
+      color: #fff;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      padding: 20px 40px;
+      gap: 30px;
     }
 
-    .logo {
+    .header img {
       height: 60px;
     }
 
-    .nav-links {
+    .nav {
       display: flex;
       gap: 20px;
     }
 
-    .nav-links a {
-      padding: 10px 18px;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
+    .nav a {
       color: white;
-      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 18px;
       border: 1px solid white;
-      transition: all 0.3s ease;
+      border-radius: 5px;
+      transition: background 0.3s, color 0.3s;
     }
 
-    .nav-links a:hover {
-      background-color: white;
+    .nav a:hover {
+      background: white;
       color: black;
     }
 
     .section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
       padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
+      flex-wrap: wrap;
     }
 
-    .section h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      text-align: center;
+    .section-text {
+      max-width: 600px;
+      animation: fadeInUp 1s ease forwards;
     }
 
-    .section p {
-      font-size: 18px;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 0 auto 40px auto;
+    .section-text h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
     }
 
-    .white-section {
-      background-color: #fff;
-      color: #000;
-      padding: 60px 20px;
-      width: 100%;
-    }
-
-    .white-section h2 {
-      font-size: 26px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .white-section p,
-    .white-section li {
+    .section-text p {
       font-size: 16px;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: auto;
+      line-height: 1.7;
     }
 
-    .white-section ul {
-      list-style: disc;
-      margin-top: 20px;
-      margin-bottom: 0;
-      padding-left: 40px;
+    .section-img {
+      max-width: 500px;
+      width: 100%;
+      animation: fadeIn 1.2s ease forwards;
     }
 
-    footer {
-      text-align: center;
-      padding: 25px 20px;
-      background: #111;
-      color: #777;
-      font-weight: normal;
+    .section-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
 
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: normal;
+    .white {
+      background-color: white;
+      color: black;
+    }
+
+    .black {
+      background-color: black;
+      color: white;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .section-img, .section-text {
+        max-width: 90%;
+      }
+
       .header {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
       }
 
-      .nav-links {
+      .nav {
         flex-direction: column;
         gap: 10px;
-        margin-top: 10px;
-      }
-
-      .nav-links a {
-        width: 100%;
-        text-align: center;
       }
     }
   </style>
 </head>
 <body>
 
-<header class="header">
-  <img src="nedson-logo.png" alt="Nedson Logo" class="logo">
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header class="header">
+    <img src="nedson-logo.png" alt="Nedson Logo">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<section class="section">
-  <h1>Our Mission</h1>
-  <p>
-    At Nedson Innovations, we provide reliable, personalised tech support and IT setup services for individuals and small businesses. Our goal is to simplify technology — so it works for you, not against you.
-  </p>
+  <section class="section white">
+    <div class="section-img"><img src="about1.jpg" alt="Our Mission"></div>
+    <div class="section-text">
+      <h2>Our Mission</h2>
+      <p>At Nedson Innovations, we believe that smart IT support is just as important as getting the job done. We pride ourselves on delivering a high standard of service and clarity.</p>
+      <p>We put your tech in our hands, and it immediately becomes the priority. From small issues to complete setup, every client is handled with care and dedication to deliver results you can trust.</p>
+    </div>
+  </section>
 
-  <h2 style="text-align:center;">Our Story</h2>
-  <p>
-    Nedson Innovations began with a passion to help people fix daily tech issues — without the confusion or stress. Over time, we’ve grown through word-of-mouth referrals, thanks to the trust we’ve earned from happy clients.
-  </p>
+  <section class="section black">
+    <div class="section-text">
+      <h2>Our Story</h2>
+      <p>Nedson Innovations began with a passion to help people solve daily tech frustrations — without the stress or jargon. From humble beginnings, we’ve grown through referrals and returning clients.</p>
+      <p>Today, we’re proud to be a name people recommend when they need honest, helpful, and experienced support — whether onsite or remote.</p>
+    </div>
+    <div class="section-img"><img src="about2.jpg" alt="Our Story"></div>
+  </section>
 
-  <h2 style="text-align:center;">We Value:</h2>
-  <p>
-    - Practical solutions that are easy to understand<br>
-    - Building trust through consistency and communication<br>
-    - Taking time to listen before we act<br>
-    - Respecting your time and your tech
-  </p>
-</section>
+  <section class="section white">
+    <div class="section-img"><img src="about3.jpg" alt="Our Values"></div>
+    <div class="section-text">
+      <h2>We Value</h2>
+      <p><strong>Clarity:</strong> No tech jargon — just plain explanations you understand.</p>
+      <p><strong>Support:</strong> Not just solving issues, but helping you feel confident again.</p>
+      <p><strong>Reliability:</strong> You can count on us showing up and doing it right the first time.</p>
+      <p><strong>Care:</strong> Every user, every business — we treat it like our own.</p>
+    </div>
+  </section>
 
-<section class="white-section">
-  <h2>What Makes Us Different</h2>
-  <p>
-    We believe support should feel personal. Whether you’re calling us for the first time or the tenth, we take the time to understand your needs and resolve them with care and clarity.
-  </p>
-  <ul>
-    <li>Onsite and remote flexibility</li>
-    <li>Clear communication without technical jargon</li>
-    <li>Support beyond the job — we follow up</li>
-    <li>Fast response through WhatsApp, call or email</li>
-  </ul>
-</section>
-
-<footer>
-  <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | 07405 007 810</p>
-  <p>&copy; 2025 Nedson Innovations. All rights reserved.</p>
-</footer>
+  <section class="section black">
+    <div class="section-text">
+      <h2>What Makes Us Different</h2>
+      <p>We believe support should feel personal. Whether you’re calling us for the first time or the tenth, we take the time to understand your needs and resolve them with care and clarity.</p>
+      <ul>
+        <li>Onsite and remote flexibility</li>
+        <li>Clear communication without technical jargon</li>
+        <li>Support beyond the job — we follow up</li>
+        <li>Fast response through WhatsApp, call or email</li>
+      </ul>
+    </div>
+    <div class="section-img"><img src="about4.jpg" alt="What Makes Us Different"></div>
+  </section>
 
 </body>
 </html>
