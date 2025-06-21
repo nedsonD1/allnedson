@@ -46,18 +46,25 @@
       padding: 20px 30px;
       z-index: 2;
       background: transparent;
-    }
-
-    .nav-container {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
-      gap: 20px;
-      flex-direction: row;
     }
 
-    .nav-container a {
+    .nav-logo {
+      height: 80px;
+    }
+
+    .hero-nav {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-grow: 1;
+      flex-wrap: wrap;
+    }
+
+    .hero-nav a {
       padding: 10px 16px;
       border: 1px solid #fff;
       border-radius: 5px;
@@ -67,13 +74,9 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    .nav-container a:hover {
+    .hero-nav a:hover {
       background: #fff;
       color: #000;
-    }
-
-    .nav-logo {
-      height: 80px;
     }
 
     .hero-content {
@@ -221,15 +224,13 @@
     }
 
     @media (max-width: 768px) {
-      .nav-container {
+      .hero-overlay {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
       }
-      .hero-content h1 {
-        font-size: 28px;
-      }
-      .hero-content p {
-        font-size: 16px;
+      .hero-nav {
+        justify-content: center;
       }
     }
   </style>
@@ -243,9 +244,9 @@
   </video>
 
   <div class="hero-overlay">
-    <div class="nav-container">
+    <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo" class="nav-logo"></a>
+    <div class="hero-nav">
       <a href="index.html">Home</a>
-      <img src="nedson-logo.png" alt="Nedson Logo" class="nav-logo">
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
