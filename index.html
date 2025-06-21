@@ -43,23 +43,27 @@
       left: 0;
       width: 100%;
       padding: 20px 30px;
-      display: grid;
-      grid-template-columns: 1fr auto;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
       z-index: 2;
+      flex-wrap: wrap;
+    }
+    .hero-brand {
+      display: flex;
+      align-items: center;
       gap: 10px;
     }
-    .hero-overlay img {
-      height: 100px;
-      margin-right: 20px;
+    .hero-brand img {
+      height: 80px;
     }
-    .hero-nav {
+    nav {
       display: flex;
       gap: 10px;
-      flex-wrap: nowrap;
-      white-space: nowrap;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
-    .hero-nav a {
+    nav a {
       padding: 10px 16px;
       border: 1px solid #fff;
       border-radius: 5px;
@@ -68,7 +72,7 @@
       font-weight: bold;
       transition: background 0.3s, color 0.3s;
     }
-    .hero-nav a:hover {
+    nav a:hover {
       background: #fff;
       color: #000;
     }
@@ -201,10 +205,10 @@
       .hero-overlay {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
       }
-      .hero-nav {
+      nav {
         justify-content: center;
-        flex-wrap: wrap;
       }
     }
   </style>
@@ -217,12 +221,14 @@
     Your browser does not support HTML5 video.
   </video>
   <div class="hero-overlay">
-    <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
-    <div class="hero-nav">
+    <div class="hero-brand">
+      <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
+    </div>
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-    </div>
+    </nav>
   </div>
   <div class="hero-content">
     <h1>Welcome to Nedson Innovations</h1>
