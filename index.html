@@ -42,22 +42,24 @@
       top: 0;
       left: 0;
       width: 100%;
-      padding: 20px 30px;
+      padding: 15px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       z-index: 2;
       gap: 10px;
-      flex-wrap: nowrap;
     }
     .hero-overlay img {
-      height: 100px; /* Reduced from 160px */
+      height: 80px;
       margin-right: 20px;
     }
     .hero-nav {
       display: flex;
       gap: 10px;
       flex-shrink: 0;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .hero-nav a {
       padding: 10px 16px;
@@ -196,16 +198,6 @@
     footer a {
       color: #fff;
       text-decoration: none;
-    }
-    @media (max-width: 768px) {
-      .hero-overlay {
-        flex-direction: column;
-        align-items: center;
-      }
-      .hero-nav {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
     }
   </style>
 </head>
