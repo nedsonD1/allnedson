@@ -130,7 +130,33 @@
       to { opacity: 1; transform: scale(1); }
     }
 
+    /* ✅ Mobile view fix for About page */
     @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+        background-color: transparent;
+      }
+
+      .header img {
+        height: 60px;
+      }
+
+      .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
       .section {
         flex-direction: column;
         text-align: center;
@@ -138,16 +164,6 @@
 
       .section-img, .section-text {
         max-width: 90%;
-      }
-
-      .header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav {
-        flex-direction: column;
-        gap: 10px;
       }
     }
   </style>
