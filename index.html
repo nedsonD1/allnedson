@@ -12,35 +12,10 @@
       background-color: #000;
       color: #fff;
     }
-    header, footer {
-      background: #111;
-      padding: 20px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    .header-left img {
-      height: 80px;
-    }
-    nav a {
-      color: #ccc;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #00ff99;
-    }
     .hero-video {
       position: relative;
       width: 100%;
-      height: 80vh;
+      height: 100vh;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -62,6 +37,34 @@
       0% { transform: scale(1); }
       100% { transform: scale(1.1); }
     }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+    .hero-overlay img {
+      height: 80px;
+    }
+    .hero-nav a {
+      margin-left: 20px;
+      padding: 8px 16px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .hero-nav a:hover {
+      background: #fff;
+      color: #000;
+    }
     .hero-content {
       position: relative;
       z-index: 1;
@@ -70,7 +73,7 @@
     }
     .hero-content h1 {
       font-size: 42px;
-      color: #00ff99;
+      color: #fff;
       margin-bottom: 20px;
       font-weight: bold;
     }
@@ -82,7 +85,7 @@
       font-weight: 500;
     }
     .cta-button {
-      background-color: #00ff99;
+      background-color: #fff;
       color: #000;
       padding: 12px 25px;
       font-weight: bold;
@@ -143,14 +146,14 @@
     }
     .floating-button {
       bottom: 90px;
-      background: #00ff99;
+      background: #fff;
       color: #000;
       padding: 12px 20px;
     }
     .whatsapp {
       bottom: 20px;
-      background: #25d366;
-      color: white;
+      background: #fff;
+      color: #000;
       padding: 12px 20px;
       font-size: 14px;
     }
@@ -165,13 +168,10 @@
       text-decoration: none;
     }
     @media (max-width: 768px) {
-      header, nav {
+      .hero-overlay {
         flex-direction: column;
+        gap: 15px;
         text-align: center;
-      }
-      .header-left {
-        flex-direction: column;
-        gap: 10px;
       }
       .hero-content h1 {
         font-size: 28px;
@@ -181,22 +181,19 @@
 </head>
 <body>
 
-<header>
-  <div class="header-left">
-    <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
 <section class="hero-video">
   <video autoplay muted loop playsinline>
     <source src="nedson-hero.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
+  <div class="hero-overlay">
+    <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
+    <div class="hero-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
   <div class="hero-content">
     <h1>Tech Support That Works for You</h1>
     <p>Nedson Innovations Ltd offers both onsite and remote support for individuals and small businesses. From fixing your slow laptop to setting up cloud backup and business tools — we keep tech simple and effective.</p>
