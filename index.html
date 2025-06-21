@@ -47,13 +47,18 @@
       justify-content: space-between;
       align-items: center;
       z-index: 2;
+      flex-wrap: wrap;
     }
     .hero-overlay img {
-      height: 80px;
+      height: 100px;
+    }
+    .hero-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
     }
     .hero-nav a {
-      margin-left: 20px;
-      padding: 8px 16px;
+      padding: 10px 18px;
       border: 1px solid #fff;
       border-radius: 5px;
       text-decoration: none;
@@ -100,6 +105,8 @@
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
+      background-color: #000;
+      color: #fff;
     }
     .section.visible {
       opacity: 1;
@@ -172,6 +179,9 @@
         flex-direction: column;
         gap: 15px;
         text-align: center;
+      }
+      .hero-nav {
+        justify-content: center;
       }
       .hero-content h1 {
         font-size: 28px;
