@@ -12,6 +12,7 @@
       background-color: #000;
       color: #fff;
     }
+
     .hero-video {
       position: relative;
       width: 100%;
@@ -22,6 +23,7 @@
       justify-content: center;
       text-align: center;
     }
+
     .hero-video video {
       position: absolute;
       top: 0;
@@ -33,72 +35,71 @@
       filter: brightness(0.5);
       animation: slowZoom 60s infinite linear;
     }
+
     @keyframes slowZoom {
       0% { transform: scale(1); }
       100% { transform: scale(1.1); }
     }
+
     .hero-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      padding: 20px 30px;
+      padding: 20px 40px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       z-index: 2;
       flex-wrap: wrap;
-      justify-content: space-between;
     }
+
     .logo {
-      flex: 1;
+      height: 80px;
     }
-    .logo img {
-      height: 100px;
-    }
-    @media (min-width: 769px) {
-      .logo img {
-        height: 140px;
-      }
-    }
+
     .hero-nav {
-      flex: 2;
       display: flex;
       justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
+      flex: 1;
+      gap: 20px;
     }
+
     .hero-nav a {
-      padding: 10px 16px;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      color: #fff;
+      font-size: 18px;
       font-weight: bold;
-      transition: background 0.3s, color 0.3s;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
     }
+
     .hero-nav a:hover {
-      background: #fff;
+      background-color: #fff;
       color: #000;
     }
+
     .hero-content {
       position: relative;
       z-index: 1;
       padding: 20px;
       max-width: 800px;
     }
+
     .hero-content h1 {
       font-size: 42px;
-      color: #fff;
       margin-bottom: 20px;
       font-weight: bold;
     }
+
     .hero-content p {
       font-size: 20px;
-      color: #fff;
       line-height: 1.6;
       margin-bottom: 30px;
       font-weight: 500;
     }
+
     .cta-button {
       background: transparent;
       color: #fff;
@@ -107,13 +108,14 @@
       border: 1px solid #fff;
       border-radius: 5px;
       text-decoration: none;
-      display: inline-block;
       transition: background 0.3s, color 0.3s;
     }
+
     .cta-button:hover {
       background-color: #fff;
       color: #000;
     }
+
     .section {
       padding: 60px 20px;
       max-width: 1100px;
@@ -121,24 +123,25 @@
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
-      background-color: #000;
-      color: #fff;
     }
+
     .section.visible {
       opacity: 1;
       transform: translateY(0);
     }
+
     .section h2 {
       text-align: center;
       font-size: 28px;
-      color: #fff;
       margin-bottom: 30px;
     }
+
     .content-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
+
     .card {
       background-color: #111;
       border-radius: 12px;
@@ -146,19 +149,22 @@
       border: 1px solid #333;
       transition: 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-5px);
       border-color: #fff;
     }
+
     .card h3 {
-      color: #fff;
       margin-bottom: 10px;
     }
+
     .card p {
       color: #ccc;
       font-size: 15px;
       line-height: 1.6;
     }
+
     .floating-button {
       position: fixed;
       bottom: 20px;
@@ -173,10 +179,12 @@
       color: #fff;
       transition: background 0.3s, color 0.3s;
     }
+
     .floating-button:hover {
       background: #fff;
       color: #000;
     }
+
     .whatsapp {
       position: fixed;
       bottom: 20px;
@@ -191,19 +199,44 @@
       color: #fff;
       transition: background 0.3s, color 0.3s;
     }
+
     .whatsapp:hover {
       background: #fff;
       color: #000;
     }
+
     footer {
       text-align: center;
       padding: 25px 20px;
       background: #111;
       color: #777;
     }
+
     footer a {
       color: #fff;
       text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero-overlay {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero-nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-nav a {
+        padding: 8px 16px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .logo {
+        height: 60px;
+      }
     }
   </style>
 </head>
@@ -215,9 +248,7 @@
     Your browser does not support HTML5 video.
   </video>
   <div class="hero-overlay">
-    <div class="logo">
-      <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
-    </div>
+    <img src="nedson-logo.png" alt="Nedson Logo" class="logo" />
     <div class="hero-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -227,8 +258,9 @@
   <div class="hero-content">
     <h1>Welcome to Nedson Innovations</h1>
     <p>Tech Support You Can Count On<br>
-    From everyday issues to complex setups, we deliver expert IT solutions with care and precision, ensuring your devices and systems run smoothly, every time.<br>
-    Whether you’re an individual or a business, our remote and onsite services are designed to keep your tech stress-free and fully optimised.</p>
+      From everyday issues to complex setups, we deliver expert IT solutions with care and precision, ensuring your devices and systems run smoothly, every time.<br>
+      Whether you’re an individual or a business, our remote and onsite services are designed to keep your tech stress-free and fully optimised.
+    </p>
     <a href="contact.html" class="cta-button">Get Support</a>
   </div>
 </section>
