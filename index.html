@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nedson Innovations Ltd</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -38,26 +38,26 @@
       100% { transform: scale(1.1); }
     }
     .hero-overlay {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       padding: 20px 30px;
-      background: transparent;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      z-index: 999;
+      z-index: 2;
       gap: 10px;
+      flex-wrap: nowrap;
     }
     .hero-overlay img {
       height: 160px;
+      margin-right: 20px;
     }
     .hero-nav {
       display: flex;
       gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-shrink: 0;
     }
     .hero-nav a {
       padding: 10px 16px;
@@ -197,6 +197,16 @@
       color: #fff;
       text-decoration: none;
     }
+    @media (max-width: 768px) {
+      .hero-overlay {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
   </style>
 </head>
 <body>
@@ -209,6 +219,7 @@
   <div class="hero-overlay">
     <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
     <div class="hero-nav">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
