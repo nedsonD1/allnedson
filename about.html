@@ -98,6 +98,28 @@
       font-size: 14px;
     }
 
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      z-index: 1000;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #000;
+      background-color: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .floating-button:hover {
+      background: #000;
+      color: #fff;
+      border-color: #fff;
+    }
+
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
@@ -183,6 +205,8 @@
     </div>
     <div class="section-img"><img src="about4.jpg" alt="What Makes Us Different"></div>
   </section>
+
+  <a href="contact.html" class="floating-button">Request Support</a>
 
   <footer>
     &copy; 2025 Nedson Innovations. All rights reserved.
