@@ -48,16 +48,17 @@
       align-items: center;
       z-index: 2;
       gap: 10px;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
     .hero-overlay img {
       height: 160px;
-      margin-right: 20px;
+      max-width: 150px;
     }
     .hero-nav {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
       gap: 10px;
-      flex-shrink: 0;
     }
     .hero-nav a {
       padding: 10px 16px;
@@ -204,6 +205,7 @@
       }
       .hero-nav {
         justify-content: center;
+        flex-wrap: wrap;
       }
     }
   </style>
