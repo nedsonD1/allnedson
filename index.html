@@ -37,22 +37,39 @@
     nav a:hover {
       color: #00ff99;
     }
-    .hero-section {
+    .hero-video {
+      position: relative;
+      height: 80vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 80px 20px 40px;
-      background-color: #111;
     }
-    .hero-section h1 {
-      font-size: 36px;
+    .hero-video video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+    .hero-content h1 {
+      font-size: 38px;
       color: #00ff99;
       margin-bottom: 15px;
     }
-    .hero-section p {
+    .hero-content p {
       font-size: 18px;
-      color: #ccc;
+      color: #eee;
       max-width: 800px;
       margin: 0 auto 20px;
-      line-height: 1.6;
     }
     .cta-button {
       background-color: #00ff99;
@@ -146,7 +163,7 @@
         flex-direction: column;
         gap: 10px;
       }
-      .hero-section h1 {
+      .hero-content h1 {
         font-size: 28px;
       }
     }
@@ -165,10 +182,16 @@
   </nav>
 </header>
 
-<section class="hero-section">
-  <h1>Tech Support That Works for You</h1>
-  <p>Nedson Innovations Ltd offers both onsite and remote support for individuals and small businesses. From fixing your slow laptop to setting up cloud backup and business tools — we keep tech simple and effective.</p>
-  <a href="contact.html" class="cta-button">Get Support</a>
+<section class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="hero-content">
+    <h1>Tech Support That Works for You</h1>
+    <p>Nedson Innovations Ltd offers both onsite and remote support for individuals and small businesses. From fixing your slow laptop to setting up cloud backup and business tools — we keep tech simple and effective.</p>
+    <a href="contact.html" class="cta-button">Get Support</a>
+  </div>
 </section>
 
 <section class="section" id="services">
