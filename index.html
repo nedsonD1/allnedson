@@ -4,10 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nedson Innovations Ltd</title>
-  <meta name="description" content="Need help with your tech? Nedson Innovations Ltd provides expert IT support for kids, teens, adults, families, and small businesses.">
-  <meta name="keywords" content="laptop repair, IT support, computer engineer, tech support, business IT help">
-  <meta name="author" content="Nedson Innovations Ltd">
   <link rel="canonical" href="https://nedsoninnovations.co.uk/" />
+  <meta name="description" content="Expert IT support for individuals and businesses. Fast, friendly, and flexible tech solutions.">
+  <meta name="author" content="Nedson Innovations Ltd">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
@@ -46,21 +45,24 @@
       width: 100%;
       z-index: 10;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
-      flex-wrap: wrap;
-    }
-
-    .logo-left img {
-      height: 70px;
-    }
-
-    .nav-center {
-      display: flex;
-      gap: 15px;
       justify-content: center;
-      flex: 1;
+      align-items: center;
+      padding: 10px 10px;
+      flex-wrap: wrap;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .header-bar .logo-nav-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .logo-nav-wrapper img {
+      height: 75px;
     }
 
     .nav-center a {
@@ -76,6 +78,10 @@
     .nav-center a:hover {
       background: #fff;
       color: #000;
+    }
+
+    .nav-center a.active {
+      border-bottom: 2px solid #fff;
     }
 
     .hero-content {
@@ -190,17 +196,12 @@
     }
 
     @media (max-width: 768px) {
-      .header-bar {
+      .logo-nav-wrapper {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        gap: 12px;
       }
-      .nav-center {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
-      .logo-left img {
-        height: 50px;
+      .logo-nav-wrapper img {
+        height: 60px;
       }
       .hero-content h1 {
         font-size: 30px;
@@ -219,14 +220,14 @@
   </video>
 
   <div class="header-bar">
-    <div class="logo-left">
+    <div class="logo-nav-wrapper">
       <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
-    </div>
-    <div class="nav-center">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="contact.html">Request Support</a>
+      <div class="nav-center">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html">Request Support</a>
+      </div>
     </div>
   </div>
 
@@ -257,7 +258,7 @@
   <h2>Why Choose Nedson?</h2>
   <div class="content-grid">
     <div class="card"><h3>🛠️ Any Tech, Any Age</h3><p>We help everyone — from first-time users to business owners — fix, learn, and grow with their tech confidently.</p></div>
-    <div class="card"><h3>🏠 Remote & Home Visits</h><p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p></div>
+    <div class="card"><h3>🏠 Remote & Home Visits</h3><p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p></div>
     <div class="card"><h3>🧠 Clear & Friendly</h3><p>We speak your language — no tech talk. Our goal is to make tech simple and stress-free for you.</p></div>
     <div class="card"><h3>💬 Fast & Reliable</h3><p>Call, WhatsApp or email — we’re quick to respond and even quicker to solve your IT issues.</p></div>
   </div>
