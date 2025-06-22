@@ -18,7 +18,9 @@
       padding: 20px 40px;
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       gap: 30px;
+      flex-wrap: wrap;
     }
 
     header img {
@@ -28,6 +30,7 @@
     .nav {
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .nav a {
@@ -96,6 +99,35 @@
       color: black;
     }
 
+    .floating-button,
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      z-index: 1000;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .floating-button:hover,
+    .whatsapp-button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .floating-button {
+      right: 20px;
+    }
+
+    .whatsapp-button {
+      left: 20px;
+    }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -103,15 +135,30 @@
       color: #777;
     }
 
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
       }
 
       .nav {
-        flex-direction: column;
-        gap: 10px;
+        justify-content: center;
+      }
+
+      .nav a {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+
+      header img {
+        height: 50px;
       }
     }
   </style>
@@ -134,11 +181,15 @@
     <form action="https://formspree.io/f/xwpbqngv" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone (Optional)">
       <textarea name="message" rows="5" placeholder="Describe the IT issue or support you need..." required></textarea>
       <input type="hidden" name="_redirect" value="thankyou.html">
       <button type="submit">Send Message</button>
     </form>
   </div>
+
+  <a href="contact.html" class="floating-button">Request Support</a>
+  <a href="https://wa.me/447405007810" class="whatsapp-button">Chat on WhatsApp</a>
 
   <footer>
     <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | 07405 007 810</p>
