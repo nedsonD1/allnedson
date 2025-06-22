@@ -13,6 +13,29 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nedsoninnovations.co.uk/" />
 
+  <!-- Structured Data for Local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nedson Innovations Ltd",
+    "image": "https://nedsoninnovations.co.uk/og-image.png",
+    "description": "Remote and onsite IT support for personal and business users. Fast, friendly and trusted services.",
+    "url": "https://nedsoninnovations.co.uk",
+    "telephone": "+447405007810",
+    "email": "info@nedsoninnovations.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "London",
+      "addressCountry": "GB"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "UK-wide"
+    }
+  }
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -87,14 +110,8 @@
       animation: slideInUp 1s ease forwards;
     }
     @keyframes slideInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .hero-content h1 {
       font-size: 42px;
@@ -182,12 +199,8 @@
       color: #fff;
       transition: background 0.3s, color 0.3s;
     }
-    .floating-button {
-      right: 20px;
-    }
-    .whatsapp {
-      left: 20px;
-    }
+    .floating-button { right: 20px; }
+    .whatsapp { left: 20px; }
     .floating-button:hover, .whatsapp:hover {
       background: #fff;
       color: #000;
@@ -210,21 +223,11 @@
         gap: 15px;
         text-align: center;
       }
-      .hero-logo img {
-        height: 70px;
-      }
-      .hero-nav {
-        justify-content: center;
-      }
-      .hero-content h1 {
-        font-size: 30px;
-      }
-      .hero-content .sub-heading {
-        font-size: 18px;
-      }
-      .hero-content p {
-        font-size: 16px;
-      }
+      .hero-logo img { height: 70px; }
+      .hero-nav { justify-content: center; }
+      .hero-content h1 { font-size: 30px; }
+      .hero-content .sub-heading { font-size: 18px; }
+      .hero-content p { font-size: 16px; }
     }
   </style>
 </head>
@@ -273,6 +276,15 @@
       <div class="card"><h3>🤝 First-Timer Friendly</h3><p>No tech jargon, just real help in plain language. Great for first-time users and referrals.</p></div>
       <div class="card"><h3>🧠 Built on Trust</h3><p>We don’t advertise much. Our business grows through people who love our service and tell others.</p></div>
       <div class="card"><h3>💬 Always Reachable</h3><p>We respond fast. Via WhatsApp, email or direct call — you’ll get support when you need it.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="locations">
+    <h2>Where We Serve</h2>
+    <div class="content-grid">
+      <div class="card"><h3>📍 Nationwide UK</h3><p>Remote support available across all UK locations, including London, Manchester, Birmingham, and more.</p></div>
+      <div class="card"><h3>🚀 Fast Remote Support</h3><p>No matter your location — we connect online to fix issues instantly, saving you time and stress.</p></div>
+      <div class="card"><h3>📞 Easy Booking</h3><p>Wherever you are, simply contact us and we’ll be ready to help you remotely or onsite if required.</p></div>
     </div>
   </section>
 
