@@ -44,35 +44,46 @@
       top: 0;
       width: 100%;
       z-index: 10;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 15px;
+      box-sizing: border-box;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      padding: 10px 10px;
-      flex-wrap: wrap;
-      background-color: rgba(0, 0, 0, 0.5);
+      gap: 10px;
     }
 
-    .header-bar .logo-nav-wrapper {
+    .logo-nav-wrapper {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
       width: 100%;
     }
 
     .logo-nav-wrapper img {
-      height: 75px;
+      height: 70px;
+      margin-bottom: 5px;
+    }
+
+    .nav-center {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      gap: 10px;
     }
 
     .nav-center a {
-      padding: 8px 16px;
+      padding: 8px 14px;
+      white-space: nowrap;
       border: 1px solid #fff;
       border-radius: 5px;
       color: #fff;
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s, color 0.3s;
+      flex-shrink: 0;
     }
 
     .nav-center a:hover {
@@ -195,19 +206,27 @@
       color: #aaa;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
+      .header-bar {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
       .logo-nav-wrapper {
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
       }
+
       .logo-nav-wrapper img {
-        height: 60px;
+        height: 80px;
+        margin-bottom: 0;
       }
-      .hero-content h1 {
-        font-size: 30px;
-      }
-      .hero-content p {
-        font-size: 16px;
+
+      .nav-center {
+        justify-content: center;
+        overflow: visible;
       }
     }
   </style>
@@ -242,6 +261,7 @@
   </div>
 </section>
 
+<!-- Sections below remain unchanged -->
 <section class="section" id="services">
   <h2>What We Do</h2>
   <div class="content-grid">
