@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nedson Innovations Ltd</title>
-  <meta name="description" content="Need help with your tech? Nedson Innovations Ltd provides expert IT support for kids, teens, adults, families, and small businesses. We fix all types of laptop and PC problems, onsite or remotely, with care and speed.">
-  <meta name="keywords" content="laptop repair, IT support for kids, computer engineer, tech support for students, business IT help, broken screen repair, computer running slow, software support, PC fix, remote IT help, computer not turning on">
+  <meta name="description" content="Need help with your tech? Nedson Innovations Ltd provides expert IT support for kids, teens, adults, families, and small businesses.">
+  <meta name="keywords" content="laptop repair, IT support, computer engineer, tech support, business IT help">
   <meta name="author" content="Nedson Innovations Ltd">
   <link rel="canonical" href="https://nedsoninnovations.co.uk/" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Playfair Display', serif;
+      font-family: system-ui, sans-serif;
       background-color: #000;
       color: #fff;
     }
@@ -43,7 +43,6 @@
     .header-bar {
       position: absolute;
       top: 0;
-      left: 0;
       width: 100%;
       z-index: 10;
       display: flex;
@@ -53,13 +52,18 @@
       flex-wrap: wrap;
     }
 
-    .nav-left, .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 15px;
+    .logo-left img {
+      height: 70px;
     }
 
-    .nav-left a, .nav-right a {
+    .nav-center {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .nav-center a {
       padding: 8px 16px;
       border: 1px solid #fff;
       border-radius: 5px;
@@ -69,13 +73,9 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    .nav-left a:hover, .nav-right a:hover {
+    .nav-center a:hover {
       background: #fff;
       color: #000;
-    }
-
-    .logo-center img {
-      height: 80px;
     }
 
     .hero-content {
@@ -84,6 +84,7 @@
       max-width: 800px;
       padding: 20px;
       text-align: center;
+      font-family: 'Playfair Display', serif;
     }
 
     .hero-content h1 {
@@ -191,17 +192,18 @@
     @media (max-width: 768px) {
       .header-bar {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 10px;
       }
-      .logo-center img {
-        height: 60px;
+      .nav-center {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      .logo-left img {
+        height: 50px;
       }
       .hero-content h1 {
         font-size: 30px;
-      }
-      .hero-content .sub-heading {
-        font-size: 18px;
       }
       .hero-content p {
         font-size: 16px;
@@ -217,15 +219,13 @@
   </video>
 
   <div class="header-bar">
-    <div class="nav-left">
+    <div class="logo-left">
+      <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
+    </div>
+    <div class="nav-center">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-    </div>
-    <div class="logo-center">
-      <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
-    </div>
-    <div class="nav-right">
       <a href="contact.html">Request Support</a>
     </div>
   </div>
@@ -257,7 +257,7 @@
   <h2>Why Choose Nedson?</h2>
   <div class="content-grid">
     <div class="card"><h3>🛠️ Any Tech, Any Age</h3><p>We help everyone — from first-time users to business owners — fix, learn, and grow with their tech confidently.</p></div>
-    <div class="card"><h3>🏠 Remote & Home Visits</h3><p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p></div>
+    <div class="card"><h3>🏠 Remote & Home Visits</h><p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p></div>
     <div class="card"><h3>🧠 Clear & Friendly</h3><p>We speak your language — no tech talk. Our goal is to make tech simple and stress-free for you.</p></div>
     <div class="card"><h3>💬 Fast & Reliable</h3><p>Call, WhatsApp or email — we’re quick to respond and even quicker to solve your IT issues.</p></div>
   </div>
