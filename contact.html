@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Nedson Innovations</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -14,9 +14,9 @@
     }
 
     .header {
+      background-color: #000;
       display: flex;
       align-items: center;
-      background: #000;
       padding: 20px 40px;
       gap: 30px;
     }
@@ -45,113 +45,91 @@
       color: black;
     }
 
-    .main {
+    .contact-section {
       padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 800px;
       margin: auto;
     }
 
-    .main h1 {
-      text-align: center;
+    .contact-section h1 {
       font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .main p {
-      text-align: center;
-      font-size: 16px;
-      margin-bottom: 40px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    .contact-info {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .contact-info p {
-      margin-bottom: 15px;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 14px;
       margin-bottom: 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
+      text-align: center;
     }
 
-    form button {
-      padding: 12px 25px;
+    .contact-section p {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ccc;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      font-family: inherit;
+      background: #111;
+      color: white;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      padding: 12px 20px;
+      background: transparent;
+      color: #fff;
       font-weight: bold;
+      border: 1px solid white;
       border-radius: 5px;
-      border: 1px solid #fff;
-      color: #000;
-      background: #fff;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
     }
 
-    form button:hover {
-      background: #000;
-      color: #fff;
-      border: 1px solid #fff;
+    button:hover {
+      background: white;
+      color: black;
     }
 
-    .floating-button,
-    .whatsapp {
+    footer {
+      background-color: #000;
+      color: #777;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    .floating-button {
       position: fixed;
       bottom: 20px;
+      right: 20px;
       padding: 12px 20px;
       font-weight: bold;
       border-radius: 30px;
       text-decoration: none;
       z-index: 1000;
       border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
       transition: background 0.3s, color 0.3s;
     }
 
-    .floating-button {
-      right: 20px;
-      background: #fff;
-      color: #000;
-    }
-
     .floating-button:hover {
-      background: #000;
-      color: #fff;
-    }
-
-    .whatsapp {
-      left: 20px;
-      background: transparent;
-      color: #fff;
-    }
-
-    .whatsapp:hover {
       background: #fff;
       color: #000;
-    }
-
-    footer {
-      background: #111;
-      color: #777;
-      text-align: center;
-      padding: 25px 20px;
     }
 
     @media (max-width: 768px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
       .header {
         flex-direction: column;
         align-items: flex-start;
@@ -175,33 +153,23 @@
     </nav>
   </header>
 
-  <section class="main">
-    <h1>Get in Touch</h1>
-    <p>Have a question or need support? Fill out the form or reach us directly — we respond fast.</p>
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <p>Have a question, need support, or ready to get started? Drop us a message below.</p>
 
-    <div class="contact-grid">
-      <div class="contact-info">
-        <p><strong>Email:</strong> info@nedsoninnovations.co.uk</p>
-        <p><strong>Phone:</strong> 07405 007 810</p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/447405007810" style="color:#fff;">Click to chat</a></p>
-        <p><strong>Working Hours:</strong> Mon – Fri | 9am – 6pm</p>
-      </div>
-
-      <form action="thankyou.html" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+    <form action="https://formspree.io/f/xwpbqngv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="_redirect" value="thankyou.html" />
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <a href="contact.html" class="floating-button">Request Support</a>
-  <a href="https://wa.me/447405007810" class="whatsapp">Chat on WhatsApp</a>
 
   <footer>
-    <p>Contact: info@nedsoninnovations.co.uk | 07405 007 810</p>
-    <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
+    &copy; 2025 Nedson Innovations. All rights reserved.
   </footer>
 
 </body>
