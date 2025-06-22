@@ -163,10 +163,13 @@
       border-radius: 12px;
       padding: 20px;
       border: 1px solid #333;
+      transform: scale(1);
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
       border-color: #fff;
+      transform: scale(1.05);
     }
 
     .card h3 {
@@ -283,9 +286,14 @@
   <h2>Why Choose Nedson?</h2>
   <div class="content-grid">
     <div class="card"><h3>🛠️ Any Tech, Any Age</h3><p>We help everyone — from first-time users to business owners — fix, learn, and grow with their tech confidently.</p></div>
-    <div class="card"><h3>💬 Fast & Reliable</h3><p>Call, WhatsApp or email — we’re quick to respond and even quicker to solve your IT issues.</p></div>
     <div class="card"><h3>🏠 Remote & Home Visits</h3><p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p></div>
     <div class="card"><h3>🧠 Clear & Friendly</h3><p>We speak your language — no tech talk. Our goal is to make tech simple and stress-free for you.</p></div>
+  </div>
+  <div style="display: flex; justify-content: center; margin-top: 30px;">
+    <div class="card" style="max-width: 400px;">
+      <h3>💬 Fast & Reliable</h3>
+      <p>Call, WhatsApp or email — we’re quick to respond and even quicker to solve your IT issues.</p>
+    </div>
   </div>
 </section>
 
