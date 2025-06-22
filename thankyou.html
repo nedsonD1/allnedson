@@ -5,76 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thank You - Nedson Innovations</title>
 
-  <!-- SEO Meta Tags -->
+  <!-- Meta Tags -->
   <meta name="description" content="Thank you for reaching out to Nedson Innovations. We’ve received your support request and will respond shortly." />
-  <meta name="keywords" content="Thank You, Nedson Innovations, Support Request Submitted, IT Help Confirmation, Contact Acknowledgement" />
+  <meta name="keywords" content="Thank You, Nedson Innovations, Support Request Submitted, IT Help Confirmation" />
   <meta name="author" content="Nedson Innovations Ltd" />
 
-  <!-- Open Graph Meta for Social Sharing -->
-  <meta property="og:title" content="Thank You - Nedson Innovations" />
-  <meta property="og:description" content="We’ve received your request and will respond shortly. Nedson Innovations provides expert and friendly IT support." />
-  <meta property="og:image" content="og-image.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nedsoninnovations.co.uk/thankyou.html" />
-
+  <!-- Font and Animation -->
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4EDM8P99T"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-X4EDM8P99T');
-  </script>
-
   <style>
     body {
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      padding: 40px 20px;
+      min-height: 100vh;
       text-align: center;
-      padding: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      animation: fadeInZoom 1.2s ease-out forwards;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
     }
 
     h2 {
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-top: 30px;
+      animation: slideIn 1s ease-in-out forwards;
     }
 
     p {
       font-size: 18px;
       color: #ccc;
+      margin-top: 15px;
+      animation: fadeIn 1.5s ease-in-out forwards;
     }
 
-    a {
-      margin-top: 30px;
+    a.button {
       display: inline-block;
-      padding: 12px 20px;
+      margin-top: 30px;
+      padding: 12px 24px;
       color: #fff;
       border: 1px solid #fff;
       border-radius: 5px;
       text-decoration: none;
+      font-weight: bold;
       transition: 0.3s;
+      animation: bounceIn 1.8s ease-in-out forwards;
     }
 
-    a:hover {
+    a.button:hover {
       background-color: #fff;
       color: #000;
+    }
+
+    @keyframes fadeInZoom {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
 
+  <img src="thankyou-banner.png" alt="Thank you from Nedson Team">
+
   <h2>Thanks for contacting Nedson Innovations</h2>
   <p>We’ve received your support request. A member of our team will be in touch with you shortly to assist with your tech issue.</p>
-  <a href="index.html">Back to Homepage</a>
+
+  <a href="index.html" class="button">Back to Homepage</a>
 
 </body>
 </html>
