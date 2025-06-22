@@ -77,10 +77,15 @@
       width: 100%;
       padding: 20px 30px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       z-index: 2;
-      flex-wrap: wrap;
+    }
+    .hero-logo {
+      margin-bottom: 10px;
+    }
+    .hero-logo img {
+      height: 150px;
     }
     .hero-nav {
       display: flex;
@@ -99,9 +104,6 @@
     .hero-nav a:hover {
       background: #fff;
       color: #000;
-    }
-    .hero-logo img {
-      height: 100px;
     }
     .hero-content {
       position: relative;
@@ -240,13 +242,13 @@
       Your browser does not support HTML5 video.
     </video>
     <div class="hero-overlay">
+      <div class="hero-logo">
+        <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
+      </div>
       <div class="hero-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-      </div>
-      <div class="hero-logo">
-        <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
       </div>
     </div>
     <div class="hero-content">
