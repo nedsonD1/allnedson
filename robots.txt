@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://nedsoninnovations.co.uk/sitemap.xml
