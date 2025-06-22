@@ -21,6 +21,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      flex-direction: column;
     }
     .hero-video video {
       position: absolute;
@@ -47,10 +48,12 @@
       justify-content: space-between;
       align-items: center;
       z-index: 2;
+      flex-wrap: wrap;
     }
     .hero-nav {
       display: flex;
       gap: 12px;
+      flex-wrap: wrap;
     }
     .hero-nav a {
       padding: 10px 16px;
@@ -87,8 +90,13 @@
     }
     .hero-content h1 {
       font-size: 42px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-weight: bold;
+    }
+    .hero-content .sub-heading {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
     .hero-content p {
       font-size: 20px;
@@ -192,10 +200,22 @@
         flex-direction: column-reverse;
         align-items: center;
         gap: 15px;
+        text-align: center;
+      }
+      .hero-logo img {
+        height: 70px;
       }
       .hero-nav {
-        flex-wrap: wrap;
         justify-content: center;
+      }
+      .hero-content h1 {
+        font-size: 30px;
+      }
+      .hero-content .sub-heading {
+        font-size: 18px;
+      }
+      .hero-content p {
+        font-size: 16px;
       }
     }
   </style>
@@ -219,11 +239,9 @@
     </div>
     <div class="hero-content">
       <h1>Welcome to Nedson Innovations</h1>
-      <p><strong>Tech Support You Can Count On</strong></p>
-      <p>
-        From everyday issues to complex setups, we deliver expert IT solutions with care and precision, ensuring your devices and systems run smoothly, every time.<br>
-        Whether you’re an individual or a business, our remote and onsite services are designed to keep your tech stress-free and fully optimised.
-      </p>
+      <div class="sub-heading">Tech Support You Can Count On</div>
+      <p>From everyday issues to complex setups, we deliver expert IT solutions with care and precision, ensuring your devices and systems run smoothly, every time.<br>
+      Whether you’re an individual or a business, our remote and onsite services are designed to keep your tech stress-free and fully optimised.</p>
       <a href="contact.html" class="cta-button">Get Support</a>
     </div>
   </section>
