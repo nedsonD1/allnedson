@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nedson Innovations Ltd</title>
-  <link rel="canonical" href="https://nedsoninnovations.co.uk/" />
   <meta name="description" content="Expert IT support for individuals and businesses. Fast, friendly, and flexible tech solutions.">
   <meta name="author" content="Nedson Innovations Ltd">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
@@ -40,22 +39,22 @@
     }
 
     .header-bar {
-      position: fixed;
+      position: absolute;
       top: 0;
       width: 100%;
       z-index: 10;
-      background: transparent;
       padding: 10px 15px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 10px;
-      transition: background 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      background: transparent;
+      transition: background 0.3s ease-in-out;
     }
 
-    .header-bar.visible {
-      background: rgba(0, 0, 0, 0.6);
+    .header-bar:hover {
+      background: rgba(0, 0, 0, 0.5);
     }
 
     .logo-nav-wrapper {
@@ -75,7 +74,6 @@
       flex-wrap: nowrap;
       justify-content: center;
       overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
       gap: 10px;
     }
 
@@ -107,19 +105,12 @@
       padding: 20px;
       text-align: center;
       font-family: 'Playfair Display', serif;
-      opacity: 0;
-      animation: fadeUp 1.5s ease-out forwards;
-      animation-delay: 0.5s;
-    }
-
-    @keyframes fadeUp {
-      0% { transform: translateY(60px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
+      animation: fadeInUp 1.5s ease-out forwards;
     }
 
     .hero-content h1 {
       font-size: 42px;
-      margin-bottom: 10px;
+      margin-bottom: 0;
       font-weight: bold;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     }
@@ -127,12 +118,13 @@
     .hero-content .sub-heading {
       font-size: 20px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .hero-content p {
       font-size: 20px;
       line-height: 1.6;
+      margin-top: 20px;
       margin-bottom: 30px;
       font-weight: 500;
     }
@@ -195,24 +187,40 @@
       line-height: 1.6;
     }
 
+    #why {
+      background: #fff;
+      color: #000;
+      width: 100%;
+      padding: 60px 10px;
+    }
+
+    #why .card {
+      background: #fff;
+      border: 1px solid #000;
+      color: #000;
+      text-align: center;
+    }
+
+    #why .card p {
+      color: #000;
+    }
+
+    #why .content-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
     .whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      padding: 12px 20px;
-      font-weight: bold;
-      border-radius: 30px;
-      border: 1px solid #fff;
-      background: transparent;
-      color: #fff;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
+      border: none;
+      background: none;
       z-index: 1000;
     }
 
-    .whatsapp:hover {
-      background: #fff;
-      color: #000;
+    .whatsapp img {
+      width: 40px;
+      height: 40px;
     }
 
     footer {
@@ -220,6 +228,11 @@
       padding: 25px 20px;
       background: #111;
       color: #aaa;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (min-width: 768px) {
@@ -246,7 +259,17 @@
       }
 
       .hero-content {
-        margin-top: -40px;
+        margin-top: -60px;
+      }
+
+      #why .content-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      #why .content-grid .card:nth-child(4) {
+        grid-column: 2 / span 1;
       }
     }
 
@@ -254,19 +277,6 @@
       .hero-content {
         margin-top: 40px;
       }
-    }
-
-    #why .content-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-
-    #why .card {
-      background-color: #fff;
-      border: 1px solid #000;
-      color: #000;
     }
   </style>
 </head>
@@ -277,7 +287,7 @@
     <source src="nedson-hero.mp4" type="video/mp4">
   </video>
 
-  <div class="header-bar" id="main-header">
+  <div class="header-bar">
     <div class="logo-nav-wrapper">
       <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
       <div class="nav-center">
@@ -308,11 +318,11 @@
     <div class="card"><h3>💼 Small Business Setup</h3><p>Let us handle your emails, file storage, device security, and software, get your business running fast and safe.</p></div>
     <div class="card"><h3>🔒 Security & Cloud Backup</h3><p>Protect your data with antivirus, cloud storage, firewalls, and regular system backups, peace of mind included.</p></div>
     <div class="card"><h3>🔧 Software Help</h3><p>Fixing update errors, setting up apps, syncing email accounts, troubleshooting login issues, on all systems.</p></div>
-    <div class="card"><h3>📚 Learn & Understand</h3><p>We guide you through using devices smarter, whether you're 7 or 70. Learn safe browsing, emails, file saving and more.</p></div>
+    <div class="card"><h3>📚 Learn & Understand</h3><p>We guide you through using devices smarter — whether you're 7 or 70. Learn safe browsing, emails, file saving and more.</p></div>
   </div>
 </section>
 
-<section class="section" id="why" style="background:#fff; color:#000; width:100%; padding:60px 10px;">
+<section class="section" id="why">
   <h2>Why Choose Nedson?</h2>
   <div class="content-grid">
     <div class="card"><h3>🛠️ Any Tech, Any Age</h3><p>We help everyone, from first-time users to business owners, fix, learn, and grow with their tech confidently.</p></div>
@@ -331,23 +341,14 @@
   </div>
 </section>
 
-<a href="https://wa.me/447405007810" class="whatsapp">Chat on WhatsApp</a>
+<a href="https://wa.me/447405007810" class="whatsapp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 <footer>
   <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
   <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
 </footer>
-
-<script>
-  window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header-bar');
-    if (window.scrollY > 50) {
-      header.classList.add('visible');
-    } else {
-      header.classList.remove('visible');
-    }
-  });
-</script>
 
 </body>
 </html>
