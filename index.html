@@ -38,10 +38,10 @@
     }
 
     .header-bar {
-      position: absolute;
+      position: fixed;
       top: 0;
       width: 100%;
-      z-index: 10;
+      z-index: 1000;
       background: transparent;
       padding: 10px 15px;
       box-sizing: border-box;
@@ -53,7 +53,7 @@
     }
 
     .header-bar:hover {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
     }
 
     .logo-nav-wrapper {
@@ -72,6 +72,8 @@
       display: flex;
       flex-wrap: nowrap;
       justify-content: center;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       gap: 10px;
     }
 
@@ -100,7 +102,7 @@
       position: relative;
       z-index: 2;
       max-width: 800px;
-      padding: 20px;
+      padding: 60px 20px 20px;
       text-align: center;
       font-family: 'Playfair Display', serif;
       animation: fadeInUp 1.2s ease-in-out forwards;
@@ -131,12 +133,6 @@
       font-weight: 500;
     }
 
-    @media (min-width: 768px) {
-      .hero-content {
-        margin-top: -50px;
-      }
-    }
-
     .cta-button {
       background: transparent;
       color: #fff;
@@ -155,6 +151,8 @@
 
     .section {
       padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .section h2 {
@@ -165,7 +163,7 @@
 
     .content-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       justify-content: center;
     }
@@ -177,93 +175,50 @@
       border: 1px solid #333;
       transform: scale(1);
       transition: transform 0.3s ease, border-color 0.3s ease;
-      font-size: 17px;
+      text-align: center;
     }
 
     .card:hover {
       border-color: #fff;
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
 
     .card h3 {
       margin-bottom: 10px;
-      font-size: 18px;
+      text-align: center;
     }
 
     .card p {
-      font-size: 15px;
+      color: #ccc;
+      font-size: 16px;
       line-height: 1.6;
-    }
-
-    .section.white-bg {
-      background: #fff;
-      color: #000;
-    }
-
-    .section.white-bg .card {
-      background: #fff;
-      border: 1px solid #000;
-    }
-
-    .section.white-bg .card p,
-    .section.white-bg .card h3 {
-      color: #000;
-    }
-
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 12px;
-      font-weight: bold;
-      border-radius: 50%;
-      border: 1px solid #fff;
-      background: transparent;
-      color: #fff;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-      z-index: 1000;
-      font-size: 22px;
-    }
-
-    .whatsapp:hover {
-      background: #fff;
-      color: #000;
-    }
-
-    footer {
       text-align: center;
-      padding: 25px 20px;
-      background: #111;
-      color: #aaa;
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 767px) {
       .header-bar {
-        flex-direction: row;
-        justify-content: space-between;
+        position: fixed;
       }
 
-      .logo-nav-wrapper {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
+      .hero-content {
+        margin-top: 100px;
+        padding: 60px 15px 20px;
       }
 
-      .logo-nav-wrapper img {
-        height: 80px;
-        margin-bottom: 0;
+      .content-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
       }
 
-      .nav-center {
-        justify-content: center;
+      .card {
+        margin-bottom: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <section class="hero-video">
+
+<section class="hero-video">
   <video autoplay muted loop playsinline>
     <source src="nedson-hero.mp4" type="video/mp4">
   </video>
@@ -284,8 +239,7 @@
     <h1>Welcome to Nedson Innovations</h1>
     <div class="sub-heading">Helping Every Age, Every Device, Every Time</div>
     <p>
-      Whether you’re a child learning online, a student with a broken laptop, a parent trying to set up home internet, or a business needing secure systems, we’ve got your back.<br>
-      From quick fixes to full IT setups, we provide remote and onsite tech support that’s fast, friendly, and built for everyone.
+      Whether you’re a child learning online, a student with a broken laptop, a parent setting up home internet, or a business needing secure systems, we’ve got your back. From quick fixes to full IT setups, we provide remote and onsite support that’s fast, friendly, and built for everyone.
     </p>
     <a href="contact.html" class="cta-button">Get Support</a>
   </div>
@@ -294,22 +248,33 @@
 <section class="section" id="services">
   <h2>What We Do</h2>
   <div class="content-grid">
-    <div class="card"><h3>🖥️ Laptop & PC Fixes</h3><p>We fix computers that won’t turn on, are running slow, show error messages, or have broken screens and keyboards.</p></div>
-    <div class="card"><h3>👨‍👩‍👧 Family Tech Support</h3><p>Help for kids’ devices, student laptops, home learning setups, and parental control tools, explained simply.</p></div>
-    <div class="card"><h3>💼 Small Business Setup</h3><p>Let us handle your emails, file storage, device security, and software, get your business running fast and safe.</p></div>
-    <div class="card"><h3>🔒 Security & Cloud Backup</h3><p>Protect your data with antivirus, cloud storage, firewalls, and regular system backups, peace of mind included.</p></div>
-    <div class="card"><h3>🔧 Software Help</h3><p>Fixing update errors, setting up apps, syncing email accounts, troubleshooting login issues, on all systems.</p></div>
-    <div class="card"><h3>📚 Learn & Understand</h3><p>We guide you through using devices smarter, whether you're 7 or 70. Learn safe browsing, emails, file saving and more.</p></div>
+    <div class="card"><h3>🖥️ Laptop & PC Fixes</h3><p>We fix computers that won’t turn on, run slow, show errors, or have broken screens and keyboards.</p></div>
+    <div class="card"><h3>👨‍👩‍👧 Family Tech Support</h3><p>Support for kids’ devices, student laptops, home learning, and parental controls, explained simply.</p></div>
+    <div class="card"><h3>💼 Small Business Setup</h3><p>Let us handle emails, file storage, device security, and software to get your business running smoothly.</p></div>
+    <div class="card"><h3>🔒 Security & Cloud Backup</h3><p>Antivirus, firewalls, cloud storage, and routine backups for peace of mind.</p></div>
+    <div class="card"><h3>🔧 Software Help</h3><p>Fixing update errors, syncing emails, installing apps, troubleshooting all systems.</p></div>
+    <div class="card"><h3>📚 Learn & Understand</h3><p>We teach safe browsing, saving files, emails and more, whether you're 7 or 70.</p></div>
   </div>
 </section>
-
-<section class="section white-bg" id="why-nedson">
-  <h2>Why Choose Nedson?</h2>
-  <div class="content-grid">
-    <div class="card"><h3>🛠️ Any Tech, Any Age</h3><p>We help everyone, from first-time users to business owners, fix, learn, and grow with their tech confidently.</p></div>
-    <div class="card"><h3>🏠 Remote & Home Visits</h3><p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p></div>
-    <div class="card"><h3>💬 Fast & Reliable</h3><p>Call, WhatsApp or email, we’re quick to respond and even quicker to solve your IT issues.</p></div>
-    <div class="card" style="grid-column: 2 / span 1;"><h3>🧠 Clear & Friendly</h3><p>We speak your language, no tech talk. Our goal is to make tech simple and stress-free for you.</p></div>
+<section class="section white-bg" id="why" style="background: #fff; color: #000; width: 100%;">
+  <h2 style="color: #000;">Why Choose Nedson?</h2>
+  <div class="content-grid" style="gap: 30px;">
+    <div class="card" style="background: #fff; border: 1px solid #000;">
+      <h3 style="color: #000;">🛠️ Any Tech, Any Age</h3>
+      <p style="color: #000;">We help everyone, from first-time users to business owners, fix, learn, and grow with their tech confidently.</p>
+    </div>
+    <div class="card" style="background: #fff; border: 1px solid #000;">
+      <h3 style="color: #000;">🏠 Remote & Home Visits</h3>
+      <p style="color: #000;">Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p>
+    </div>
+    <div class="card" style="background: #fff; border: 1px solid #000;">
+      <h3 style="color: #000;">💬 Fast & Reliable</h3>
+      <p style="color: #000;">Call, WhatsApp or email, we’re quick to respond and even quicker to solve your IT issues.</p>
+    </div>
+    <div class="card" style="background: #fff; border: 1px solid #000; grid-column: 2 / span 1;">
+      <h3 style="color: #000;">🧠 Clear & Friendly</h3>
+      <p style="color: #000;">We speak your language, no tech talk. Our goal is to make tech simple and stress-free for you.</p>
+    </div>
   </div>
 </section>
 
@@ -325,7 +290,7 @@
 <a href="https://wa.me/447405007810" class="whatsapp">💬</a>
 
 <footer>
-  <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
+  <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk" style="color: #aaa;">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
   <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
 </footer>
 
