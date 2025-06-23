@@ -38,17 +38,14 @@
     }
 
     .header-bar {
-      position: absolute;
+      position: fixed;
       top: 0;
       width: 100%;
       z-index: 10;
       background: transparent;
       padding: 10px 15px;
-      box-sizing: border-box;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
+      justify-content: center;
       transition: background 0.3s ease;
     }
 
@@ -58,27 +55,23 @@
 
     .logo-nav-wrapper {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       width: 100%;
+      max-width: 1200px;
     }
 
     .logo-nav-wrapper img {
-      height: 70px;
-      margin-bottom: 5px;
+      height: 80px;
     }
 
     .nav-center {
       display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      gap: 10px;
+      gap: 15px;
     }
 
     .nav-center a {
-      padding: 8px 14px;
+      padding: 10px 16px;
       white-space: nowrap;
       border: 1px solid #fff;
       border-radius: 5px;
@@ -86,16 +79,11 @@
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s, color 0.3s;
-      flex-shrink: 0;
     }
 
     .nav-center a:hover {
       background: #fff;
       color: #000;
-    }
-
-    .nav-center a.active {
-      border-bottom: 2px solid #fff;
     }
 
     .hero-content {
@@ -106,6 +94,7 @@
       text-align: center;
       font-family: 'Playfair Display', serif;
       animation: fadeInUp 1.2s ease-in-out forwards;
+      margin-top: 60px;
     }
 
     @keyframes fadeInUp {
@@ -127,16 +116,9 @@
     }
 
     .hero-content p {
-      font-size: 20px;
+      font-size: 18px;
       line-height: 1.6;
       margin-bottom: 30px;
-      font-weight: 500;
-    }
-
-    @media (min-width: 768px) {
-      .hero-content {
-        margin-top: -40px;
-      }
     }
 
     .cta-button {
@@ -167,9 +149,10 @@
 
     .content-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .card {
@@ -177,26 +160,22 @@
       border-radius: 12px;
       padding: 20px;
       border: 1px solid #333;
-      transform: scale(1);
-      transition: transform 0.3s ease, border-color 0.3s ease;
+      transition: transform 0.3s ease;
       text-align: center;
     }
 
     .card:hover {
-      border-color: #fff;
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     .card h3 {
+      font-size: 18px;
       margin-bottom: 10px;
-      text-align: center;
     }
 
     .card p {
-      color: #ccc;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.6;
-      text-align: center;
     }
 
     .section.white-bg {
@@ -209,8 +188,7 @@
       border: 1px solid #000;
     }
 
-    .section.white-bg .card p,
-    .section.white-bg .card h3 {
+    .section.white-bg .card p {
       color: #000;
     }
 
@@ -218,16 +196,15 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      padding: 12px 16px;
       font-weight: bold;
       border-radius: 50%;
       border: 1px solid #fff;
       background: transparent;
       color: #fff;
       text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-      z-index: 1000;
       font-size: 22px;
+      padding: 12px 14px;
+      z-index: 1000;
     }
 
     .whatsapp:hover {
@@ -242,46 +219,26 @@
       color: #aaa;
     }
 
-    @media (min-width: 768px) {
-      .header-bar {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      .logo-nav-wrapper {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-      }
-
-      .logo-nav-wrapper img {
-        height: 80px;
-        margin-bottom: 0;
-      }
-
-      .nav-center {
-        justify-content: center;
-        overflow: visible;
-      }
-    }
-
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       .content-grid {
         grid-template-columns: 1fr;
-        padding: 0 15px;
-      }
-
-      .card {
-        margin-bottom: 20px;
       }
 
       .hero-content {
-        padding: 60px 15px 20px;
+        margin-top: 90px;
       }
 
-      .header-bar {
-        padding: 8px 10px;
+      .nav-center {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card h3 {
+        font-size: 17px;
+      }
+
+      .card p {
+        font-size: 15px;
       }
     }
   </style>
@@ -327,30 +284,31 @@
     <div class="card"><h3>📚 Learn & Understand</h3><p>We guide you through using devices smarter, whether you're 7 or 70. Learn safe browsing, emails, file saving and more.</p></div>
   </div>
 </section>
-
 <section class="section white-bg" id="why">
   <h2>Why Choose Nedson?</h2>
   <div class="content-grid">
-    <div class="card"><h3>🛠️ Any Tech, Any Age</h3><p>We help everyone, from first-time users to business owners, fix, learn, and grow with their tech confidently.</p></div>
-    <div class="card"><h3>🏠 Remote & Home Visits</h3><p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p></div>
-    <div class="card"><h3>💬 Fast & Reliable</h3><p>Call, WhatsApp or email, we’re quick to respond and even quicker to solve your IT issues.</p></div>
-    <div class="card" style="grid-column: 2 / span 1;"><h3>🧠 Clear & Friendly</h3><p>We speak your language, no tech talk. Our goal is to make tech simple and stress-free for you.</p></div>
+    <div class="card">
+      <h3>🛠️ Any Tech, Any Age</h3>
+      <p>We help everyone, from first-time users to business owners, fix, learn, and grow with their tech confidently.</p>
+    </div>
+    <div class="card">
+      <h3>🏡 Remote & Home Visits</h3>
+      <p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p>
+    </div>
+    <div class="card">
+      <h3>💬 Fast & Reliable</h3>
+      <p>Call, WhatsApp or email, we’re quick to respond and even quicker to solve your IT issues.</p>
+    </div>
+    <div class="card" style="grid-column: 2 / span 1;">
+      <h3>🧠 Clear & Friendly</h3>
+      <p>We speak your language, no tech talk. Our goal is to make tech simple and stress-free for you.</p>
+    </div>
   </div>
 </section>
 
-<section class="section" id="locations">
-  <h2>Where We Serve</h2>
-  <div class="content-grid">
-    <div class="card"><h3>📍 UK-Wide Coverage</h3><p>From London to Liverpool, our remote IT services cover everywhere, no postcode is too far.</p></div>
-    <div class="card"><h3>⚡ Instant Remote Fixes</h3><p>Most problems don’t need a visit. We fix many issues online, saving you time and hassle.</p></div>
-    <div class="card"><h3>📞 Easy to Book</h3><p>Use our form, WhatsApp or email to schedule help. You’ll get prompt support when you need it most.</p></div>
-  </div>
-</section>
-
-<a href="https://wa.me/447405007810" class="whatsapp">💬</a>
+<a href="https://wa.me/447405007810" class="whatsapp" target="_blank">💬</a>
 
 <footer>
-  <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
   <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
 </footer>
 
