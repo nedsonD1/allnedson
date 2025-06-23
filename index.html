@@ -38,7 +38,7 @@
     }
 
     .header-bar {
-      position: absolute;
+      position: fixed;
       top: 0;
       width: 100%;
       z-index: 10;
@@ -49,7 +49,7 @@
       flex-direction: column;
       align-items: center;
       gap: 10px;
-      transition: background 0.3s ease;
+      transition: background 0.4s ease;
     }
 
     .header-bar:hover {
@@ -106,7 +106,6 @@
       text-align: center;
       font-family: 'Playfair Display', serif;
       animation: fadeInUp 1.2s ease-in-out forwards;
-      margin-top: 30px;
     }
 
     @keyframes fadeInUp {
@@ -132,6 +131,12 @@
       line-height: 1.6;
       margin-bottom: 30px;
       font-weight: 500;
+    }
+
+    @media (min-width: 768px) {
+      .hero-content {
+        margin-top: -40px;
+      }
     }
 
     .cta-button {
@@ -162,19 +167,19 @@
 
     .content-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
       justify-content: center;
     }
 
     .card {
+      font-size: 17px;
       background-color: #111;
       border-radius: 12px;
       padding: 20px;
       border: 1px solid #333;
       transform: scale(1);
       transition: transform 0.3s ease, border-color 0.3s ease;
-      font-size: 16px;
     }
 
     .card:hover {
@@ -196,7 +201,7 @@
     .section.white-bg {
       background: #fff;
       color: #000;
-      padding: 60px 0;
+      width: 100%;
     }
 
     .section.white-bg .card {
@@ -204,21 +209,16 @@
       border: 1px solid #000;
     }
 
-    .section.white-bg .card p {
+    .section.white-bg .card p,
+    .section.white-bg .card h3 {
       color: #000;
-    }
-
-    .section.white-bg .content-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
     }
 
     .whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      padding: 12px;
+      padding: 12px 16px;
       font-weight: bold;
       border-radius: 50%;
       border: 1px solid #fff;
@@ -233,6 +233,13 @@
     .whatsapp:hover {
       background: #fff;
       color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      background: #111;
+      color: #aaa;
     }
 
     @media (min-width: 768px) {
@@ -257,11 +264,15 @@
         justify-content: center;
         overflow: visible;
       }
+
+      .section.white-bg .content-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   </style>
 </head>
 <body>
-<section class="hero-video">
+  <section class="hero-video">
   <video autoplay muted loop playsinline>
     <source src="nedson-hero.mp4" type="video/mp4">
   </video>
@@ -288,6 +299,7 @@
     <a href="contact.html" class="cta-button">Get Support</a>
   </div>
 </section>
+
 <section class="section" id="services">
   <h2>What We Do</h2>
   <div class="content-grid">
