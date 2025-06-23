@@ -5,13 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nedson Innovations Ltd</title>
   <link rel="canonical" href="https://nedsoninnovations.co.uk/" />
-  <meta property="og:title" content="Nedson Innovations - Expert IT Help" />
-  <meta property="og:description" content="Remote and onsite support for personal and business tech needs, reliable, friendly, and ready to help." />
-  <meta property="og:image" content="https://nedsoninnovations.co.uk/og-image.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nedsoninnovations.co.uk/" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -44,16 +38,17 @@
     }
 
     .header-bar {
-      position: fixed;
+      position: absolute;
       top: 0;
       width: 100%;
       z-index: 10;
       background: transparent;
-      padding: 10px 30px;
+      padding: 10px 15px;
       box-sizing: border-box;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      gap: 10px;
       transition: background 0.3s ease;
     }
 
@@ -61,14 +56,24 @@
       background: rgba(0, 0, 0, 0.4);
     }
 
-    .logo {
+    .logo-nav-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo-nav-wrapper img {
       height: 70px;
+      margin-bottom: 5px;
     }
 
     .nav-center {
       display: flex;
       flex-wrap: nowrap;
       justify-content: center;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       gap: 10px;
     }
 
@@ -81,6 +86,7 @@
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s, color 0.3s;
+      flex-shrink: 0;
     }
 
     .nav-center a:hover {
@@ -129,7 +135,7 @@
 
     @media (min-width: 768px) {
       .hero-content {
-        margin-top: -60px;
+        margin-top: -40px;
       }
     }
 
@@ -163,7 +169,7 @@
 
     .content-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       justify-items: center;
     }
@@ -198,7 +204,6 @@
     .section.white-bg {
       background: #fff;
       color: #000;
-      width: 100%;
     }
 
     .section.white-bg .card {
@@ -206,8 +211,7 @@
       border: 1px solid #000;
     }
 
-    .section.white-bg .card p,
-    .section.white-bg .card h3 {
+    .section.white-bg .card p {
       color: #000;
     }
 
@@ -215,15 +219,16 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      font-size: 26px;
-      padding: 14px;
+      padding: 12px 16px;
+      font-weight: bold;
       border-radius: 50%;
+      border: 1px solid #fff;
       background: transparent;
       color: #fff;
-      border: 1px solid #fff;
       text-decoration: none;
       transition: background 0.3s, color 0.3s;
       z-index: 1000;
+      font-size: 22px;
     }
 
     .whatsapp:hover {
@@ -238,7 +243,35 @@
       color: #aaa;
     }
 
+    @media (min-width: 768px) {
+      .header-bar {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .logo-nav-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .logo-nav-wrapper img {
+        height: 80px;
+        margin-bottom: 0;
+      }
+
+      .nav-center {
+        justify-content: center;
+        overflow: visible;
+      }
+    }
+
     @media (max-width: 767px) {
+      .hero-content {
+        margin-top: 50px;
+      }
+
       .content-grid {
         grid-template-columns: 1fr;
       }
@@ -247,32 +280,18 @@
         width: 100%;
         max-width: 100%;
       }
-
-      .hero-content {
-        margin-top: 50px;
-      }
-
-      .header-bar {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .nav-center {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 10px;
-      }
     }
   </style>
 </head>
 <body>
   <section class="hero-video">
-    <video autoplay muted loop playsinline>
-      <source src="nedson-hero.mp4" type="video/mp4" />
-    </video>
+  <video autoplay muted loop playsinline>
+    <source src="nedson-hero.mp4" type="video/mp4">
+  </video>
 
-    <div class="header-bar">
-      <a href="index.html"><img src="nedson-logo.png" alt="Nedson Innovations Logo" class="logo"></a>
+  <div class="header-bar">
+    <div class="logo-nav-wrapper">
+      <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
       <div class="nav-center">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -280,54 +299,56 @@
         <a href="contact.html">Request Support</a>
       </div>
     </div>
+  </div>
 
-    <div class="hero-content">
-      <h1>Welcome to Nedson Innovations</h1>
-      <div class="sub-heading">Helping Every Age, Every Device, Every Time</div>
-      <p>
-        Whether you’re a child learning online, a student with a broken laptop, a parent trying to set up home internet, or a business needing secure systems, we’ve got your back.<br>
-        From quick fixes to full IT setups, we provide remote and onsite tech support that’s fast, friendly, and built for everyone.
-      </p>
-      <a href="contact.html" class="cta-button">Get Support</a>
-    </div>
-  </section>
+  <div class="hero-content">
+    <h1>Welcome to Nedson Innovations</h1>
+    <div class="sub-heading">Helping Every Age, Every Device, Every Time</div>
+    <p>
+      Whether you’re a child learning online, a student with a broken laptop, a parent trying to set up home internet, or a business needing secure systems, we’ve got your back.<br>
+      From quick fixes to full IT setups, we provide remote and onsite tech support that’s fast, friendly, and built for everyone.
+    </p>
+    <a href="contact.html" class="cta-button">Get Support</a>
+  </div>
+</section>
 
-  <section class="section" id="services">
-    <h2>What We Do</h2>
-    <div class="content-grid">
-      <div class="card"><h3>🖥️ Laptop & PC Fixes</h3><p>We fix computers that won’t turn on, are running slow, show error messages, or have broken screens and keyboards.</p></div>
-      <div class="card"><h3>👨‍👩‍👧 Family Tech Support</h3><p>Help for kids’ devices, student laptops, home learning setups, and parental control tools, explained simply.</p></div>
-      <div class="card"><h3>💼 Small Business Setup</h3><p>Let us handle your emails, file storage, device security, and software, get your business running fast and safe.</p></div>
-      <div class="card"><h3>🔒 Security & Cloud Backup</h3><p>Protect your data with antivirus, cloud storage, firewalls, and regular system backups, peace of mind included.</p></div>
-      <div class="card"><h3>🔧 Software Help</h3><p>Fixing update errors, setting up apps, syncing email accounts, troubleshooting login issues, on all systems.</p></div>
-      <div class="card"><h3>📚 Learn & Understand</h3><p>We guide you through using devices smarter, whether you're 7 or 70. Learn safe browsing, emails, file saving and more.</p></div>
-    </div>
-  </section>
+<section class="section" id="services">
+  <h2>What We Do</h2>
+  <div class="content-grid">
+    <div class="card"><h3>🖥️ Laptop & PC Fixes</h3><p>We fix computers that won’t turn on, are running slow, show error messages, or have broken screens and keyboards.</p></div>
+    <div class="card"><h3>👨‍👩‍👧 Family Tech Support</h3><p>Help for kids’ devices, student laptops, home learning setups, and parental control tools, explained simply.</p></div>
+    <div class="card"><h3>💼 Small Business Setup</h3><p>Let us handle your emails, file storage, device security, and software, get your business running fast and safe.</p></div>
+    <div class="card"><h3>🔒 Security & Cloud Backup</h3><p>Protect your data with antivirus, cloud storage, firewalls, and regular system backups, peace of mind included.</p></div>
+    <div class="card"><h3>🔧 Software Help</h3><p>Fixing update errors, setting up apps, syncing email accounts, troubleshooting login issues, on all systems.</p></div>
+    <div class="card"><h3>📚 Learn & Understand</h3><p>We guide you through using devices smarter, whether you're 7 or 70. Learn safe browsing, emails, file saving and more.</p></div>
+  </div>
+</section>
 
-  <section class="section white-bg" id="why">
-    <h2>Why Choose Nedson?</h2>
-    <div class="content-grid">
-      <div class="card"><h3>🛠️ Any Tech, Any Age</h3><p>We help everyone, from first-time users to business owners, fix, learn, and grow with their tech confidently.</p></div>
-      <div class="card"><h3>🏠 Remote & Home Visits</h3><p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p></div>
-      <div class="card"><h3>💬 Fast & Reliable</h3><p>Call, WhatsApp or email, we’re quick to respond and even quicker to solve your IT issues.</p></div>
-      <div class="card"><h3>🧠 Clear & Friendly</h3><p>We speak your language, no tech talk. Our goal is to make tech simple and stress-free for you.</p></div>
-    </div>
-  </section>
+<section class="section white-bg" id="why">
+  <h2>Why Choose Nedson?</h2>
+  <div class="content-grid">
+    <div class="card"><h3>🛠️ Any Tech, Any Age</h3><p>We help everyone, from first-time users to business owners, fix, learn, and grow with their tech confidently.</p></div>
+    <div class="card"><h3>🏠 Remote & Home Visits</h3><p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p></div>
+    <div class="card"><h3>💬 Fast & Reliable</h3><p>Call, WhatsApp or email, we’re quick to respond and even quicker to solve your IT issues.</p></div>
+    <div class="card"><h3>🧠 Clear & Friendly</h3><p>We speak your language, no tech talk. Our goal is to make tech simple and stress-free for you.</p></div>
+  </div>
+</section>
 
-  <section class="section" id="locations">
-    <h2>Where We Serve</h2>
-    <div class="content-grid">
-      <div class="card"><h3>📍 UK-Wide Coverage</h3><p>From London to Liverpool, our remote IT services cover everywhere, no postcode is too far.</p></div>
-      <div class="card"><h3>⚡ Instant Remote Fixes</h3><p>Most problems don’t need a visit. We fix many issues online, saving you time and hassle.</p></div>
-      <div class="card"><h3>📞 Easy to Book</h3><p>Use our form, WhatsApp or email to schedule help. You’ll get prompt support when you need it most.</p></div>
-    </div>
-  </section>
+<section class="section" id="locations">
+  <h2>Where We Serve</h2>
+  <div class="content-grid">
+    <div class="card"><h3>📍 UK-Wide Coverage</h3><p>From London to Liverpool, our remote IT services cover everywhere, no postcode is too far.</p></div>
+    <div class="card"><h3>⚡ Instant Remote Fixes</h3><p>Most problems don’t need a visit. We fix many issues online, saving you time and hassle.</p></div>
+    <div class="card"><h3>📞 Easy to Book</h3><p>Use our form, WhatsApp or email to schedule help. You’ll get prompt support when you need it most.</p></div>
+  </div>
+</section>
 
-  <a href="https://wa.me/447405007810" class="whatsapp" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/447405007810" class="whatsapp">💬</a>
 
-  <footer>
-    <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
-    <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
+  <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
