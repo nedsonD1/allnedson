@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Protect Your Files | Nedson Innovations</title>
-  <meta name="description" content="Learn how to back up your files using cloud storage, external drives, and automatic tools.">
+  <meta name="description" content="Learn how to back up and protect your files using cloud storage, external drives, and simple habits.">
   <link rel="canonical" href="https://nedsoninnovations.co.uk/tips/protect-your-files.html" />
   <meta property="og:title" content="Protect Your Files | Nedson Innovations" />
   <meta property="og:description" content="Never lose your files again. Use cloud backups and drives to keep your data safe and accessible." />
@@ -20,60 +20,65 @@
       background: #fff;
       color: #000;
     }
+
     header {
       background: #000;
-      padding: 20px;
-    }
-    .nav-container {
+      color: #fff;
+      padding: 15px 20px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
-    .logo {
-      font-size: 22px;
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      font-family: 'Playfair Display', serif;
+
+    header img {
+      height: 40px;
     }
-    .nav-links {
+
+    nav {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      justify-content: center;
     }
-    .nav-links a {
+
+    nav a {
       color: #fff;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      padding: 8px 14px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 15px;
+      border: 1px solid #fff;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: bold;
     }
-    .nav-links a:hover {
+
+    nav a:hover {
       background: #fff;
       color: #000;
     }
-    .page-heading {
+
+    .page-title {
       text-align: center;
-      margin: 30px 20px 10px;
-      font-family: 'Playfair Display', serif;
+      margin-top: 30px;
       font-size: 28px;
+      font-family: 'Playfair Display', serif;
     }
+
     .content {
       max-width: 800px;
       margin: auto;
-      padding: 20px;
+      padding: 40px 20px;
     }
+
     .content h2 {
       margin-top: 30px;
-      font-size: 20px;
+      font-size: 22px;
     }
+
     .content ul {
       line-height: 1.7;
       padding-left: 20px;
     }
+
     .cta-button {
       display: inline-block;
       margin-top: 30px;
@@ -83,9 +88,11 @@
       text-decoration: none;
       border-radius: 5px;
     }
+
     .cta-button:hover {
       background: #444;
     }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -93,19 +100,21 @@
       color: #aaa;
       margin-top: 40px;
     }
+
     footer a {
       color: #ccc;
       text-decoration: none;
     }
 
-    @media screen and (max-width: 768px) {
-      .nav-container {
+    @media (max-width: 768px) {
+      header {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
       }
-      .nav-links {
+
+      nav {
         justify-content: center;
+        margin-top: 10px;
       }
     }
   </style>
@@ -113,18 +122,16 @@
 <body>
 
 <header>
-  <div class="nav-container">
-    <a href="../index.html" class="logo">NEDSON INNOVATIONS</a>
-    <div class="nav-links">
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../request-support.html">Request Support</a>
-      <a href="../tips.html">Tips</a>
-    </div>
-  </div>
+  <a href="../index.html"><img src="../nedson-logo.png" alt="Nedson Logo"></a>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../contact.html">Request Support</a>
+  </nav>
 </header>
 
-<h1 class="page-heading">Protect Your Files</h1>
+<h1 class="page-title">Protect Your Files</h1>
 
 <div class="content">
   <p>Every day, people lose photos, school work, invoices, or client files due to damaged devices or lost phones. Here's how to make sure that never happens to you.</p>
@@ -143,8 +150,8 @@
 
   <h2>3. Use Automatic Backup Tools</h2>
   <ul>
-    <li><strong>Windows:</strong> Use File History or OneDrive to back up folders automatically.</li>
-    <li><strong>Mac:</strong> Turn on Time Machine to back up regularly to an external drive.</li>
+    <li>Windows: Use File History or OneDrive to back up folders automatically.</li>
+    <li>Mac: Turn on Time Machine to back up regularly to an external drive.</li>
   </ul>
 
   <h2>4. Keep Multiple Copies</h2>
@@ -152,9 +159,9 @@
     <li>Important documents should live in more than one place — cloud + USB or two drives.</li>
   </ul>
 
-  <p>Need help setting this up? <a href="../contact.html">Contact us</a> — we’ll guide you through remote or onsite.</p>
+  <p>Need help setting this up? <a href="../contact.html">Reach out to us</a> — we’ll guide you through remote or onsite.</p>
 
-  <a href="../tips.html" class="cta-button">← Back to Tips</a>
+  <a href="tips.html" class="cta-button">← Back to Tips</a>
 </div>
 
 <footer>
