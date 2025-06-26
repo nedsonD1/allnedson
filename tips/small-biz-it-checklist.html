@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Small Business IT Checklist | Nedson Innovations</title>
-  <meta name="description" content="The essential IT setup guide for small business owners: secure email, backups, antivirus, and remote support options." />
+  <meta name="description" content="The essential IT setup guide for small business owners: secure email, backups, antivirus, and remote support options.">
   <link rel="canonical" href="https://nedsoninnovations.co.uk/tips/small-biz-it-checklist.html" />
   <meta property="og:title" content="Small Business IT Checklist | Nedson Innovations" />
   <meta property="og:description" content="Make sure your small business is ready. Email, backups, antivirus, and IT support you can count on." />
@@ -20,60 +20,65 @@
       background: #fff;
       color: #000;
     }
+
     header {
       background: #000;
-      padding: 20px;
-    }
-    .nav-container {
+      color: #fff;
+      padding: 15px 20px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
-    .logo {
-      font-size: 22px;
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      font-family: 'Playfair Display', serif;
+
+    header img {
+      height: 40px;
     }
-    .nav-links {
+
+    nav {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      justify-content: center;
     }
-    .nav-links a {
+
+    nav a {
       color: #fff;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      padding: 8px 14px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 15px;
+      border: 1px solid #fff;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: bold;
     }
-    .nav-links a:hover {
+
+    nav a:hover {
       background: #fff;
       color: #000;
     }
-    .page-heading {
+
+    .page-title {
       text-align: center;
-      margin: 30px 20px 10px;
-      font-family: 'Playfair Display', serif;
+      margin-top: 30px;
       font-size: 28px;
+      font-family: 'Playfair Display', serif;
     }
+
     .content {
       max-width: 800px;
       margin: auto;
-      padding: 20px;
+      padding: 40px 20px;
     }
+
     .content h2 {
       margin-top: 30px;
-      font-size: 20px;
+      font-size: 22px;
     }
+
     .content ul {
       line-height: 1.7;
       padding-left: 20px;
     }
+
     .cta-button {
       display: inline-block;
       margin-top: 30px;
@@ -83,9 +88,11 @@
       text-decoration: none;
       border-radius: 5px;
     }
+
     .cta-button:hover {
       background: #444;
     }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -93,19 +100,21 @@
       color: #aaa;
       margin-top: 40px;
     }
+
     footer a {
       color: #ccc;
       text-decoration: none;
     }
 
-    @media screen and (max-width: 768px) {
-      .nav-container {
+    @media (max-width: 768px) {
+      header {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
       }
-      .nav-links {
+
+      nav {
         justify-content: center;
+        margin-top: 10px;
       }
     }
   </style>
@@ -113,18 +122,16 @@
 <body>
 
 <header>
-  <div class="nav-container">
-    <a href="../index.html" class="logo">NEDSON INNOVATIONS</a>
-    <div class="nav-links">
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../request-support.html">Request Support</a>
-      <a href="../tips.html">Tips</a>
-    </div>
-  </div>
+  <a href="../index.html"><img src="../nedson-logo.png" alt="Nedson Logo"></a>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../contact.html">Request Support</a>
+  </nav>
 </header>
 
-<h1 class="page-heading">Small Business IT Checklist</h1>
+<h1 class="page-title">Small Business IT Checklist</h1>
 
 <div class="content">
   <p>If you're starting or running a small business, your IT setup can make or break your daily operations. Here's a simple checklist to stay protected, productive, and professional:</p>
@@ -160,7 +167,7 @@
 
   <p>We help set up and support small business systems from scratch. <a href="../contact.html">Contact us</a> for a quick consultation.</p>
 
-  <a href="../tips.html" class="cta-button">← Back to Tips</a>
+  <a href="tips.html" class="cta-button">← Back to Tips</a>
 </div>
 
 <footer>
