@@ -8,15 +8,11 @@
   <link rel="icon" href="../og-image.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
       font-family: system-ui, sans-serif;
       background: #fff;
       color: #000;
-      display: flex;
-      flex-direction: column;
     }
 
     header {
@@ -67,9 +63,10 @@
     }
 
     .content-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 25px;
+      justify-content: center;
     }
 
     .card {
@@ -77,6 +74,9 @@
       border: 1px solid #ddd;
       border-radius: 10px;
       padding: 20px;
+      width: 30%;
+      min-width: 280px;
+      box-sizing: border-box;
     }
 
     .card h3 {
@@ -108,7 +108,7 @@
       padding: 30px 20px;
       background: #000;
       color: #aaa;
-      margin-top: auto;
+      margin-top: 40px;
     }
 
     footer a {
@@ -125,6 +125,10 @@
       nav {
         justify-content: center;
         margin-top: 10px;
+      }
+
+      .card {
+        width: 100%;
       }
     }
   </style>
