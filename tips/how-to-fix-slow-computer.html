@@ -56,11 +56,25 @@
       color: #000;
     }
 
-    .page-title {
+    .hero-banner {
+      background-image: url('../tips-banner.png');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin-top: 30px;
-      font-size: 28px;
+    }
+
+    .hero-banner .page-title {
+      color: white;
+      font-size: 32px;
       font-family: 'Playfair Display', serif;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin: 0;
     }
 
     .content {
@@ -130,8 +144,10 @@
     <a href="../contact.html">Request Support</a>
   </nav>
 </header>
-<img src="../tips-banner.png" alt="Tech Banner" style="width:100%; max-height:300px; object-fit:cover; display:block; margin-bottom: 20px;">
+
+<section class="hero-banner">
   <h1 class="page-title">How to Fix a Slow Computer</h1>
+</section>
 
 <div class="content">
   <p>If your computer is slow, it doesn’t always mean you need to replace it. Try these quick steps to boost speed and performance:</p>
