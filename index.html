@@ -3,296 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IT Support Services – Remote & Onsite | Nedson Innovations</title>
-  <meta name="description" content="Expert IT support services for individuals and businesses. We offer remote and onsite help, including support for users in London and across the UK.">
+  <title>Property Lettings & IT Consultancy | Nedson Innovations</title>
+  <meta name="description" content="Nedson Innovations focuses on property lettings and management, with IT consultancy as a complementary service. Let, manage, and maintain properties with care, plus professional IT support when you need it.">
   <link rel="icon" href="og-image.png" type="image/png">
   <link rel="canonical" href="https://nedsoninnovations.co.uk/" />
-  <!-- Open Graph Meta Tags for Social Sharing -->
-<meta property="og:title" content="Nedson Innovations | Expert IT Support & Setup Services" />
-<meta property="og:description" content="Get professional IT support and setup for home or business. We offer tech help, cloud backup, and secure solutions — remote or onsite." />
-<meta property="og:image" content="https://nedsoninnovations.co.uk/og-image.png" />
-<meta property="og:url" content="https://nedsoninnovations.co.uk/" />
-<meta property="og:type" content="website" />
-  <!-- ✅ Paste schema below this line -->
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nedson Innovations | Property Lettings & IT Consultancy" />
+  <meta property="og:description" content="Property lettings and management as our main concern, plus professional IT consultancy services." />
+  <meta property="og:image" content="https://nedsoninnovations.co.uk/og-image.png" />
+  <meta property="og:url" content="https://nedsoninnovations.co.uk/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema, dual nature with letting as primary -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["Organization","RealEstateAgent","ProfessionalService"],
     "name": "Nedson Innovations Ltd",
-    "image": "https://nedsoninnovations.co.uk/og-image.png",
     "url": "https://nedsoninnovations.co.uk/",
-    "telephone": "+447405007810",
+    "image": "https://nedsoninnovations.co.uk/og-image.png",
     "email": "info@nedsoninnovations.co.uk",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "London",
-      "addressCountry": "GB"
-    },
-    "description": "We provide remote and onsite IT support services to individuals and small businesses across London and the UK.",
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 51.5074,
-        "longitude": -0.1278
-      },
-      "geoRadius": 100000
+    "telephone": "+447405007810",
+    "description": "Property lettings and management as the main concern, plus information technology consultancy activities.",
+    "areaServed": "Worldwide",
+    "knowsAbout": [
+      "Residential property letting",
+      "Property management",
+      "Tenant support and maintenance coordination",
+      "Information technology consultancy",
+      "Remote and onsite IT support"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Nedson Innovations Services",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Property Lettings & Management",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Lettings"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Property Management"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tenant Support, Repairs Coordination"}}
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "IT Consultancy",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "IT Consulting for SMEs"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Remote and Onsite IT Support"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud, Security, Backup Advisory"}}
+          ]
+        }
+      ]
     },
     "openingHours": "Mo-Sa 09:00-18:00",
     "sameAs": []
   }
   </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-    .hero-video {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-    }
-    .hero-video video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-      filter: brightness(0.5);
-    }
-    .header-bar {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      background: transparent;
-      padding: 10px 15px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      transition: background 0.3s ease;
-    }
-    .header-bar:hover {
-      background: rgba(0, 0, 0, 0.4);
-    }
-    .logo-nav-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-    .logo-nav-wrapper img {
-      height: 70px;
-      margin-bottom: 5px;
-    }
-    .nav-center {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      gap: 10px;
-    }
-    .nav-center a {
-      padding: 8px 14px;
-      white-space: nowrap;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s, color 0.3s;
-      flex-shrink: 0;
-    }
-    .nav-center a:hover {
-      background: #fff;
-      color: #000;
-    }
-    .nav-center a.active {
-      border-bottom: 2px solid #fff;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 800px;
-      padding: 20px;
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      animation: fadeInUp 1.2s ease-in-out forwards;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .hero-content h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    }
-    .hero-content .sub-heading {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .hero-content p {
-      font-size: 20px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      font-weight: 500;
-    }
+    body { margin: 0; font-family: system-ui, sans-serif; background-color: #000; color: #fff; }
+    .hero-video { position: relative; width: 100%; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; }
+    .hero-video video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.5); }
+    .header-bar { position: absolute; top: 0; width: 100%; z-index: 10; background: transparent; padding: 10px 15px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 10px; transition: background 0.3s ease; }
+    .header-bar:hover { background: rgba(0, 0, 0, 0.4); }
+    .logo-nav-wrapper { display: flex; flex-direction: column; align-items: center; width: 100%; }
+    .logo-nav-wrapper img { height: 70px; margin-bottom: 5px; }
+    .nav-center { display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 10px; }
+    .nav-center a { padding: 8px 14px; white-space: nowrap; border: 1px solid #fff; border-radius: 5px; color: #fff; text-decoration: none; font-weight: bold; transition: background 0.3s, color 0.3s; flex-shrink: 0; }
+    .nav-center a:hover { background: #fff; color: #000; }
+    .nav-center a.active { border-bottom: 2px solid #fff; }
+    .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 20px; text-align: center; font-family: 'Playfair Display', serif; animation: fadeInUp 1.2s ease-in-out forwards; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-content h1 { font-size: 42px; margin-bottom: 10px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+    .hero-content .sub-heading { font-size: 20px; font-weight: bold; margin-bottom: 20px; }
+    .hero-content p { font-size: 20px; line-height: 1.6; margin-bottom: 30px; font-weight: 500; }
+    @media (min-width: 768px) { .hero-content { margin-top: -40px; } }
+    .cta-button { background: transparent; color: #fff; padding: 12px 25px; font-weight: bold; border: 1px solid #fff; border-radius: 5px; text-decoration: none; transition: background 0.3s, color 0.3s; display: inline-block; }
+    .cta-button:hover { background-color: #fff; color: #000; }
+    .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    .section h2 { text-align: center; font-size: 28px; margin-bottom: 30px; }
+    .content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; justify-items: center; }
+    .card { background-color: #111; border-radius: 12px; padding: 20px; border: 1px solid #333; transform: scale(1); transition: transform 0.3s ease, border-color 0.3s ease; max-width: 360px; text-align: center; }
+    .card:hover { border-color: #fff; transform: scale(1.05); }
+    .card h3 { margin-bottom: 10px; font-size: 18px; }
+    .card p { color: #ccc; font-size: 16px; line-height: 1.6; }
+    .section.white-bg { background: #fff; color: #000; max-width: 100% !important; padding: 60px 0; }
+    .section.white-bg .card { background: #fff; border: 1px solid #000; }
+    .section.white-bg .card p { color: #000; }
+    .white-bg .content-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 0 15px; margin: 0 auto; }
+    footer { text-align: center; padding: 25px 20px; background: #111; color: #aaa; }
+    footer a { color: white; text-decoration: none; }
+    footer a:hover { color: #cccccc; }
     @media (min-width: 768px) {
-      .hero-content {
-        margin-top: -40px;
-      }
+      .header-bar { flex-direction: row; justify-content: space-between; }
+      .logo-nav-wrapper { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
+      .logo-nav-wrapper img { height: 80px; margin-bottom: 0; }
+      .nav-center { justify-content: center; overflow: visible; }
     }
-    .cta-button {
-      background: transparent;
-      color: #fff;
-      padding: 12px 25px;
-      font-weight: bold;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-    }
-    .cta-button:hover {
-      background-color: #fff;
-      color: #000;
-    }
-    .section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .section h2 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 30px;
-    }
-    .content-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      justify-items: center;
-    }
-    .card {
-      background-color: #111;
-      border-radius: 12px;
-      padding: 20px;
-      border: 1px solid #333;
-      transform: scale(1);
-      transition: transform 0.3s ease, border-color 0.3s ease;
-      max-width: 360px;
-      text-align: center;
-    }
-    .card:hover {
-      border-color: #fff;
-      transform: scale(1.05);
-    }
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-    .card p {
-      color: #ccc;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    .section.white-bg {
-      background: #fff;
-      color: #000;
-      max-width: 100% !important;
-      padding: 60px 0;
-    }
-    .section.white-bg .card {
-      background: #fff;
-      border: 1px solid #000;
-    }
-    .section.white-bg .card p {
-      color: #000;
-    }
-    .white-bg .content-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 0 15px;
-      margin: 0 auto;
-    }
-        .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 12px 16px;
-      font-weight: bold;
-      border-radius: 50%;
-      border: 1px solid #fff;
-      background: transparent;
-      color: #fff;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-      z-index: 1000;
-      font-size: 22px;
-    }
-
-    .whatsapp:hover {
-      background: #fff;
-      color: #000;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px 20px;
-      background: #111;
-      color: #aaa;
-    }
-
-    @media (min-width: 768px) {
-      .header-bar {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-      .logo-nav-wrapper {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-      }
-      .logo-nav-wrapper img {
-        height: 80px;
-        margin-bottom: 0;
-      }
-      .nav-center {
-        justify-content: center;
-        overflow: visible;
-      }
-    }
-
     @media (max-width: 767px) {
-      .hero-content {
-        margin-top: 50px;
-      }
-      .content-grid {
-        grid-template-columns: 1fr;
-      }
-      .card {
-        width: 100%;
-        max-width: 100%;
-      }
+      .hero-content { margin-top: 50px; }
+      .content-grid { grid-template-columns: 1fr; }
+      .card { width: 100%; max-width: 100%; }
     }
   </style>
 </head>
@@ -301,122 +117,112 @@
     <video autoplay muted loop playsinline>
       <source src="nedson-hero.mp4" type="video/mp4">
     </video>
+
     <div class="header-bar">
       <div class="logo-nav-wrapper">
         <a href="index.html"><img src="nedson-logo.png" alt="Nedson Logo"></a>
         <div class="nav-center">
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="contact.html">Request Support</a>
-  <a href="tips.html">Tips</a>
-</div>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="contact.html">Request Support</a>
+          <a href="tips.html">Tips</a>
+        </div>
       </div>
     </div>
+
     <div class="hero-content">
-  <h1>Expert IT Support – Remote & Onsite</h1>
-  <div class="sub-heading">Tech Support for Everyone, Anywhere, Anytime</div>
-  <p>
-    We provide fast, friendly IT help for home users and small businesses. From device repairs to cloud setups, we serve clients across the UK – including London.
-  </p>
-  <a href="contact.html" class="cta-button">Get Support Now</a>
-</div>
+      <h1>Property Lettings & Management</h1>
+      <div class="sub-heading">Our main concern is letting and operating of own or leased real estate</div>
+      <p>
+        We provide well managed homes for tenants, clear communication for landlords, and reliable maintenance coordination. Alongside property lettings, we also offer professional IT consultancy and support for individuals and small businesses.
+      </p>
+      <div class="cta-row">
+        <a href="contact.html" class="cta-button">Enquire About Lettings</a>
+        <a href="contact.html" class="cta-button">Get IT Support</a>
+      </div>
+    </div>
   </section>
 
   <section class="section" id="services">
     <h2>What We Do</h2>
     <div class="content-grid">
-      <div class="card"><h3>🖥️ Laptop & PC Fixes</h3><p>We fix computers that won’t turn on, are running slow, show error messages, or have broken screens and keyboards.</p></div>
-      <div class="card"><h3>👨‍👩‍👧 Family Tech Support</h3><p>Help for kids’ devices, student laptops, home learning setups, and parental control tools, explained simply.</p></div>
-      <div class="card"><h3>💼 Small Business Setup</h3><p>Let us handle your emails, file storage, device security, and software, get your business running fast and safe.</p></div>
-      <div class="card"><h3>🔒 Security & Cloud Backup</h3><p>Protect your data with antivirus, cloud storage, firewalls, and regular system backups, peace of mind included.</p></div>
-      <div class="card"><h3>🔧 Software Help</h3><p>Fixing update errors, setting up apps, syncing email accounts, troubleshooting login issues, on all systems.</p></div>
-      <div class="card"><h3>📚 Learn & Understand</h3><p>We guide you through using devices smarter, whether you're 7 or 70. Learn safe browsing, emails, file saving and more.</p></div>
+      <!-- Property first -->
+      <div class="card"><h3>🏠 Residential Lettings</h3><p>Quality homes to let, fair processes, simple documentation, responsive communication for tenants and landlords.</p></div>
+      <div class="card"><h3>🛠️ Property Management</h3><p>End to end management, tenant queries, inspections, repair coordination, and smooth renewals.</p></div>
+      <div class="card"><h3>📞 Tenant Support</h3><p>Clear guidance, rapid response for issues, helpful updates from move in to move out.</p></div>
+      <!-- IT consultancy second -->
+      <div class="card"><h3>💡 IT Consultancy</h3><p>Practical technology advice for small businesses, secure email, cloud, backup, device setup, and training.</p></div>
+      <div class="card"><h3>🖥️ Remote & Onsite IT Help</h3><p>Troubleshooting, performance fixes, software setup, security checks, support for Windows and Mac.</p></div>
+      <div class="card"><h3>🔐 Security & Backup Advisory</h3><p>Protect data with sensible policies, backups, and tools that fit your budget and workflow.</p></div>
     </div>
   </section>
 
   <section class="section white-bg" id="why">
-    <h2>Why Choose Nedson?</h2>
+    <h2>Why Choose Nedson</h2>
     <div class="content-grid">
-      <div class="card"><h3>🛠️ Any Tech, Any Age</h3><p>We help everyone, from first-time users to business owners, fix, learn, and grow with their tech confidently.</p></div>
-      <div class="card"><h3>🏠 Remote & Home Visits</h3><p>Need someone to come over? Or want quick remote help? We’ve got flexible support wherever you are.</p></div>
-      <div class="card"><h3>💬 Fast & Reliable</h3><p>Call, WhatsApp or email, we’re quick to respond and even quicker to solve your IT issues.</p></div>
-      <div class="card"><h3>🧠 Clear & Friendly</h3><p>We speak your language, no tech talk. Our goal is to make tech simple and stress-free for you.</p></div>
+      <div class="card"><h3>🏡 Lettings First</h3><p>Lettings and property operations are our main concern, handled with care and professionalism.</p></div>
+      <div class="card"><h3>🤝 Clear, Friendly Service</h3><p>Straightforward communication, reasonable timelines, support that respects your time and needs.</p></div>
+      <div class="card"><h3>🔧 Reliable Upkeep</h3><p>Maintenance coordination, routine checks, and a focus on safe, livable homes.</p></div>
+      <div class="card"><h3>💼 Practical IT Support</h3><p>When technology help is needed, we provide sensible consultancy and support as a complementary service.</p></div>
     </div>
   </section>
 
   <section class="section" id="locations">
     <h2>Where We Serve</h2>
     <div class="content-grid">
-      <div class="card"><h3>📍 UK-Wide Coverage</h3><p>From London to Liverpool, our remote IT services cover everywhere, no postcode is too far.</p></div>
-      <div class="card"><h3>⚡ Instant Remote Fixes</h3><p>Most problems don’t need a visit. We fix many issues online, saving you time and hassle.</p></div>
-      <div class="card"><h3>📞 Easy to Book</h3><p>Use our form, WhatsApp or email to schedule help. You’ll get prompt support when you need it most.</p></div>
+      <div class="card"><h3>🌍 Property & IT Services</h3><p>Property lettings and management where our portfolio operates, IT consultancy available remotely, with onsite by agreement.</p></div>
+      <div class="card"><h3>⚡ Fast Response</h3><p>Simple enquiry process, quick updates, and clear next steps for tenants, landlords, and IT clients.</p></div>
+      <div class="card"><h3>📞 Easy to Book</h3><p>Use the form, WhatsApp, or email to schedule a viewing or request support.</p></div>
     </div>
   </section>
+
   <section class="section white-bg" id="testimonials">
-  <h2>What Our Clients Say</h2>
-  <div class="content-grid">
-    <div class="card">
-      <p>"Nedson fixed my laptop same day. Super fast and polite service!"</p>
-      <h3>– Sandra, London</h3>
+    <h2>What Clients Say</h2>
+    <div class="content-grid">
+      <div class="card">
+        <p>"Smooth move in, helpful team, and quick support when I had a maintenance question."</p>
+        <h3>– Tenant Feedback</h3>
+      </div>
+      <div class="card">
+        <p>"Our property is well managed and communications are clear, happy to recommend."</p>
+        <h3>– Landlord Feedback</h3>
+      </div>
+      <div class="card">
+        <p>"When we needed IT help, they guided us simply and got things running."</p>
+        <h3>– Small Business Client</h3>
+      </div>
     </div>
-    <div class="card">
-      <p>"As a small business owner, I needed someone reliable. They helped set up our systems remotely and followed up after."</p>
-      <h3>– Jide, Birmingham</h3>
-    </div>
-    <div class="card">
-      <p>"Friendly and clear. I learned so much while getting my Mac sorted. Highly recommend."</p>
-      <h3>– Lara, Manchester</h3>
-    </div>
-  </div>
-</section>
+  </section>
+
   <section class="section" id="tips">
-  <h2>Tips & Guides</h2>
-  <div class="content-grid">
-    <div class="card">
-      <h3>🧯 How to Fix a Slow Computer</h3>
-      <p>Simple steps to speed up your PC without calling an engineer. Learn what to check, clean, and disable.</p>
-      <a href="tips/how-to-fix-slow-computer.html" class="cta-button">Read More</a>
+    <h2>Guides & Resources</h2>
+    <div class="content-grid">
+      <div class="card">
+        <h3>🧾 Renting Checklist</h3>
+        <p>What to prepare before move in, documents, deposits, and helpful tips for a smooth start.</p>
+        <a href="tips/renting-checklist.html" class="cta-button">Read More</a>
+      </div>
+      <div class="card">
+        <h3>🔧 Maintenance Basics</h3>
+        <p>Simple steps for common household issues, and when to raise a ticket for support.</p>
+        <a href="tips/maintenance-basics.html" class="cta-button">Read More</a>
+      </div>
+      <div class="card">
+        <h3>💡 IT Quick Wins</h3>
+        <p>Speed up slow devices, protect files, and keep your systems tidy with easy actions.</p>
+        <a href="tips/how-to-fix-slow-computer.html" class="cta-button">Read More</a>
+      </div>
     </div>
-    <div class="card">
-      <h3>🔐 Protect Your Files</h3>
-      <p>Backup strategies using cloud storage, external drives, and free tools for peace of mind.</p>
-      <a href="tips/protect-your-files.html" class="cta-button">Read More</a>
-    </div>
-    <div class="card">
-      <h3>💼 Small Biz IT Checklist</h3>
-      <p>Just started a business? Here's what you need: secure email, shared storage, antivirus, and remote help options.</p>
-      <a href="tips/small-biz-it-checklist.html" class="cta-button">Read More</a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Floating WhatsApp Icon -->
-<a href="https://wa.me/447405007810" target="_blank" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  ">
-</a>
+  <a href="https://wa.me/447405007810" target="_blank" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
+  </a>
 
   <footer>
     <p>Contact: <a href="mailto:info@nedsoninnovations.co.uk">info@nedsoninnovations.co.uk</a> | +44 7405 007 810</p>
     <p>&copy; 2025 Nedson Innovations Ltd. All rights reserved.</p>
   </footer>
-  <style>
-  footer a {
-    color: white;
-    text-decoration: none;
-  }
-  footer a:hover {
-    color: #cccccc;
-  }
-</style>
 </body>
 </html>
