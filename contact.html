@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Nedson Innovations</title>
-  <link rel="icon" href="og-image.png" type="image/png">
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Need IT support or help with your tech setup? Reach out to Nedson Innovations. Fill our contact form and get expert help quickly." />
-  <meta name="keywords" content="IT Support Contact, Tech Support, Nedson Innovations, Get Help, IT Setup, Request Support, Email IT Help, Remote Support, Onsite IT, Contact Tech Help" />
-  <meta name="author" content="Nedson Innovations Ltd" />
+  <title>Contact Us, Property Lettings & IT Consultancy | Nedson Innovations</title>
 
-  <!-- Open Graph Meta for Social Sharing -->
-  <meta property="og:title" content="Contact Nedson Innovations - Get Reliable IT Help" />
-  <meta property="og:description" content="Reach out to Nedson Innovations for expert support. Whether remote or onsite, we’re here to solve your IT issues quickly and clearly." />
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Get in touch about property lettings and management, or request IT consultancy support. Send an enquiry and we will respond promptly." />
+  <meta name="keywords" content="property lettings contact, landlord enquiries, tenant enquiries, property management contact, IT consultancy contact, tech support enquiry, Nedson Innovations" />
+  <meta name="author" content="Nedson Innovations Ltd" />
+  <link rel="icon" href="og-image.png" type="image/png">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Contact Nedson Innovations, Lettings and IT Consultancy" />
+  <meta property="og:description" content="Enquire about lettings and property management, or request practical IT support and consultancy." />
   <meta property="og:image" content="og-image.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nedsoninnovations.co.uk/contact.html" />
@@ -37,14 +38,14 @@
     }
 
     .header {
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  flex-wrap: wrap;
-}
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      flex-wrap: wrap;
+    }
 
     .header img {
       height: 60px;
@@ -72,49 +73,63 @@
     }
 
     .contact-container {
-      max-width: 700px;
-      margin: 30px auto 50px;
-      padding: 20px;
+      max-width: 760px;
+      margin: 30px auto 60px;
+      padding: 24px;
       background-color: #111;
       border-radius: 10px;
       opacity: 0;
       transform: translateY(30px);
       animation: fadeInUp 0.8s ease forwards;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.35);
     }
 
     @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
       text-align: center;
       font-size: 28px;
+      margin: 0 0 6px 0;
     }
 
-    p {
+    .intro {
       text-align: center;
       font-size: 16px;
-      margin-bottom: 40px;
+      margin: 0 0 28px 0;
       color: #ccc;
     }
 
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
     }
 
-    input, textarea {
-      padding: 15px;
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 14px;
+      margin-bottom: 6px;
+      display: block;
+      color: #ddd;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
       border: none;
       border-radius: 8px;
       font-size: 16px;
       background: #fff;
       color: #000;
+      box-sizing: border-box;
     }
+
+    textarea { resize: vertical; min-height: 140px; }
 
     button {
       padding: 15px;
@@ -125,11 +140,15 @@
       border-radius: 8px;
       cursor: pointer;
       transition: 0.3s;
+      width: 100%;
     }
 
-    button:hover {
-      background-color: white;
-      color: black;
+    button:hover { background-color: white; color: black; }
+
+    .helper {
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 6px;
     }
 
     footer {
@@ -139,37 +158,21 @@
       color: #777;
     }
 
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
+    footer a { color: #fff; text-decoration: none; }
 
     @media (max-width: 768px) {
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    gap: 10px;
-  }
-
-  .header img {
-    height: 50px;
-  }
-
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .nav a {
-    font-size: 14px;
-    padding: 8px 14px;
-  }
-}
+      .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        gap: 10px;
+      }
+      .header img { height: 50px; }
+      .nav { flex-direction: row; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+      .nav a { font-size: 14px; padding: 8px 14px; }
+      form { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -185,14 +188,61 @@
 
   <div class="contact-container">
     <h1>Contact Us</h1>
-    <p>If you're experiencing tech problems or need help with your setup, you're in the right place. Just fill out the form below and we’ll get back to you shortly.</p>
+    <p class="intro">
+      Lettings and property operations are our main concern, IT consultancy is available as a complementary service. Choose your enquiry type below and share a few details, we will respond promptly.
+    </p>
 
     <form action="https://formspree.io/f/xwpbqngv" method="POST" onsubmit="redirectAfterSubmit(event)">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Your Phone (Optional)">
-      <textarea name="message" rows="5" placeholder="Describe the IT issue or support you need..." required></textarea>
-      <button type="submit">Send Message</button>
+      <!-- Enquiry type -->
+      <div class="full">
+        <label for="enquiry_type">Enquiry Type</label>
+        <select name="enquiry_type" id="enquiry_type" required onchange="syncPlaceholders()">
+          <option value="" disabled selected>Select an option</option>
+          <option value="Lettings and Property Management">Lettings and Property Management</option>
+          <option value="IT Consultancy and Support">IT Consultancy and Support</option>
+          <option value="General Question">General Question</option>
+        </select>
+        <div class="helper">For lettings, include property address if known, for IT, include device and issue summary.</div>
+      </div>
+
+      <div>
+        <label for="name">Your Name</label>
+        <input id="name" type="text" name="name" placeholder="Jane Doe" required>
+      </div>
+
+      <div>
+        <label for="email">Your Email</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div>
+        <label for="phone">Phone, optional</label>
+        <input id="phone" type="tel" name="phone" placeholder="+44 7405 007 810">
+      </div>
+
+      <div>
+        <label for="role">I am a</label>
+        <select id="role" name="role">
+          <option value="" selected>Choose one, optional</option>
+          <option value="Tenant">Tenant</option>
+          <option value="Landlord">Landlord</option>
+          <option value="Prospective Tenant">Prospective Tenant</option>
+          <option value="Business Client">Business Client</option>
+          <option value="Home User">Home User</option>
+        </select>
+      </div>
+
+      <div class="full">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="For lettings, tell us about the property or your tenancy, for IT, describe the issue and what you have tried." required></textarea>
+      </div>
+
+      <!-- Hidden page source for your inbox triage -->
+      <input type="hidden" name="source_page" value="contact.html">
+
+      <div class="full">
+        <button type="submit">Send Message</button>
+      </div>
     </form>
   </div>
 
@@ -236,6 +286,18 @@
         console.error("Submission error:", error);
         alert("Submission failed. Please try again.");
       });
+    }
+
+    function syncPlaceholders() {
+      const type = document.getElementById('enquiry_type').value;
+      const message = document.getElementById('message');
+      if (type === 'Lettings and Property Management') {
+        message.placeholder = 'Tell us about the property or tenancy, include address if known, issue or request, preferred times.';
+      } else if (type === 'IT Consultancy and Support') {
+        message.placeholder = 'Describe the issue and device, Windows or Mac, what you have tried, any error messages, preferred times.';
+      } else {
+        message.placeholder = 'Share your question or request, we will get back to you promptly.';
+      }
     }
   </script>
 
